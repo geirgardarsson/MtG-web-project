@@ -5,7 +5,10 @@ const axios = require('axios');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', {title: 'Magic the Gathering'})
+  cardsearch.start()
+  .then((result) => {
+    res.render('index', {title: 'Magic the Gathering', card: result.data.cards });
+  })
   .catch((error) => {
     res.render('error', { title: 'Villa kom upp', message: 'U n00b'});
   });
