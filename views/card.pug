@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Er þetta spilið þitt? #{title}
+  ul
+    each item in card
+      li
+        h2= item.name
+        img(src= ""+item.imageUrl)
