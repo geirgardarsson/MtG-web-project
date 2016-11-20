@@ -7,6 +7,7 @@ const axios = require('axios');
 router.get('/', (req, res, next) => {
   cardsearch.start()
   .then((result) => {
+    console.log(result);
     res.render('index', {title: 'Magic the Gathering', card: result.data.cards });
   })
   .catch((error) => {
