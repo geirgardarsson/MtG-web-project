@@ -4,5 +4,14 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style-type: none;
 }

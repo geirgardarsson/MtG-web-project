@@ -1,4 +1,5 @@
 const axios = require('axios');
+const mtg = require('mtgsdk');
 
 const baseURL = process.env.BASEURL ||
                 'https://api.magicthegathering.io/v1/cards';
@@ -14,7 +15,7 @@ function start() {
 
 
 function cards() {
-  const instance = axios.create({ baseURL: "https://api.magicthegathering.io/v1/cards?set=ktk"});
+  const instance = axios.create({ baseURL: "https://api.magicthegathering.io/v1/cards?page=316&pageSize=100"});
   return instance.get('/');
 }
 

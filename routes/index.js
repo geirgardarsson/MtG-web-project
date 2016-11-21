@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
 router.post('/card', (req, res, next) => {
   cardsearch.cards()
   .then((result) => {
-    // console.log(result.data.cards);
+    console.log('result: ', result);
     res.render('card', { title: 'Magic the Gathering', card: result.data.cards });
   })
   .catch((error) => {
