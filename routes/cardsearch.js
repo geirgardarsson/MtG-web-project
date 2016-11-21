@@ -19,7 +19,13 @@ function cards() {
   return instance.get('/');
 }
 
+function filter() {
+  return;
+}
+
+
 module.exports = {
   cards,
   start,
+  filter,
 }

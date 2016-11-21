@@ -1,6 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('/images/serraangel.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 a {
@@ -14,4 +23,5 @@ a {
 
 li {
   list-style-type: none;
+  margin-bottom: -0.3%;
 }

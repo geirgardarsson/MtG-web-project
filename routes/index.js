@@ -16,18 +16,17 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/card', (req, res, next) => {
+  const input = req.body.text;
+  console.log('input: ', input);
   cardsearch.cards()
   .then((result) => {
-    console.log('result: ', result);
+    // console.log('result: ', result);
     res.render('card', { title: 'Magic the Gathering', card: result.data.cards });
   })
   .catch((error) => {
     res.render('error', { title: 'Villa kom upp', message: 'U don goof'});
   });
 });
-
-// annað router.get function hér
-
 
 
 module.exports = router;
