@@ -7,7 +7,7 @@ const axios = require('axios');
 router.get('/', (req, res, next) => {
   cardsearch.start()
   .then((result) => {
-    console.log(result);
+    // console.log(result.data.cards);
     res.render('index', {title: 'Magic the Gathering', card: result.data.cards });
   })
   .catch((error) => {
@@ -15,15 +15,10 @@ router.get('/', (req, res, next) => {
   });
 });
 
-
-
-
-
-
-router.get('/card', (req, res, next) => {
+router.post('/card', (req, res, next) => {
   cardsearch.cards()
   .then((result) => {
-    console.log(result.data.cards);
+    // console.log(result.data.cards);
     res.render('card', { title: 'Magic the Gathering', card: result.data.cards });
   })
   .catch((error) => {
@@ -32,5 +27,7 @@ router.get('/card', (req, res, next) => {
 });
 
 // annað router.get function hér
+
+
 
 module.exports = router;
