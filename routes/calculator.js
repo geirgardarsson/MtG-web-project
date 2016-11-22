@@ -1,9 +1,14 @@
 
 
 //hahahahahahahahahahahahahhahahahahahahaha
-function calculator (){
+function calculator() {
 console.log('Geir herra magic kall');
-  return 'Halló';
+  return;
+}
+
+function geir() {
+  console.log ('geir er ekki magic kall');
+  return 'heya';
 }
 
 module.exports = {

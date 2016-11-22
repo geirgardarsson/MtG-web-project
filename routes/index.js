@@ -32,10 +32,10 @@ router.post('/card', (req, res, next) => {
 });
 
 router.post('/calc', (req, res, next) => {
-  calculator.calculator()
-  .then((result) => {
-    res.render('calc', {title: 'GeirGatheringWizard', geir: result});
-  })
+  calculator.calculator();
+    //console.log("þetta eru result");
+    res.render('calc', {title: 'GeirGatheringWizard', geir: 'þetta virkar'})
+  //})
   .catch((error) => {
     res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
   });
