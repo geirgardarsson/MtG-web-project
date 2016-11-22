@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= 'Reiknivél fyrir mana kostnað'
+  p= 'hjálpar þér að segja til um blablablab'
+  p= title
+  form(method='post', action='/calculate')
+    input(name='', placeholder='23')
+  input(id='blue', type='checkbox')
+  | ég er með blátt mana í stokknum
+  input(id='black', type='checkbox')
+  | ég er með svart mana í stokknum
+  input(id='white', type='checkbox')
+  | ég er með hvítt mana í stokknum

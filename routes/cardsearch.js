@@ -12,7 +12,6 @@ function start() {
   const instance = axios.create({ baseURL: "https://api.magicthegathering.io/v1/cards?name=zurgo"});
   return instance.get('');
 }
-//?page=316&pageSize=100
 
 function cards(input) {
   //console.log('input í cards: ', input);
