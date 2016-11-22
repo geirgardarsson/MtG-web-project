@@ -17,10 +17,10 @@ router.get('/', (req, res, next) => {
 
 router.post('/card', (req, res, next) => {
   const input = req.body.text;
-  console.log('input: ', input);
+//  console.log('input: ', input);
   cardsearch.cards(input)
   .then((result) => {
-    // console.log('result: ', result.data.cards);
+     //console.log('result: ', result);
     cardsearch.test(input);
     // console.log('result: ', outcome.name);
     res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: input });
