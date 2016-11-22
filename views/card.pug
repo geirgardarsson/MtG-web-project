@@ -7,4 +7,5 @@ block content
   ul(class='container')
     each item in card
       li
-        img(src= ""+item.imageUrl onerror="this.style.display='none'")
+        a(href='/card/'+ item.name + '-' + item.set)
+          img(src= ""+item.imageUrl onerror="this.style.display='none'")
