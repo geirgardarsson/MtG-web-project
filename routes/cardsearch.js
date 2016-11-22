@@ -25,11 +25,11 @@ function cards(input) {
 }
 
 function test(input) {
-  mtg.card.all({ name: input, pageSize: 1 })
-  .on('data', card => {
-    console.log(card.name);
+  mtg.card.all({ name: input })
+  .on('data', result => {
+    console.log(result.name);
   });
-  return;
+  return result;
 }
 
 

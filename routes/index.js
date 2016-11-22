@@ -21,11 +21,12 @@ router.post('/card', (req, res, next) => {
   cardsearch.cards(input)
   .then((result) => {
     console.log('result: ', result.data.cards);
-    cardsearch.test(input);
+    const outcome = cardsearch.test(input);
+    console.log('result: ', outcome.name);
     res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: input });
   })
   .catch((error) => {
-    res.render('error', { title: 'Villa kom upp', message: 'U don goof'});
+    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
   });
 });
 
