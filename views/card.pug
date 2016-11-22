@@ -7,4 +7,4 @@ block content
   ul(class='container')
     each item in card
       li
-        img(src= ""+item.imageUrl)
+        img(src= ""+item.imageUrl onerror="this.style.display='none'")
