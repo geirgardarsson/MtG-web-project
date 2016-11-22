@@ -33,7 +33,7 @@ router.post('/card', (req, res, next) => {
 
 router.post('/calc', (req, res, next) => {
   calculator.calculator()
-    .then((result) =>{
+  .then((result) => {
     res.render('calc', {title: 'GeirGatheringWizard', geir: result});
   })
   .catch((error) => {
