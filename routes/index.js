@@ -20,9 +20,9 @@ router.post('/card', (req, res, next) => {
   console.log('input: ', input);
   cardsearch.cards(input)
   .then((result) => {
-    console.log('result: ', result.data.cards);
-    const outcome = cardsearch.test(input);
-    console.log('result: ', outcome.name);
+    // console.log('result: ', result.data.cards);
+    cardsearch.test(input);
+    // console.log('result: ', outcome.name);
     res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: input });
   })
   .catch((error) => {

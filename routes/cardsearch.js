@@ -20,7 +20,7 @@ function cards(input) {
   console.log('baseURL: ', baseURL);
   link = baseURL + link;
   console.log('link: ', link);
-  const instance = axios.create({ baseURL: link });
+  const instance = axios.create({ baseURL: "https://api.magicthegathering.io/v1/cards?page=316&pageSize=100" });
   return instance.get('/');
 }
 
@@ -29,7 +29,7 @@ function test(input) {
   .on('data', result => {
     console.log(result.name);
   });
-  return result;
+  return;
 }
 
 
