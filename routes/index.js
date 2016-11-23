@@ -49,4 +49,17 @@ router.get('/advancedsearch', (req, res) => {
   res.render('advancedsearch', { title: 'Ítarleg leit' });
 });
 
+router.post('/advancedsearch', (req, res) => {
+  console.log('name-test: ', req.body.name);
+  console.log('rarity-test: ', req.body.rarity) //virkar
+  console.log('power-test: ', req.body.po, req.body.wer);
+  console.log('toughness-test: ', req.body.tough, req.body.ness);
+  console.log('cardtype-test: ', req.body.type);
+  console.log('subtype-test: ', req.body.subtype);
+  console.log('setname-test: ', req.body.setName);
+  console.log('cmc-test: ', req.body.cm, req.body.cost);
+  console.log('color-test: ', req.body.colors);
+  res.render('advancedsearch', { title: 'Ítarleg leit' });
+})
+
 module.exports = router;
