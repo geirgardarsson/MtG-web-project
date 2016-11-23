@@ -25,3 +25,18 @@ li {
   list-style-type: none;
   margin-bottom: -0.3%;
 }
+
+.info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.info-left {
+  padding: 2%;
+}
+
+.info-right {
+  padding: 2%;
+  max-width: 40%;
+}
