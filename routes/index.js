@@ -20,7 +20,7 @@ router.post('/card', (req, res, next) => {
   });
 });
 
-router.post('/calc', (req, res, next) => {
+router.get('/calc', (req, res, next) => {
   calculator.calculator();
     //console.log("þetta eru result");
     res.render('calc', {title: 'GeirGatheringWizard', geir: 'þetta virkar'})
@@ -40,6 +40,8 @@ router.get('/card/:nameset', (req, res) => {
   });
 });
 
-
+router.get('/advancedsearch', (req, res) => {
+  res.render('advancedsearch', { title: 'Ítarleg leit' });
+});
 
 module.exports = router;
