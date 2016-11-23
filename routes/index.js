@@ -30,5 +30,16 @@ router.post('/calc', (req, res, next) => {
   });
 });
 
+router.get('/card/:nameset', (req, res) => {
+  cardsearch.cardinfo(req.params.nameset)
+  .then((result) => {
+    res.render('info', { card: result.data.cards });
+  })
+  .catch((error) => {
+    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá' });
+  });
+});
+
+
 
 module.exports = router;

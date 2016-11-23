@@ -15,7 +15,16 @@ function cards(input) {
   return instance.get(link);
 }
 
+function cardinfo(nameset) {
+  let res = nameset.split('$');
+  res[0] = '?name=' + res[0] + '&';
+  res[1] = '?set=' + res[1];
+  let infolink = baseURL + res[0] + res[1];
+  const instance = axios.create({ baseURL: infolink });
+  return instance.get(infolink);
+}
 
 module.exports = {
   cards,
+  cardinfo,
 }
