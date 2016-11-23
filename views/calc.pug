@@ -4,17 +4,18 @@ block content
   h1= 'Reiknivél fyrir mana kostnað'
   p= 'hjálpar þér að segja til um blablablab'
   p= title
-  form(method='post', action='/calculate')
-    input(name='', placeholder='23')
-  input(id='blue', type='checkbox')
-  | Blátt
-  input(id='black', type='checkbox')
-  | Svart
-  input(id='white', type='checkbox')
-  | Hvítt
-  input(id='red', type='checkbox')
-  | Red
-  input(id='green', type='checkbox')
-  | Grænt
-  input(id='grey', type='checkbox')
-  | Litalaust (colourless)
+
+  form(method='post', action='/calc')
+    div
+      label(for='size') Fjöldi spila í stokknum hjá þér:
+      input#size(type='number', min='40', placeholder=geir, required)
+    div
+      label(for='lands') fjöldi landa sem þú vilt hafa:
+      input#lands(type='number', name='', placeholder='23', required)
+    div
+      label(for='Colors') fjöldi lita í stokknum:
+      input#Colors(type='number', name='',min=1, max=6, placeholder='1', required)
+      p= 'mundu að "colorless" telst núna sem litur'
+    div
+      submit(for='Calculate') reikna út fjöldi landa
+      input(type='submit', name='reikna')

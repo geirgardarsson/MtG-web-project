@@ -30,6 +30,11 @@ router.get('/calc', (req, res, next) => {
   });
 });
 
+router.post('/calc', (req, res) => {
+  console.log('galdrar');
+  res.render('calc');
+});
+
 router.get('/card/:nameset', (req, res) => {
   cardsearch.cardinfo(req.params.nameset)
   .then((result) => {
