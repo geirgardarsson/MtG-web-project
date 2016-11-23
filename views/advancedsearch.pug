@@ -2,3 +2,97 @@ extends layout
 
 block content
   h1= title
+  form(method='post', action='/card')
+    div
+      input(name='name', placeholder='Name')
+    div Rarity
+      div
+        input(type='checkbox' value='Common' name='Common')
+        | Common
+      div
+        input(type='checkbox' value='Uncommon')
+        | Uncommon
+      div
+        input(type='checkbox' value='Rare')
+        | Rare
+      div
+        input(type='checkbox' value='Mythic Rare')
+        | Mythic Rare
+      div
+        input(type='checkbox' value='Special')
+        | Special
+    div Stats
+      div Power
+        div
+          select
+            option(value='') Equal
+            option(value='gt') Greater than
+            option(value='gte') Great or equal than
+            option(value='lt') Less than
+            option(value='lte') Less or equal than
+          input(type='number' name='power' min='0' max='99')
+      div Toughness
+        div
+          select
+            option(value='') Equal
+            option(value='gt') Greater than
+            option(value='gte') Great or equal than
+            option(value='lt') Less than
+            option(value='lte') Less or equal than
+          input(type='number' name='toughness' min='0' max='99')
+    div Cardtype
+      div
+        input(type='checkbox' value='creature' name='creature')
+        | Creature
+      div
+        input(type='checkbox' value='instant' name='instant')
+        | Instant
+      div
+        input(type='checkbox' value='sorcery' name='sorcery')
+        | Sorcery
+      div
+        input(type='checkbox' value='enchantment' name='enchantment')
+        | Enchantment
+      div
+        input(type='checkbox' value='planeswalker' name='planeswalker')
+        | Planeswalker
+      div
+        input(type='checkbox' value='tribal' name='tribal')
+        | Tribal
+      div
+        input(type='checkbox' value='land' name='land')
+        | Land
+      div
+        input(type='checkbox' value='artifact' name='artifact')
+        | Artifact
+    div
+      input(name='subtype', placeholder='Subtype')
+    div
+      input(name='setName', placeholder='Setname')
+    div Converted mana cost
+      div
+        select
+          option(value='') Equal
+          option(value='gt') Greater than
+          option(value='gte') Great or equal than
+          option(value='lt') Less than
+          option(value='lte') Less or equal than
+        input(type='number' name='cmc' min='0' max='99')
+    div Colors
+      div
+        input(type='checkbox' value='green' name='green')
+        | Green
+      div
+        input(type='checkbox' value='red' name='red')
+        | Red
+      div
+        input(type='checkbox' value='blue' name='blue')
+        | Blue
+      div
+        input(type='checkbox' value='black' name='black')
+        | Black
+      div
+        input(type='checkbox' value='white' name='white')
+        | White
+    div
+      button(type='submit') Leita
