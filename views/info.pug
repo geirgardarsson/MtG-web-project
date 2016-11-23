@@ -1,5 +1,20 @@
 extends layout
 
 block content
-  each item in card
-    h1= item.name
+  div(class='info-wrapper')  
+    each item in card
+      h1= item.name
+      img(src= ""+item.imageUrl onerror="this.style.display='none'")
+      p Manacost #{item.manacost}
+      p Converted manacost #{item.cmc}
+      p Colors #{item.colors}
+      p Color Identity #{item.colorIdentity}
+      p Supertype #{item.supertypes}
+      p Type #{item.types}
+      p Subtype #{item.subtypes}
+      p Rarity #{item.rarity}
+      p Set #{item.setName}
+      p Text #{item.text}
+      p Artist #{item.artist}
+      p Power and toughness #{item.power} / #{item.toughness}
+      p Legalities #{item.legalities}
