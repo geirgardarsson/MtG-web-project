@@ -25,6 +25,19 @@ function cardinfo(nameset) {
 }
 
 function advanced(parameters) {
+
+  let linkelems = [];
+  let x = 0;
+
+  for (let i = 0; i < parameters.length; i++) {
+    if (parameters[i] === '' || parameters[i] === undefined) {
+      linkelems[x] = parameters[x];
+      x += 1;
+    }
+  }
+
+  console.log('linkelems: ', linkelems);
+
   console.log('advanced: ', parameters);
   return;
 }
