@@ -11,12 +11,6 @@ router.get('/', (req, res) => {
 
 router.post('/card', (req, res, next) => {
   const input = req.body.text;
-/*  let black = '';
-  let blue = '';
-  let red = '';
-  let green = '';
-  let white = '';
-  let grey = '';*/
   cardsearch.cards(input)
   .then((result) => {
     res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: input });
@@ -94,7 +88,13 @@ router.post('/advancedsearch', (req, res) => {
   console.log('linkelems í index.js: ', linkelems);
   let link = cardsearch.advancedlink(linkelems, req.body.noOtherColors);
   console.log('link: ', link);
-  res.render('advancedsearch', { title: 'Ítarleg leit' });
+  cardsearch.getlink(link)
+  .then((result) => {
+    res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: link });
+  })
+  .catch((error) => {
+    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
+  });
 });
 
 module.exports = router;

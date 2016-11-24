@@ -87,14 +87,27 @@ function advanced(parameters) {
 
 function advancedlink(linkelems, noc) {
   console.log('linkelms og noc: ', linkelems, noc);
-  let link = '';
+  let link = '?';
+
+  for (let i = 0; i < linkelems.length; i += 1) {
+    link += linkelems[i] + '&'
+  }
+
+  link = link.substring(0, link.length - 1);
+  console.log(link);
   return link;
 }
 
+function getlink(link) {
+  link = baseURL + link;
+  const instance = axios.create({ baseURL: link });
+  return instance.get(link);
+}
 
 module.exports = {
   cards,
   cardinfo,
   advanced,
   advancedlink,
+  getlink,
 }
