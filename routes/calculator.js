@@ -54,13 +54,6 @@ function manacalc(Colors,lands){
       }
     }
   }
-
-  /*colors[0]=black;
-  colors[1]=blue;
-  colors[2]=red;
-  colors[3]=green;
-  colors[4]=white;
-  colors[5]=grey;*/
   let mana = [0,0,0,0,0,0];
   console.log("total er:" + total);
   console.log("lands er:" + land);
