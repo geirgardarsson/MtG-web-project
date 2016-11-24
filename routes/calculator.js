@@ -43,7 +43,6 @@ function checker(colors){
 
 
 module.exports = {
-  calculator,
   manacalc,
   checker,
 }
