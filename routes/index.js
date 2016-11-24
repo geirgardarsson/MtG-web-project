@@ -11,6 +11,12 @@ router.get('/', (req, res) => {
 
 router.post('/card', (req, res, next) => {
   const input = req.body.text;
+/*  let black = '';
+  let blue = '';
+  let red = '';
+  let green = '';
+  let white = '';
+  let grey = '';*/
   cardsearch.cards(input)
   .then((result) => {
     res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: input });
@@ -24,7 +30,6 @@ router.get('/calc', (req, res, next) => {
   calculator.calculator();
     //console.log("þetta eru result");
     res.render('calc', {title: 'GeirGatheringWizard', geir: 'þetta virkar'})
-  //})
   .catch((error) => {
     res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
   });
@@ -32,17 +37,28 @@ router.get('/calc', (req, res, next) => {
 
 router.post('/calc', (req, res) => {
   console.log('galdrar');
-  const lands = req.body.tala;
-  const black = req.body.black;
-  const blue = req.body.blue;
-  const red = req.body.red;
-  const green = req.body.green;
-  const white = req.body.white;
-  const grey = req.body.grey;
-  const calculated = calculator.thisisit(black,blue,red,green,white,grey,lands);
+  const lands = req.body.lands;
+  let black = req.body.black;
+  let blue = req.body.blue;
+  let red = req.body.red;
+  let green = req.body.green;
+  let white = req.body.white;
+  let grey = req.body.grey;
+  let calculated = calculator.manacalc(black,blue,red,green,white,grey,lands);
+console.log("calculated:"+calculated)
+console.log("calculated[3]:"+calculated[3])
+  black = calculated[0];
+  blue = calculated[1];
+  red = calculated[2];
+  green = calculated[3];
+  white = calculated[4];
+  grey = calculated[5];
+//  console.log(calculated);
+//  console.log(calculated[0]);
 
 
-  res.render('calc', { calculated });
+
+  res.render('calc', { black, blue, red, green, white, grey });
 });
 
 router.get('/card/:nameset', (req, res) => {
