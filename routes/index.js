@@ -73,11 +73,12 @@ router.post('/advancedsearch', (req, res) => {
   parameters[7] = req.body.artist;
   parameters[8] = req.body.cm + req.body.cost;
   parameters[9] = req.body.color;
-  parameters[10] = req.body.noOtherColors;
 
-  cardsearch.advanced(parameters);
-
+  let linkelems = cardsearch.advanced(parameters);
+  console.log('linkelems í index.js: ', linkelems);
+  let link = cardsearch.advancedlink(linkelems, req.body.noOtherColors);
+  console.log('link: ', link);
   res.render('advancedsearch', { title: 'Ítarleg leit' });
-})
+});
 
 module.exports = router;
