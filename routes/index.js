@@ -32,7 +32,13 @@ router.get('/calc', (req, res, next) => {
 
 router.post('/calc', (req, res) => {
   console.log('galdrar');
-  res.render('calc');
+  const numberFromInput = req.body.tala;
+  console.log(numberFromInput);
+  console.log(req.body.tala);
+  //const numbers = multiplier.parseNumber(numberFromInput);
+  //const number = multiplier.multiply(numbers);
+  //const factors = multiplier.factorize(number);
+  res.render('calc', { geir: numberFromInput });
 });
 
 router.get('/card/:nameset', (req, res) => {
