@@ -29,7 +29,7 @@ router.get('/calc', (req, res, next) => {
   });
 });
 
-router.post('/calc', (req, res) => {
+/*router.post('/calc', (req, res) => {
   console.log('galdrar');
   const lands = req.body.lands;
   let black = req.body.black;
@@ -38,9 +38,48 @@ router.post('/calc', (req, res) => {
   let green = req.body.green;
   let white = req.body.white;
   let grey = req.body.grey;
-  let calculated = calculator.manacalc(black,blue,red,green,white,grey,lands);
+  let colors = [black,blue,red,green, white, grey,]
+  //let calculated = calculator.manacalc(black,blue,red,green,white,grey,lands);
+  let calculated = calculator.manacalc(colors);
 console.log("calculated:"+calculated)
 console.log("calculated[3]:"+calculated[3])
+  black = calculated[0];
+  blue = calculated[1];
+  red = calculated[2];
+  green = calculated[3];
+  white = calculated[4];
+  grey = calculated[5];
+//  console.log(calculated);
+//  console.log(calculated[0]);
+
+
+
+  res.render('calc', { black, blue, red, green, white, grey });
+});*/
+
+router.post('/calc', (req, res) => {
+  console.log('galdrar');
+  let lands = req.body.lands;
+  console.log('lands í indexjs er:' + lands);
+  let black = req.body.black;
+  let blue = req.body.blue;
+  let red = req.body.red;
+  let green = req.body.green;
+  let white = req.body.white;
+  let grey = req.body.grey;
+  let colors = [black,blue,red,green,white, grey,]
+  //let calculated = calculator.manacalc(black,blue,red,green,white,grey,lands);
+  let calculated = calculator.manacalc(colors, lands);
+//console.log("calculated:"+calculated)
+//console.log("calculated[3]:"+calculated[3])
+/*for(let i=0;i<Colors.length; i++){
+  if (Colors[i] !== '') {
+    if (Colors[i] !== undefined) {
+      total=total+Colors[i];
+    }
+  }
+}*/
+
   black = calculated[0];
   blue = calculated[1];
   red = calculated[2];

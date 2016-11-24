@@ -10,37 +10,42 @@ block content
   form(method='post', action='/calc')
     div
       label(for='size') Fjöldi Svarta mana tákna:
-      input(type='number', name="black" min='0', value=0, required)
+      input(type='number', name="black" min='0', placeholder=0)
     div
       label(for='size') Fjöldi Blárra mana tákna:
-      input(type='number', name="blue" min='0', value=0, required)
+      input(type='number', name="blue" min='0', placeholder=0)
     div
       label(for='size') Fjöldi Rauðra mana tákna:
-      input(type='number', name="red" min='0', value=0, required)
+      input(type='number', name="red" min='0', placeholder=0)
     div
       label(for='size') Fjöldi Græna mana tákna:
-      input(type='number', name="green" min='0', value=0, required)
+      input(type='number', name="green" min='0', placeholder=0)
     div
       label(for='size') Fjöldi Hvítra mana tákna:
-      input(type='number', name="white" min='0', value=0, required)
+      input(type='number', name="white" min='0', placeholder=0)
     div
       label(for='size') Fjöldi Litlausa mana tákna:
-      input(type='number', name="grey" min='0', value=0, required)
+      input(type='number', name="grey" min='0', placeholder=0)
     div
       label(for='lands') fjöldi landa í stokknum þínum:
-      input(type='number', name='lands', placeholder='23', required)
-
+      input(type='number', name="lands", placeholder='23', required)
     div
       input(type='submit', name='reikna út fjöldi landa')
-  p Fjöldi Svartra landa:
-  p #{black}
-  p Fjöldi Blárra landa:
-  p #{blue}
-  p Fjöldi Rauðra landa:
-  p #{red}
-  p Fjöldi Grænna landa:
-  p #{green}
-  p Fjöldi Hvíta landa:
-  p #{white}
-  p Fjöldi Grára landa:
-  p #{grey}
+    if black
+      p Fjöldi Svartra landa:
+      p #{black}
+    if blue
+      p Fjöldi Blárra landa:
+      p #{blue}
+    if red
+      p Fjöldi Rauðra landa:
+      p #{red}
+    if green
+      p Fjöldi Grænna landa:
+      p #{green}
+    if white
+      p Fjöldi Hvíta landa:
+      p #{white}
+    if grey
+      p Fjöldi Grára landa:
+      p #{grey}
