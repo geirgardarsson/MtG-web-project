@@ -5,24 +5,48 @@ block content
   p= 'hjálpar þér að segja til um blablablab'
   p= title
 
+
+
   form(method='post', action='/calc')
     div
-      label(for='size') Fjöldi spila í stokknum hjá þér:
-      input(type='number', name="tala" min='40', placeholder=geir, required)
+      label(for='size') Fjöldi Svarta mana tákna:
+      input(type='number', name="black" min='0', placeholder=0, required)
     div
-      label(for='lands') fjöldi landa sem þú vilt hafa:
+      label(for='size') Fjöldi Blárra mana tákna:
+      input(type='number', name="blue" min='0', placeholder=0, required)
+    div
+      label(for='size') Fjöldi Rauðra mana tákna:
+      input(type='number', name="red" min='0', placeholder=0, required)
+    div
+      label(for='size') Fjöldi Græna mana tákna:
+      input(type='number', name="green" min='0', placeholder=0, required)
+    div
+      label(for='size') Fjöldi Hvítra mana tákna:
+      input(type='number', name="white" min='0', placeholder=0, required)
+    div
+      label(for='size') Fjöldi Litlausa mana tákna:
+      input(type='number', name="grey" min='0', placeholder=0, required)
+    div
+      label(for='size') Fjöldi mana tákna:
+      input(type='number', name="tala" min='0', placeholder=0, required)
+    div
+      label(for='lands') fjöldi landa í stokknum þínum:
       input(type='number', name='', placeholder='23', required)
     div
-      label(for='Colors') fjöldi lita í stokknum:
-      input(type='number', name='',min=1, max=6, placeholder='1', required)
+      label(for='Colors') fjöldi lita í stokknum: þetta er óþarfi for now
+      input(type='number', name='',min=1, max=6, placeholder='1')
 
     div
       input(type='submit', name='reikna út fjöldi landa')
-  p Þú slóst inn:
-  p= geir
-  p Úr því fundust tölurnar:
-  p #{numbers}
-  p Margfeldi þeirra er:
-  p #{number}
-  p Þættir tölunnar eru:
-  p #{factors}
+  p Fjöldi Svartra landa:
+  p= calculated[0]
+  p Fjöldi Blárra landa:
+  p= calculated[1]
+  p Fjöldi Rauðra landa:
+  p= calculated[2]
+  p Fjöldi Grænna landa:
+  p= calculated[3]
+  p Fjöldi Hvíta landa:
+  p= calculated[4]
+  p Fjöldi Grára landa:
+  p= calculated[5]

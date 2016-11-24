@@ -32,13 +32,17 @@ router.get('/calc', (req, res, next) => {
 
 router.post('/calc', (req, res) => {
   console.log('galdrar');
-  const numberFromInput = req.body.tala;
-  console.log(numberFromInput);
-  console.log(req.body.tala);
-  //const numbers = multiplier.parseNumber(numberFromInput);
-  //const number = multiplier.multiply(numbers);
-  //const factors = multiplier.factorize(number);
-  res.render('calc', { geir: numberFromInput });
+  const lands = req.body.tala;
+  const black = req.body.black;
+  const blue = req.body.blue;
+  const red = req.body.red;
+  const green = req.body.green;
+  const white = req.body.white;
+  const grey = req.body.grey;
+  const calculated = calculator.thisisit(black,blue,red,green,white,grey,lands);
+
+
+  res.render('calc', { calculated });
 });
 
 router.get('/card/:nameset', (req, res) => {

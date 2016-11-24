@@ -11,11 +11,10 @@ function geir() {
   return 'heya';
 }
 
-function basic(size,lands,numcol){
+
+function thisisit(black,blue,red,green,white,grey,lands){
 
 }
-
-
 //ef 2 litir
 function mana(size,colors1,colors2,lands) {
   var fj=colors1+colors2; //fjöldi mana tákna
