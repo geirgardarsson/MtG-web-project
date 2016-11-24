@@ -24,21 +24,21 @@ block content
     div Stats
       div Power
         div
-          select
-            option(value='' name='po') Equal
-            option(value='gt' name='po') Greater than
-            option(value='gte' name='po') Great or equal than
-            option(value='lt' name='po') Less than
-            option(value='lte' name='po') Less or equal than
+          select(name='po')
+            option(value='') Equal
+            option(value='gt') Greater than
+            option(value='gte') Great or equal than
+            option(value='lt') Less than
+            option(value='lte') Less or equal than
           input(type='number' name='wer' min='0' max='99')
       div Toughness
         div
-          select
-            option(value='' name='tough') Equal
-            option(value='gt' name='tough') Greater than
-            option(value='gte' name='tough') Great or equal than
-            option(value='lt' name='tough') Less than
-            option(value='lte' name='tough') Less or equal than
+          select(name='tough')
+            option(value='') Equal
+            option(value='gt') Greater than
+            option(value='gte') Great or equal than
+            option(value='lt') Less than
+            option(value='lte') Less or equal than
           input(type='number' name='ness' min='0' max='99')
     div Cardtype
       div
@@ -73,12 +73,12 @@ block content
       input(name='artist', placeholder='Artist')
     div Converted mana cost
       div
-        select
-          option(value='' name='cm') Equal
-          option(value='gt' name='cm') Greater than
-          option(value='gte' name='cm') Great or equal than
-          option(value='lt' name='cm') Less than
-          option(value='lte' name='cm') Less or equal than
+        select(name='cm')
+          option(value='') Equal
+          option(value='gt') Greater than
+          option(value='gte') Great or equal than
+          option(value='lt') Less than
+          option(value='lte') Less or equal than
         input(type='number' name='cost' min='0' max='99')
     div Colors
       div

@@ -24,7 +24,13 @@ function cardinfo(nameset) {
   return instance.get(infolink);
 }
 
+function advanced(parameters) {
+  console.log('advanced: ', parameters);
+  return;
+}
+
 module.exports = {
   cards,
   cardinfo,
+  advanced,
 }
