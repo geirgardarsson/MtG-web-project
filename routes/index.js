@@ -22,7 +22,6 @@ router.post('/card', (req, res, next) => {
 
 router.get('/calc', (req, res, next) => {
   calculator.calculator();
-    //console.log("þetta eru result");
     res.render('calc', {title: 'GeirGatheringWizard', geir: 'þetta virkar'})
   .catch((error) => {
     res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
@@ -31,9 +30,7 @@ router.get('/calc', (req, res, next) => {
 
 
 router.post('/calc', (req, res) => {
-  console.log('galdrar');
   let lands = req.body.lands;
-  console.log('lands í indexjs er:' + lands);
   let black = req.body.black;
   let blue = req.body.blue;
   let red = req.body.red;
@@ -42,6 +39,7 @@ router.post('/calc', (req, res) => {
   let grey = req.body.grey;
   let colors = [black,blue,red,green,white, grey,]
   let calculated = calculator.manacalc(colors, lands);
+  let checker= calculator.checker(colors);
 
   black = calculated[0];
   blue = calculated[1];
@@ -49,12 +47,15 @@ router.post('/calc', (req, res) => {
   green = calculated[3];
   white = calculated[4];
   grey = calculated[5];
-//  console.log(calculated);
-//  console.log(calculated[0]);
+  console.log("black:" + black);
+  console.log("blue" + blue);
+  console.log("red" + red);
+  console.log("green" + green);
+  console.log("white" +white);
+  console.log("grey" +grey);
+  console.log("checker:" + checker);
 
-
-
-  res.render('calc', { black, blue, red, green, white, grey });
+  res.render('calc', { black, blue, red, green, white, grey, checker });
 });
 
 router.get('/card/:nameset', (req, res) => {
@@ -87,7 +88,6 @@ router.post('/advancedsearch', (req, res) => {
   parameters[9] = req.body.color;
 
   let linkelems = cardsearch.advanced(parameters);
-  console.log('linkelems í index.js: ', linkelems);
   let link = cardsearch.advancedlink(linkelems, req.body.noOtherColors);
   console.log('link: ', link);
   cardsearch.getlink(link)

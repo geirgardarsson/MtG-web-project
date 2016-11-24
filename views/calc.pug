@@ -4,9 +4,6 @@ block content
   h1= 'Reiknivél fyrir mana kostnað'
   p= 'hjálpar þér að segja til um blablablab'
   p= title
-
-
-
   form(method='post', action='/calc')
     div
       label(for='size') Fjöldi Svarta mana tákna:
@@ -31,21 +28,24 @@ block content
       input(type='number', name="lands", placeholder='23', required)
     div
       input(type='submit', name='reikna út fjöldi landa')
-    if black
-      p Fjöldi Svartra landa:
-      p #{black}
-    if blue
-      p Fjöldi Blárra landa:
-      p #{blue}
-    if red
-      p Fjöldi Rauðra landa:
-      p #{red}
-    if green
-      p Fjöldi Grænna landa:
-      p #{green}
-    if white
-      p Fjöldi Hvíta landa:
-      p #{white}
-    if grey
-      p Fjöldi Grára landa:
-      p #{grey}
+      if checker !== 6
+        if black
+          p Fjöldi Svartra landa:
+          p #{black}
+        if blue
+          p Fjöldi Blárra landa:
+          p #{blue}
+        if red
+          p Fjöldi Rauðra landa:
+          p #{red}
+        if green
+          p Fjöldi Grænna landa:
+          p #{green}
+        if white
+          p Fjöldi Hvíta landa:
+          p #{white}
+        if grey
+          p Fjöldi Grára landa:
+          p #{grey}
+      else
+        p Þú slóst ekki inn neitt
