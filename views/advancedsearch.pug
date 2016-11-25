@@ -3,103 +3,105 @@ extends layout
 block content
   h1= title
   form(method='post', action='/advancedsearch')
-    div
-      input(name='name', placeholder='Name')
-    div Rarity
-      div
-        input(type='checkbox' value='Common' name='rarity')
-        | Common
-      div
-        input(type='checkbox' value='Uncommon' name='rarity')
-        | Uncommon
-      div
-        input(type='checkbox' value='Rare' name='rarity')
-        | Rare
-      div
-        input(type='checkbox' value='Mythic Rare' name='rarity')
-        | Mythic Rare
-      div
-        input(type='checkbox' value='Special' name='rarity')
-        | Special
-    div Stats
-      div Power
+    div(class='adv-name')
+      input(name='name', placeholder='Name' class='adv-name-input')
+    div(class='container')
+      div(class='adv-rarity') Rarity
         div
-          select(name='po')
+          input(type='checkbox' value='Common' name='rarity')
+          | Common
+        div
+          input(type='checkbox' value='Uncommon' name='rarity')
+          | Uncommon
+        div
+          input(type='checkbox' value='Rare' name='rarity')
+          | Rare
+        div
+          input(type='checkbox' value='Mythic Rare' name='rarity')
+          | Mythic Rare
+        div
+          input(type='checkbox' value='Special' name='rarity')
+          | Special
+      div(class='adv-stats') Stats
+        div Power
+          div
+            select(name='po')
+              option(value='') Equal
+              option(value='gt') Greater than
+              option(value='gte') Great or equal than
+              option(value='lt') Less than
+              option(value='lte') Less or equal than
+            input(type='number' name='wer' min='0' max='99')
+        div Toughness
+          div
+            select(name='tough')
+              option(value='') Equal
+              option(value='gt') Greater than
+              option(value='gte') Great or equal than
+              option(value='lt') Less than
+              option(value='lte') Less or equal than
+            input(type='number' name='ness' min='0' max='99')
+      div(class='adv-type') Cardtype
+        div
+          input(type='checkbox' value='creature' name='type')
+          | Creature
+        div
+          input(type='checkbox' value='instant' name='type')
+          | Instant
+        div
+          input(type='checkbox' value='sorcery' name='type')
+          | Sorcery
+        div
+          input(type='checkbox' value='enchantment' name='type')
+          | Enchantment
+        div
+          input(type='checkbox' value='planeswalker' name='type')
+          | Planeswalker
+        div
+          input(type='checkbox' value='tribal' name='type')
+          | Tribal
+        div
+          input(type='checkbox' value='land' name='type')
+          | Land
+        div
+          input(type='checkbox' value='artifact' name='type')
+          | Artifact
+      div(class='adv-misc') Annað
+        div
+          input(name='subtype', placeholder='Subtype')
+        div
+          input(name='setName', placeholder='Setname')
+        div
+          input(name='artist', placeholder='Artist')
+      div(class='adv-mana') Converted mana cost
+        div
+          select(name='cm')
             option(value='') Equal
             option(value='gt') Greater than
             option(value='gte') Great or equal than
             option(value='lt') Less than
             option(value='lte') Less or equal than
-          input(type='number' name='wer' min='0' max='99')
-      div Toughness
+          input(type='number' name='cost' min='0' max='99')
+      div(class='adv-colors') Colors
         div
-          select(name='tough')
-            option(value='') Equal
-            option(value='gt') Greater than
-            option(value='gte') Great or equal than
-            option(value='lt') Less than
-            option(value='lte') Less or equal than
-          input(type='number' name='ness' min='0' max='99')
-    div Cardtype
-      div
-        input(type='checkbox' value='creature' name='type')
-        | Creature
-      div
-        input(type='checkbox' value='instant' name='type')
-        | Instant
-      div
-        input(type='checkbox' value='sorcery' name='type')
-        | Sorcery
-      div
-        input(type='checkbox' value='enchantment' name='type')
-        | Enchantment
-      div
-        input(type='checkbox' value='planeswalker' name='type')
-        | Planeswalker
-      div
-        input(type='checkbox' value='tribal' name='type')
-        | Tribal
-      div
-        input(type='checkbox' value='land' name='type')
-        | Land
-      div
-        input(type='checkbox' value='artifact' name='type')
-        | Artifact
-    div
-      input(name='subtype', placeholder='Subtype')
-    div
-      input(name='setName', placeholder='Setname')
-    div
-      input(name='artist', placeholder='Artist')
-    div Converted mana cost
-      div
-        select(name='cm')
-          option(value='') Equal
-          option(value='gt') Greater than
-          option(value='gte') Great or equal than
-          option(value='lt') Less than
-          option(value='lte') Less or equal than
-        input(type='number' name='cost' min='0' max='99')
-    div Colors
-      div
-        input(type='checkbox' value='green' name='color')
-        | Green
-      div
-        input(type='checkbox' value='red' name='color')
-        | Red
-      div
-        input(type='checkbox' value='blue' name='color')
-        | Blue
-      div
-        input(type='checkbox' value='black' name='color')
-        | Black
-      div
-        input(type='checkbox' value='white' name='color')
-        | White
-      div
-        input(type='checkbox' value='true' name='noOtherColors')
-        | No other colors
-    div
+          input(type='checkbox' value='green' name='color')
+          | Green
+        div
+          input(type='checkbox' value='red' name='color')
+          | Red
+        div
+          input(type='checkbox' value='blue' name='color')
+          | Blue
+        div
+          input(type='checkbox' value='black' name='color')
+          | Black
+        div
+          input(type='checkbox' value='white' name='color')
+          | White
+        div
+          input(type='checkbox' value='true' name='noOtherColors')
+          | No other colors
+    div(class='adv-submit')
       button(type='submit') Leita
   a(href='/advancedsearch') Ítarleg leit
   a(href='/calc') Reiknvél
