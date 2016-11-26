@@ -56,7 +56,7 @@ function manacalc(Colors,lands){
   if(landtotal !=0){
    check = lands-landtotal;
  }
-  console.log("þetta er check gildið" + check);
+  //console.log("þetta er check gildið" + check);
 
   console.log("þetta er landafjöldinn" + mana);
 

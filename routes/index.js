@@ -22,7 +22,7 @@ router.post('/card', (req, res, next) => {
 
 router.get('/calc', (req, res, next) => {
   //calculator.calculator();
-    res.render('calc', {title: 'GeirGatheringWizard', geir: 'þetta virkar'})
+    res.render('calc', {title: 'GeirGatheringWizard'})
   .catch((error) => {
     res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
   });
@@ -57,6 +57,7 @@ router.post('/calc', (req, res) => {
 
   res.render('calc', { black, blue, red, green, white, grey, checker });
 });
+
 
 router.get('/card/:nameset', (req, res) => {
   cardsearch.cardinfo(req.params.nameset)

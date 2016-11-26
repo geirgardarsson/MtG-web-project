@@ -3,31 +3,47 @@ extends layout
 block content
 
   h1= 'Reiknivél fyrir mana kostnað'
-  p(class='test2')= 'hjálpar þér að finna út nákvæmlega hversu mikið mana þú átt að hafa af hverjum lit'
-  form(method='post', action='/calc', class='test')
-    div
-      label(for='size') Fjöldi Svarta mana tákna:
-      input(type='number', name="black" min='0', placeholder=0)
-    div
-      label(for='size') Fjöldi Blárra mana tákna:
-      input(type='number', name="blue" min='0', placeholder=0)
-    div
-      label(for='size') Fjöldi Rauðra mana tákna:
-      input(type='number', name="red" min='0', placeholder=0)
-    div
-      label(for='size') Fjöldi Græna mana tákna:
-      input(type='number', name="green" min='0', placeholder=0)
-    div
-      label(for='size') Fjöldi Hvítra mana tákna:
-      input(type='number', name="white" min='0', placeholder=0)
-    div
-      label(for='size') Fjöldi Litlausa mana tákna:
-      input(type='number', name="grey" min='0', placeholder=0)
-    div(class='test2')
-      label(for='lands') fjöldi landa í stokknum þínum:
-      input(type='number', name="lands", min='1', placeholder='23', required)
-    div
-      input(type='submit', name='reikna út fjöldi landa')
+  p= 'hjálpar þér að finna út nákvæmlega hversu mikið mana þú átt að hafa af hverjum lit'
+  p Hvaða liti ertu með í stokknum þínum?
+  form(method='post', action='/calc', class='calc-stats')
+    div(class='calc-name-fit')
+      div
+        p(class='calc-p-input') Fjöldi Svarta mana tákna:
+        div(class='calc-input')
+          img(src='/images/BlackMana.jpg', class='icon')
+          input(type='number', name="black" min='0', placeholder=0, class='calc-name-input')
+      div
+        p(class='calc-p-input') Fjöldi Blárra mana tákna:
+        div(class='calc-input')
+          img(src='/images/BlackMana.jpg', class='icon')
+          input(type='number', name="blue" min='0', placeholder=0, class='calc-name-input')
+      div
+        p(class='calc-p-input') Fjöldi Rauðra mana tákna:
+        div(class='calc-input')
+          img(src='/images/BlackMana.jpg', class='icon')
+          input(type='number', name="red" min='0', placeholder=0, class='calc-name-input')
+      div
+        p(class='calc-p-input') Fjöldi Græna mana tákna:
+        div(class='calc-input')
+          img(src='/images/BlackMana.jpg', class='icon')
+          input(type='number', name="green" min='0', placeholder=0, class='calc-name-input')
+      div
+        p(class='calc-p-input') Fjöldi Hvítra mana tákna:
+        div(class='calc-input')
+          img(src='/images/BlackMana.jpg', class='icon')
+          input(type='number', name="white" min='0', placeholder=0, class='calc-name-input')
+      div
+        p(class='calc-p-input') Fjöldi Litlausa mana tákna:
+        div(class='calc-input')
+          img(src='/images/BlackMana.jpg', class='icon')
+          input(type='number', name="grey" min='0', placeholder=0, class='calc-name-input')
+      div
+        lp(class='calc-p-input') fjöldi landa í stokknum þínum:
+        div(class='calc-input')
+          img(src='/images/BlackMana.jpg', class='icon')
+          input(type='number', name="lands", min='1', placeholder='23', required)
+      div
+        input(type='submit', name='reikna út fjöldi landa')
 
     if checker !== 6
       if black
@@ -50,6 +66,6 @@ block content
         p #{grey}
     else
       p Þú slóst ekki inn neitt
-  a(href='/advancedsearch', class='test') Ítarleg leit
+  a(href='/advancedsearch') Ítarleg leit
   a(href='/calc') Reiknvél
   a(href='/') Heim

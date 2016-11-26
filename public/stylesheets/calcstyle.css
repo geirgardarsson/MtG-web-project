@@ -1,13 +1,71 @@
 .test {
-  display flex;
+  display: flex;
   flex-flow: column-reverse wrap;
   font-size: 30px;
   color: blue;
 }
 
 .test2 {
-  display flex;
+  display: flex;
   flex-flow: column-reverse wrap;
   font-size: 30px;
   color: red;
+}
+
+.calccolor {
+  margin-left: 20px;
+}
+
+.calccolorcontainer {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 25px;
+  justify-content: space-around;
+  justify-content: flex-start;
+}
+
+.calc-name-fit {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.calc-name-input {
+  width: 10%;
+  line-height: 32px;
+  font-size: 26px;
+  font-family: 'Bree Serif', serif;
+  padding: 5px;
+}
+
+.calc-p-input {
+  font-size: 20px;
+  text-align: center;
+}
+
+.icon {
+  height: 10%;
+  width: 10%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+.calc-input-info {}
+
+.calc-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.calc-stats {
+  display: flex;
+  align-self: center;
+  padding: 0.5%;
+  background-color: gray;
+  opacity: 0.9;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  width: 80%;
 }
