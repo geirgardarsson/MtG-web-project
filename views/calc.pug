@@ -1,8 +1,14 @@
 extends layout
 
 block content
-
-  h1= 'Reiknivél fyrir mana kostnað'
+  ul(class='topnav')
+    li(class='topnav-li')
+      a(class='topnav-a' href='/') Heim
+    li(class='topnav-li')
+      a(class='topnav-a' href='/advancedsearch') Ítarleg leit
+    li(class='topnav-li')
+      a(class='topnav-a-active' href='/calc') Reiknivél
+  h1(class='calc-top')= 'Reiknivél fyrir mana kostnað'
   p= 'hjálpar þér að finna út nákvæmlega hversu mikið mana þú átt að hafa af hverjum lit'
   p Hvaða liti ertu með í stokknum þínum?
   form(method='post', action='/calc', class='calc-stats')

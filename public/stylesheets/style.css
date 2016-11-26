@@ -315,3 +315,7 @@ button:hover {
   font-size: 17px;
   cursor: default;
 }
+
+.calc-top {
+  margin-top: 5%;
+}
