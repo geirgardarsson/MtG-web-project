@@ -32,6 +32,10 @@ function manacalc(Colors,lands){
     if (Colors[i] !== '') {
       if (Colors[i] !== undefined){
         mana[i]=Math.round(((Colors[i]/total)*land));
+        if(mana[i]==0){
+          console.log('geir fann villuna');
+          mana[i]=mana[i]+1;
+        }
           console.log("útkoman:"+ Math.round(((Colors[i]/total)*land)));
       }
     }
@@ -60,10 +64,6 @@ function manacalc(Colors,lands){
 
   console.log("þetta er landafjöldinn" + mana);
 
-  /*if(check==0){
-    console.log(mana);
-    //return mana;
-}*/
   //ef fjöldinn er minni en fjöldi landa
   //þá bæta við minnsta gildinu þar til check er 0
   if(check > 0){
@@ -99,12 +99,15 @@ function manacalc(Colors,lands){
   }
   var mincount=0;
 
- let maxpointer=maxpoint(mana);
+ /*let maxpointer=maxpoint(mana);
+ console.log('geir fann villu');
+ console.log('mana er núna:' + mana);
   //Athugar hvort að öll gildi ná minumum
   for(var i=0;i<mana.length;i++){
-    if (mana[i] !== '') {
-      if (mana[i] !== undefined) {
-        while(mana[i]<minlands && mana[i] !=0){
+    //if (mana[i] !== '') {
+      //if (mana[i] !== undefined) {
+      console.log('geir athugar villuna me' + mana[i]);
+        while(mana[i]<minlands && mana[i] !=''){
           console.log("mana[i] fyrir:" + mana[i]);
           console.log("mana[max] fyrir:" + mana[maxpointer]);
           mana[maxpointer]=mana[maxpointer]-1;
@@ -113,9 +116,9 @@ function manacalc(Colors,lands){
           console.log("mana[max] eftir:" + mana[maxpointer]);
           maxpointer=maxpoint(mana);
         }
-      }
-    }
-  }
+    //7  }
+  //7  }
+}*/
   console.log("geir komst á leiðarenda");
   return mana;
 }
