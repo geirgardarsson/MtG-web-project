@@ -86,6 +86,7 @@ router.post('/advancedsearch', (req, res) => {
   parameters[7] = req.body.artist;
   parameters[8] = req.body.cm + req.body.cost;
   parameters[9] = req.body.color;
+  parameters[10] = req.body.text;
 
   let linkelems = cardsearch.advanced(parameters);
   let link = cardsearch.advancedlink(linkelems, req.body.noOtherColors);

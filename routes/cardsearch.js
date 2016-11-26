@@ -73,6 +73,9 @@ function advanced(parameters) {
           case 9:
             parameters[i] = 'colors=' + parameters[i];
             break;
+          case 10:
+            parameters[i] = 'text=' + parameters[i];
+            break;
         }
         linkelems[x] = parameters[i];
         x += 1;

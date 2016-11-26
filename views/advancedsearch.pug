@@ -4,7 +4,7 @@ block content
   h1= title
   form(method='post', action='/advancedsearch')
     div(class='adv-name')
-      input(name='name', placeholder='Name' class='adv-name-input')
+      input(name='name', placeholder='Name' class='adv-name-input' )
     div(class='container')
       div(class='adv-rarity') Rarity
         div
@@ -71,6 +71,8 @@ block content
           input(name='subtype', placeholder='Subtype')
         div
           input(name='setName', placeholder='Setname')
+        div
+          input(name='text', placeholder='Keywords')
         div
           input(name='artist', placeholder='Artist')
       div(class='adv-mana') Converted mana cost
