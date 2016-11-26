@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Bree Serif', serif;
   background-image: url('/images/serraangel.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -55,6 +55,23 @@ li {
   opacity: 0.9;
   padding: 0.5%;
   border-radius: 10px;
+  width: 380px;
+}
+
+.adv-submit-button {
+  cursor: pointer;
+  background-color: #111;
+  border: none;
+  color: #ddd;
+  border-radius: 10px;
+  padding: 10px 175px;
+  font-weight: bold;
+  font-family: 'Bree Serif', serif;
+}
+
+button:hover {
+  color: #111;
+  background-color: #ddd;
 }
 
 .adv-name {
@@ -63,13 +80,21 @@ li {
   padding: 0.5%;
   background-color: gray;
   opacity: 0.9;
-  height: 0%;
+  width: 380px;
   border-radius: 10px;
   margin-bottom: 3%;
 }
 
 .adv-name-input {
-  width: 30%;
+  width: 100%;
+  line-height: 32px;
+  font-size: 26px;
+  font-family: 'Bree Serif', serif;
+}
+
+.adv-name-fit {
+  display: flex;
+  justify-content: center;
 }
 
 .adv-rarity {
@@ -77,6 +102,7 @@ li {
   background-color: gray;
   opacity: 0.9;
   border-radius: 10px;
+  margin-bottom: 1%;
 }
 
 .adv-stats {
@@ -84,6 +110,7 @@ li {
   background-color: gray;
   opacity: 0.9;
   border-radius: 10px;
+  margin-bottom: 1%;
 }
 
 .adv-type {
@@ -91,6 +118,7 @@ li {
   background-color: gray;
   opacity: 0.9;
   border-radius: 10px;
+  margin-bottom: 1%;
 }
 
 .adv-mana {
@@ -98,6 +126,7 @@ li {
   background-color: gray;
   opacity: 0.9;
   border-radius: 10px;
+  margin-bottom: 1%;
 }
 
 .adv-misc {
@@ -107,7 +136,7 @@ li {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin-bottom: 1%;
 }
 
 .adv-colors {
@@ -115,6 +144,7 @@ li {
   background-color: gray;
   opacity: 0.9;
   border-radius: 10px;
+  margin-bottom: 1%;
 }
 
 .white {
@@ -178,5 +208,4 @@ li {
   margin: 0px;
   font-size: 17px;
   cursor: default;
-  margin-bottom: -5%;
 }

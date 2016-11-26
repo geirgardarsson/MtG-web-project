@@ -1,10 +1,11 @@
 extends layout
 
 block content
-  h1= title
+  ul(class='topnav')
   form(method='post', action='/advancedsearch')
-    div(class='adv-name')
-      input(name='name', placeholder='Name' class='adv-name-input' )
+    div(class='adv-name-fit')
+      div(class='adv-name')
+        input(name='name', placeholder='Name' class='adv-name-input' )
     div(class='container')
       div(class='adv-rarity')
         p(class='adv-header') Rarity
@@ -28,7 +29,8 @@ block content
           p(class='checkboxText') Special
           input(type='checkbox' value='Special' name='rarity' id='checkboxTwoSpecial' class='hide')
           label(for='checkboxTwoSpecial')
-      div(class='adv-stats') Stats
+      div(class='adv-stats')
+        p(class='adv-header') Stats
         div Power
           div
             select(name='po')
@@ -81,16 +83,8 @@ block content
           p(class='checkboxText') Artifact
           input(type='checkbox' value='artifact' name='type' id='checkboxTwoAtrifact' class='hide')
           label(for='checkboxTwoAtrifact')
-      div(class='adv-misc') Annað
-        div
-          input(name='subtype', placeholder='Subtype')
-        div
-          input(name='setName', placeholder='Setname')
-        div
-          input(name='text', placeholder='Keywords')
-        div
-          input(name='artist', placeholder='Artist')
-      div(class='adv-mana') Converted mana cost
+      div(class='adv-mana')
+        p(class='adv-header') Converted mana cost
         div
           select(name='cm')
             option(value='') Equal
@@ -99,27 +93,45 @@ block content
             option(value='lt') Less than
             option(value='lte') Less or equal than
           input(type='number' name='cost' min='0' max='99')
-      div(class='adv-colors') Colors
+      div(class='adv-colors')
+        p(class='adv-header') Colors
+        div(class='checkboxTwo')
+          p(class='checkboxText') Green
+          input(type='checkbox' value='green' name='color' id='checkboxTwoGreen' class='hide')
+          label(for='checkboxTwoGreen')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Red
+          input(type='checkbox' value='red' name='color' id='checkboxTwoRed' class='hide')
+          label(for='checkboxTwoRed')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Blue
+          input(type='checkbox' value='blue' name='color' id='checkboxTwoBlue' class='hide')
+          label(for='checkboxTwoBlue')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Black
+          input(type='checkbox' value='black' name='color' id='checkboxTwoBlack' class='hide')
+          label(for='checkboxTwoBlack')
+        div(class='checkboxTwo')
+          p(class='checkboxText') White
+          input(type='checkbox' value='white' name='color' id='checkboxTwoWhite' class='hide')
+          label(for='checkboxTwoWhite')
+        div(class='checkboxTwo')
+          p(class='checkboxText') No other colors
+          input(type='checkbox' value='true' name='noOtherColors' id='checkboxTwoNoc' class='hide')
+          label(for='checkboxTwoNoc')
+      div(class='adv-misc')
+        p(class='adv-header') Annað
         div
-          input(type='checkbox' value='green' name='color')
-          | Green
+          input(name='subtype', placeholder='Subtype')
         div
-          input(type='checkbox' value='red' name='color')
-          | Red
+          input(name='setName', placeholder='Setname')
         div
-          input(type='checkbox' value='blue' name='color')
-          | Blue
+          input(name='text', placeholder='Keywords')
         div
-          input(type='checkbox' value='black' name='color')
-          | Black
-        div(class='white')
-          input(type='checkbox' value='white' name='color')
-          | White
-        div
-          input(type='checkbox' value='true' name='noOtherColors')
-          | No other colors
-    div(class='adv-submit')
-      button(type='submit') Leita
+          input(name='artist', placeholder='Artist')
+    div(class='adv-name-fit')
+      div(class='adv-submit')
+        button(type='submit' class='adv-submit-button') LEITA
   a(href='/advancedsearch') Ítarleg leit
   a(href='/calc') Reiknvél
   a(href='/') Heim
