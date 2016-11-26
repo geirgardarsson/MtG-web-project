@@ -3,8 +3,10 @@ extends layout
 block content
   ul(class='topnav')
     li(class='topnav-li')
-      a(class='topnav-li' href='/advancedsearch') Ítarleg leit
       a(class='topnav-li' href='/') Heim
+    li(class='topnav-li')
+      a(class='topnav-li' href='/advancedsearch') Ítarleg leit
+    li(class='topnav-li')
       a(class='topnav-li' href='/calc') Reiknivél
   form(method='post', action='/advancedsearch' class='adv-form')
     div(class='adv-name-fit')
@@ -37,7 +39,7 @@ block content
         p(class='adv-header') Stats
         div Power
           div
-            select(name='po')
+            select(name='po' class='adv-font')
               option(value='') Equal
               option(value='gt') Greater than
               option(value='gte') Great or equal than
@@ -46,7 +48,7 @@ block content
             input(type='number' name='wer' min='0' max='99')
         div Toughness
           div
-            select(name='tough')
+            select(name='tough' class='adv-font')
               option(value='') Equal
               option(value='gt') Greater than
               option(value='gte') Great or equal than
@@ -90,7 +92,7 @@ block content
       div(class='adv-mana')
         p(class='adv-header') Converted mana cost
         div
-          select(name='cm')
+          select(name='cm' class='adv-font')
             option(value='') Equal
             option(value='gt') Greater than
             option(value='gte') Great or equal than
@@ -126,13 +128,13 @@ block content
       div(class='adv-misc')
         p(class='adv-header') Annað
         div
-          input(name='subtype', placeholder='Subtype')
+          input(name='subtype', placeholder='Subtype' class='adv-font')
         div
-          input(name='setName', placeholder='Setname')
+          input(name='setName', placeholder='Setname' class='adv-font')
         div
-          input(name='text', placeholder='Keywords')
+          input(name='text', placeholder='Keywords' class='adv-font')
         div
-          input(name='artist', placeholder='Artist')
+          input(name='artist', placeholder='Artist' class='adv-font')
     div(class='adv-name-fit')
       div(class='adv-submit')
         button(type='submit' class='adv-submit-button') LEITA

@@ -59,6 +59,11 @@ a {
   float: left;
 }
 
+.topnav-li:hover {
+  background-color: #ddd;
+  color: #111;
+}
+
 li {
   list-style-type: none;
   margin-bottom: -0.3%;
@@ -142,6 +147,10 @@ button:hover {
   opacity: 0.9;
   border-radius: 10px;
   margin-bottom: 1%;
+}
+
+.adv-font {
+  font-family: 'Bree Serif', serif;
 }
 
 .adv-type {
