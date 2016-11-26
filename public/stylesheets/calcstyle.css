@@ -1,8 +1,31 @@
-.test {
-  display: flex;
-  flex-flow: column-reverse wrap;
-  font-size: 30px;
-  color: blue;
+.blactext {
+  color: #111;
+  font-style: italic;
+}
+
+.bluetext {
+  color: #a3d3ea;
+  font-style: italic;
+}
+
+.redtext {
+  color: #eba58c;
+  font-style: italic;
+}
+
+.greentext {
+  color: #92c6a4;
+  font-style: italic;
+}
+
+.whitetext {
+  color: #efedcb;
+  font-style: italic;
+}
+
+.greytext {
+  color: #bfb6b6;
+  font-style: italic;
 }
 
 .test2 {
@@ -32,7 +55,7 @@
 }
 
 .calc-name-input {
-  width: 10%;
+  width: 20%;
   line-height: 32px;
   font-size: 26px;
   font-family: 'Bree Serif', serif;
@@ -51,14 +74,19 @@
   margin-top: 2%;
 }
 
+.icon-result {
+  height: 30%;
+  width: 21.68%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
 .greyicon {
   height: 10%;
   width: 10%;
   margin-right: 5%;
   margin-top: 2%;
 }
-
-.calc-input-info {}
 
 .calc-input {
   display: flex;
@@ -76,4 +104,11 @@
   margin-bottom: 1%;
   width: 80%;
   padding: 50px;
+}
+
+.calc-outcome-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }

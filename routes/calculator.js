@@ -11,6 +11,7 @@ function manacalc(Colors,lands){
       }
     }
   }
+  console.log('þetta eru gildin sem voru slegin inn:' + Colors);
   let numofcolors = 0;
   let total=0;
   //reiknar út heildar manatákna og fjölda lita
@@ -23,9 +24,10 @@ function manacalc(Colors,lands){
     }
   }
   console.log("numofcolors er:" + numofcolors);
-  let mana = [0,0,0,0,0,0];
+  let mana = [0,0,0,0,0,0,0]; //bætt við auka 0 í test
   console.log("total er:" + total);
   console.log("lands er:" + land);
+
   //reiknar út hversu mikið af landi eiga að vera af hverjum lit og skilar í
   //fylkinu mana
   for(let i=0;i<6;i++){
@@ -33,7 +35,6 @@ function manacalc(Colors,lands){
       if (Colors[i] !== undefined){
         mana[i]=Math.round(((Colors[i]/total)*land));
         if(mana[i]==0){
-          console.log('geir fann villuna');
           mana[i]=mana[i]+1;
         }
           console.log("útkoman:"+ Math.round(((Colors[i]/total)*land)));
@@ -43,7 +44,8 @@ function manacalc(Colors,lands){
 
 
   let landtotal=0;
-  let minlands= ((Math.ceil(land/numofcolors))/2);
+  //reiknar út minnsta fjölda landa sem hver litur þarf að hafa
+  let minlands= (Math.floor((Math.ceil(land/numofcolors))/2));
   console.log("minlands er: "+ minlands);
 //heildarfjöldi landa sem á að skila
   for(let i=0;i<6;i++){
@@ -53,17 +55,17 @@ function manacalc(Colors,lands){
       }
     }
   }
-
+  //totla fjöldi landa sem er gert ráð fyrir
   console.log("þetta er landtotal:" + landtotal);
   let check=0;
 //athugar hvort að fjöldi stemmi við fjölda landa
   if(landtotal !=0){
    check = lands-landtotal;
  }
-  //console.log("þetta er check gildið" + check);
 
   console.log("þetta er landafjöldinn" + mana);
-
+/*
+//ÞETTA ER GAMLA CHECK SEM BÆITR EÐA DREGUR FRÁ FRÁ FYRSTA STAKI
   //ef fjöldinn er minni en fjöldi landa
   //þá bæta við minnsta gildinu þar til check er 0
   if(check > 0){
@@ -95,15 +97,16 @@ function manacalc(Colors,lands){
       console.log("geir athugar stöðuna nokkrum sinnum");
     }
     console.log("check<0 mana: " + mana);
-    //return mana;
   }
+  */
   var mincount=0;
 
- /*let maxpointer=maxpoint(mana);
+ let maxpointer=maxpoint(mana);
  console.log('geir fann villu');
  console.log('mana er núna:' + mana);
   //Athugar hvort að öll gildi ná minumum
   for(var i=0;i<mana.length;i++){
+    //þarf mögulega að hafa þessi gildi
     //if (mana[i] !== '') {
       //if (mana[i] !== undefined) {
       console.log('geir athugar villuna me' + mana[i]);
@@ -118,13 +121,12 @@ function manacalc(Colors,lands){
         }
     //7  }
   //7  }
-}*/
+}
   console.log("geir komst á leiðarenda");
   return mana;
 }
 
-        //lykkja sem dregur frá hæsta gildinu
-        //lyykja sem bætir við minnsta gildinu
+//finnur staðsetningu hæstagildis í fylki og skilar pointernum
 function maxpoint(mana){
   let max=0;
   let maxpointer;
@@ -137,6 +139,8 @@ function maxpoint(mana){
   return maxpointer;
 }
 
+
+//athugar hvort að gildi í fylki sé tómt og skilar fjölda af gildum sem eru tóm
 function checker(colors){
   let check=0;
   for(let i = 0;i<colors.length; i++ ){
@@ -146,35 +150,7 @@ function checker(colors){
   }
   return check;
 }
-// Callback that creates and populates a data table,
-// instantiates the pie chart, passes in the data and
-// draws it.
-/*google.charts.load('current', {'packages':['corechart']})
-google.charts.setOnLoadCallback(drawChart)
-function drawChart() {
 
-  // Create the data table.
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
-  data.addRows([
-    ['Mushrooms', 3],
-    ['Onions', 1],
-    ['Olives', 1],
-    ['Zucchini', 1],
-    ['Pepperoni', 2]
-  ]);
-
-  // Set chart options
-  var options = {'title':'How Much Pizza I Ate Last Night',
-                 'width':400,
-                 'height':300};
-
-  // Instantiate and draw our chart, passing in some options.
-  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-  chart.draw(data, options);
-  }
-*/
 module.exports = {
   manacalc,
   checker,
