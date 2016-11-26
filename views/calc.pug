@@ -15,32 +15,31 @@ block content
       div
         p(class='calc-p-input') Fjöldi Blárra mana tákna:
         div(class='calc-input')
-          img(src='/images/BlackMana.jpg', class='icon')
+          img(src='/images/BlueMana.jpg', class='icon')
           input(type='number', name="blue" min='0', placeholder=0, class='calc-name-input')
       div
         p(class='calc-p-input') Fjöldi Rauðra mana tákna:
         div(class='calc-input')
-          img(src='/images/BlackMana.jpg', class='icon')
+          img(src='/images/RedMana.jpg', class='icon')
           input(type='number', name="red" min='0', placeholder=0, class='calc-name-input')
       div
         p(class='calc-p-input') Fjöldi Græna mana tákna:
         div(class='calc-input')
-          img(src='/images/BlackMana.jpg', class='icon')
+          img(src='/images/GreenMana.jpg', class='icon')
           input(type='number', name="green" min='0', placeholder=0, class='calc-name-input')
       div
         p(class='calc-p-input') Fjöldi Hvítra mana tákna:
         div(class='calc-input')
-          img(src='/images/BlackMana.jpg', class='icon')
+          img(src='/images/WhiteMana.jpg', class='icon')
           input(type='number', name="white" min='0', placeholder=0, class='calc-name-input')
       div
         p(class='calc-p-input') Fjöldi Litlausa mana tákna:
         div(class='calc-input')
-          img(src='/images/BlackMana.jpg', class='icon')
+          img(src='/images/GreyMana.jpg', class='greyicon')
           input(type='number', name="grey" min='0', placeholder=0, class='calc-name-input')
       div
-        lp(class='calc-p-input') fjöldi landa í stokknum þínum:
+        p(class='calc-p-input') fjöldi landa í stokknum þínum:
         div(class='calc-input')
-          img(src='/images/BlackMana.jpg', class='icon')
           input(type='number', name="lands", min='1', placeholder='23', required)
       div
         input(type='submit', name='reikna út fjöldi landa')
@@ -48,21 +47,27 @@ block content
     if checker !== 6
       if black
         p Fjöldi Svartra landa:
+        img(src='/images/BlackMana.jpg', class='icon')
         p #{black}
       if blue
         p Fjöldi Blárra landa:
+        img(src='/images/BlackMana.jpg', class='icon')
         p #{blue}
       if red
         p Fjöldi Rauðra landa:
+        img(src='/images/BlackMana.jpg', class='icon')
         p #{red}
       if green
         p Fjöldi Grænna landa:
+        img(src='/images/BlackMana.jpg', class='icon')
         p #{green}
       if white
         p Fjöldi Hvíta landa:
+        img(src='/images/BlackMana.jpg', class='icon')
         p #{white}
       if grey
         p Fjöldi Grára landa:
+        img(src='/images/BlackMana.jpg', class='icon')
         p #{grey}
     else
       p Þú slóst ekki inn neitt
