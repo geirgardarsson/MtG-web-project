@@ -1,5 +1,5 @@
-
-
+/////////script(type="text/javascript", src="https://www.gstatic.com/charts/loader.js")
+//MUNDU AÐ TAKA TIL Í ÞESSUM KÓÐA!!!!
 function manacalc(Colors,lands){
   let land=(parseInt(lands));
   console.log('lands er' + lands);
@@ -86,18 +86,9 @@ function manacalc(Colors,lands){
   }
   //ef fjöldinn er stærri en fjöldi landa
   //þá draga frá hæsta gildinu þar til check er 0
+  //HÉRNA GETUR ÞÚ LAGAÐ VILLUNA EF ALLIR ERU MEÐ SAMA FJÖLDA!!!!!!!!!!!!!
   if(check < 0){
     while(check !=0){
-      //lykkja sem dregur frá hæsta gildinu
-      //lyykja sem bætir við minnsta gildinu
-    /*  let max=0;
-      let maxpointer;
-      for(let i=0;i<mana.length;i++){
-        if(mana[i]>max){
-          max=mana[i];
-          maxpointer=i;
-        }
-      }*/
       let maxpointer=maxpoint(mana);
       mana[maxpointer]=mana[maxpointer]-1;
       check++;
@@ -121,7 +112,6 @@ function manacalc(Colors,lands){
           console.log("mana[i] eftir" + mana[i]);
           console.log("mana[max] eftir:" + mana[maxpointer]);
           maxpointer=maxpoint(mana);
-          //console.log("gerigatherungwizar");
         }
       }
     }
@@ -153,8 +143,35 @@ function checker(colors){
   }
   return check;
 }
+// Callback that creates and populates a data table,
+// instantiates the pie chart, passes in the data and
+// draws it.
+/*google.charts.load('current', {'packages':['corechart']})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
 
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Topping');
+  data.addColumn('number', 'Slices');
+  data.addRows([
+    ['Mushrooms', 3],
+    ['Onions', 1],
+    ['Olives', 1],
+    ['Zucchini', 1],
+    ['Pepperoni', 2]
+  ]);
 
+  // Set chart options
+  var options = {'title':'How Much Pizza I Ate Last Night',
+                 'width':400,
+                 'height':300};
+
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+  }
+*/
 module.exports = {
   manacalc,
   checker,
