@@ -3,11 +3,11 @@ extends layout
 block content
   ul(class='topnav')
     li(class='topnav-li')
-      a(class='topnav-li' href='/') Heim
+      a(class='topnav-a' href='/') Heim
     li(class='topnav-li')
-      a(class='topnav-li' href='/advancedsearch') Ítarleg leit
+      a(class='topnav-a-active' href='/advancedsearch') Ítarleg leit
     li(class='topnav-li')
-      a(class='topnav-li' href='/calc') Reiknivél
+      a(class='topnav-a' href='/calc') Reiknivél
   form(method='post', action='/advancedsearch' class='adv-form')
     div(class='adv-name-fit')
       div(class='adv-name')
@@ -122,7 +122,7 @@ block content
           input(type='checkbox' value='white' name='color' id='checkboxTwoWhite' class='hide')
           label(for='checkboxTwoWhite')
         div(class='checkboxTwo')
-          p(class='checkboxText') No other colors
+          p(class='nocText') No other colors
           input(type='checkbox' value='true' name='noOtherColors' id='checkboxTwoNoc' class='hide')
           label(for='checkboxTwoNoc')
       div(class='adv-misc')
@@ -138,6 +138,3 @@ block content
     div(class='adv-name-fit')
       div(class='adv-submit')
         button(type='submit' class='adv-submit-button') LEITA
-  a(href='/advancedsearch') Ítarleg leit
-  a(href='/calc') Reiknvél
-  a(href='/') Heim

@@ -1,10 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Veldu spil
-  form(method='post', action='/card')
-    input(name='text', placeholder='t.d. Werebear')
-    button(type='submit') Leita
-  a(href='/advancedsearch') Ítarleg leit
-  a(href='/calc') Reiknivél
+  ul(class='topnav')
+    li(class='topnav-li')
+      a(class='topnav-a-active' href='/') Heim
+    li(class='topnav-li')
+      a(class='topnav-a' href='/advancedsearch') Ítarleg leit
+    li(class='topnav-li')
+      a(class='topnav-a' href='/calc') Reiknivél
+  div(class='home-container')
+    h1(class='home-header') Veldu spil
+    form(method='post', action='/card' class='home-form')
+      input(name='text', placeholder='t.d. Werebear' class='adv-name-input')
+      button(type='submit' class='home-submit') LEITA
