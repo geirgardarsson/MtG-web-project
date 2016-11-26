@@ -2,7 +2,11 @@ extends layout
 
 block content
   ul(class='topnav')
-  form(method='post', action='/advancedsearch')
+    li(class='topnav-li')
+      a(class='topnav-li' href='/advancedsearch') Ítarleg leit
+      a(class='topnav-li' href='/') Heim
+      a(class='topnav-li' href='/calc') Reiknivél
+  form(method='post', action='/advancedsearch' class='adv-form')
     div(class='adv-name-fit')
       div(class='adv-name')
         input(name='name', placeholder='Name' class='adv-name-input' )

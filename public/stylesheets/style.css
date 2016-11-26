@@ -1,5 +1,6 @@
 body {
-  padding: 50px;
+  padding: 0;
+  margin: 0;
   font: 14px 'Bree Serif', serif;
   background-image: url('/images/serraangel.jpg');
   background-repeat: no-repeat;
@@ -26,6 +27,36 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 3%;
+}
+
+.adv-form {
+  padding: 3%;
+  margin-top: 3%;
+}
+
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.topnav-active {
+  background-color: gray;
+}
+
+.topnav-li {
+  display: block;
+  color: #ddd;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
 }
 
 li {
