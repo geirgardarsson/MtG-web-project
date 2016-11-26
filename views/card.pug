@@ -1,7 +1,16 @@
 extends layout
 
 block content
-  h1= title
+  ul(class='topnav')
+    li(class='topnav-li')
+      a(class='topnav-a' href='/') Heim
+    li(class='topnav-li')
+      a(class='topnav-a' href='/advancedsearch') Ítarleg leit
+    li(class='topnav-li')
+      a(class='topnav-a' href='/calc') Reiknivél
+    li(class='topnav-li')
+      a(class='topnav-a-active') Spilin þín
+  h1(class='calc-top')= title
   p Er þetta spilið þitt?
   p Þú slóst inn: #{yourCard}
   ul(class='card-container')
