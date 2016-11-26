@@ -64,6 +64,38 @@ function manacalc(Colors,lands){
  }
 
   console.log("þetta er landafjöldinn" + mana);
+
+  while(check !=0){
+    //fjöldinn er minni en fjöldi landa
+    if(check>0){
+      mana[6]=mana[6]+1;
+      check=check-1;
+      console.log('check>0 GeirGatheringWizard');
+      //villa!!
+    }
+    //fjöldinn er stærri en fjöldi landa
+    else if(check<0){
+      console.log('check<0 GeirGatheringWizard');
+      let cnt=0;
+      //þarf að minnka öll gildi um 1
+      for(var i=0;i<mana.length-1;i++){
+        if(mana[i]!=''){
+          console.log('geir í draumalandi');
+          mana[i]=mana[i]-1;
+          cnt=cnt+1;
+
+        }
+      }
+
+      mana[6]=mana[6]+cnt-1;
+      check=0;
+    }
+  }
+
+  //sértilfelli, aðeins notað ef notandi er vitleysingur :)
+  if(mana[6]>land){
+    mana[6]=land;
+  }
 /*
 //ÞETTA ER GAMLA CHECK SEM BÆITR EÐA DREGUR FRÁ FRÁ FYRSTA STAKI
   //ef fjöldinn er minni en fjöldi landa
@@ -105,7 +137,7 @@ function manacalc(Colors,lands){
  console.log('geir fann villu');
  console.log('mana er núna:' + mana);
   //Athugar hvort að öll gildi ná minumum
-  for(var i=0;i<mana.length;i++){
+  for(var i=0;i<mana.length-1;i++){
     //þarf mögulega að hafa þessi gildi
     //if (mana[i] !== '') {
       //if (mana[i] !== undefined) {
@@ -130,7 +162,7 @@ function manacalc(Colors,lands){
 function maxpoint(mana){
   let max=0;
   let maxpointer;
-  for(let i=0;i<mana.length;i++){
+  for(let i=0;i<mana.length-1;i++){
     if(mana[i]>max){
       max=mana[i];
       maxpointer=i;

@@ -124,8 +124,12 @@ block content
             div(class='calc-input')
               img(src='/images/GreyMana.jpg', class='icon-result')
               p #{grey}
+        if extra
+          div
+            p(class='calc-p-input')
+              |Þú ræður hvaða lit
+            div(class='calc-input')
+              img(src='/images/GreyMana.jpg', class='icon-result')
+              p #{extra}
     else
       p Þú slóst ekki inn neitt
-  a(href='/advancedsearch') Ítarleg leit
-  a(href='/calc') Reiknvél
-  a(href='/') Heim

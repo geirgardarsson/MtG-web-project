@@ -84,6 +84,17 @@ function advanced(parameters) {
   }
   return linkelems;
 }
+//splittar stök í fylki á sama
+function getsearchedfor(linkelems){
+  for(let i=0;i<linkelems.length;i++){
+    let display = linkelems[i].split('=');
+    console.log("display er:" + display);
+    linkelems[i] = display[1];
+    console.log('linkelems er: ' + linkelems);
+  }
+  return linkelems;
+
+}
 
 function advancedlink(linkelems, noc) {
   console.log('linkelms og noc: ', linkelems, noc);
@@ -110,4 +121,5 @@ module.exports = {
   advanced,
   advancedlink,
   getlink,
+  getsearchedfor,
 }

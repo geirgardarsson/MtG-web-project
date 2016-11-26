@@ -37,7 +37,8 @@ router.post('/calc', (req, res) => {
   let green = req.body.green;
   let white = req.body.white;
   let grey = req.body.grey;
-  let colors = [black,blue,red,green,white, grey,]
+  let extra;
+  let colors = [black,blue,red,green,white, grey, extra];
   let calculated = calculator.manacalc(colors, lands);
   let checker= calculator.checker(colors);
 
@@ -47,15 +48,17 @@ router.post('/calc', (req, res) => {
   green = calculated[3];
   white = calculated[4];
   grey = calculated[5];
+  extra = calculated[6];
   console.log("black:" + black);
   console.log("blue" + blue);
   console.log("red" + red);
   console.log("green" + green);
   console.log("white" +white);
   console.log("grey" +grey);
+  console.log("extra" +extra);
   console.log("checker:" + checker);
 
-  res.render('calc', { black, blue, red, green, white, grey, checker });
+  res.render('calc', { black, blue, red, green, white, grey, extra, checker });
 });
 
 
@@ -90,11 +93,14 @@ router.post('/advancedsearch', (req, res) => {
   parameters[10] = req.body.text;
 
   let linkelems = cardsearch.advanced(parameters);
+  //console.log(linkelems);
   let link = cardsearch.advancedlink(linkelems, req.body.noOtherColors);
-  console.log('link: ', link);
+  let info = cardsearch.getsearchedfor(linkelems);
+  //console.log(info);
+  //console.log('link: ', link);
   cardsearch.getlink(link)
   .then((result) => {
-    res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: link });
+    res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: info });
   })
   .catch((error) => {
     res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
