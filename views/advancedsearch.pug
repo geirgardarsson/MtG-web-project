@@ -6,22 +6,28 @@ block content
     div(class='adv-name')
       input(name='name', placeholder='Name' class='adv-name-input' )
     div(class='container')
-      div(class='adv-rarity') Rarity
-        div
-          input(type='checkbox' value='Common' name='rarity')
-          | Common
-        div
-          input(type='checkbox' value='Uncommon' name='rarity')
-          | Uncommon
-        div
-          input(type='checkbox' value='Rare' name='rarity')
-          | Rare
-        div
-          input(type='checkbox' value='Mythic Rare' name='rarity')
-          | Mythic Rare
-        div
-          input(type='checkbox' value='Special' name='rarity')
-          | Special
+      div(class='adv-rarity')
+        p(class='adv-header') Rarity
+        div(class='checkboxTwo')
+          p(class='checkboxText') Common
+          input(type='checkbox' value='Common' name='rarity' id='checkboxTwoCommon' class='hide')
+          label(for='checkboxTwoCommon')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Uncommon
+          input(type='checkbox' value='Uncommon' name='rarity' id='checkboxTwoUncommon' class='hide')
+          label(for='checkboxTwoUncommon')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Rare
+          input(type='checkbox' value='Rare' name='rarity' id='checkboxTwoRare' class='hide')
+          label(for='checkboxTwoRare')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Mythic Rare
+          input(type='checkbox' value='Mythic Rare' name='rarity' id='checkboxTwoMythic' class='hide')
+          label(for='checkboxTwoMythic')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Special
+          input(type='checkbox' value='Special' name='rarity' id='checkboxTwoSpecial' class='hide')
+          label(for='checkboxTwoSpecial')
       div(class='adv-stats') Stats
         div Power
           div
@@ -41,31 +47,40 @@ block content
               option(value='lt') Less than
               option(value='lte') Less or equal than
             input(type='number' name='ness' min='0' max='99')
-      div(class='adv-type') Cardtype
-        div
-          input(type='checkbox' value='creature' name='type')
-          | Creature
-        div
-          input(type='checkbox' value='instant' name='type')
-          | Instant
-        div
-          input(type='checkbox' value='sorcery' name='type')
-          | Sorcery
-        div
-          input(type='checkbox' value='enchantment' name='type')
-          | Enchantment
-        div
-          input(type='checkbox' value='planeswalker' name='type')
-          | Planeswalker
-        div
-          input(type='checkbox' value='tribal' name='type')
-          | Tribal
-        div
-          input(type='checkbox' value='land' name='type')
-          | Land
-        div
-          input(type='checkbox' value='artifact' name='type')
-          | Artifact
+      div(class='adv-type')
+        p(class='adv-header') Cardtype
+        div(class='checkboxTwo')
+          p(class='checkboxText') Creature
+          input(type='checkbox' value='creature' name='type' id='checkboxTwoCreature' class='hide')
+          label(for='checkboxTwoCreature')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Instant
+          input(type='checkbox' value='instant' name='type' id='checkboxTwoInstant' class='hide')
+          label(for='checkboxTwoInstant')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Sorcery
+          input(type='checkbox' value='sorcery' name='type' id='checkboxTwoSorcery' class='hide')
+          label(for='checkboxTwoSorcery')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Enchantment
+          input(type='checkbox' value='enchantment' name='type' id='checkboxTwoEnchantment' class='hide')
+          label(for='checkboxTwoEnchantment')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Planeswalker
+          input(type='checkbox' value='planeswalker' name='type' id='checkboxTwoPlaneswalker' class='hide')
+          label(for='checkboxTwoPlaneswalker')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Tribal
+          input(type='checkbox' value='tribal' name='type' id='checkboxTwoTribal' class='hide')
+          label(for='checkboxTwoTribal')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Land
+          input(type='checkbox' value='land' name='type' id='checkboxTwoLand' class='hide')
+          label(for='checkboxTwoLand')
+        div(class='checkboxTwo')
+          p(class='checkboxText') Artifact
+          input(type='checkbox' value='artifact' name='type' id='checkboxTwoAtrifact' class='hide')
+          label(for='checkboxTwoAtrifact')
       div(class='adv-misc') Annað
         div
           input(name='subtype', placeholder='Subtype')
@@ -97,7 +112,7 @@ block content
         div
           input(type='checkbox' value='black' name='color')
           | Black
-        div
+        div(class='white')
           input(type='checkbox' value='white' name='color')
           | White
         div

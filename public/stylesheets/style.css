@@ -52,7 +52,7 @@ li {
   display: flex;
   justify-content: center;
   background-color: gray;
-  opacity: 0.8;
+  opacity: 0.9;
   padding: 0.5%;
   border-radius: 10px;
 }
@@ -62,7 +62,7 @@ li {
   justify-content: center;
   padding: 0.5%;
   background-color: gray;
-  opacity: 0.8;
+  opacity: 0.9;
   height: 0%;
   border-radius: 10px;
   margin-bottom: 3%;
@@ -75,41 +75,108 @@ li {
 .adv-rarity {
   padding: 0.5%;
   background-color: gray;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 10px;
 }
 
 .adv-stats {
   padding: 0.5%;
   background-color: gray;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 10px;
 }
 
 .adv-type {
   padding: 0.5%;
   background-color: gray;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 10px;
 }
 
 .adv-mana {
   padding: 0.5%;
   background-color: gray;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 10px;
 }
 
 .adv-misc {
   padding: 0.5%;
   background-color: gray;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .adv-colors {
   padding: 0.5%;
   background-color: gray;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 10px;
+}
+
+.white {
+  margin-bottom: 20%;
+}
+
+.checkboxTwo {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo input[type=checkbox]:checked + label {
+  left: 114px;
+  background: #26ca28;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.checkboxText {
+  color: #ddd;
+  text-align: center;
+  cursor: default;
+  margin-top: -2%;
+}
+
+.adv-header {
+  color: #111;
+  text-align: center;
+  margin: 0px;
+  font-size: 17px;
+  cursor: default;
+  margin-bottom: -5%;
 }
