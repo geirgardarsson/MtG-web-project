@@ -1,0 +1,16 @@
+{
+  "plugins": [],
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "max-len": ["error", 80],
+    "no-unused-vars": ["error", { "args": "none" }],
+    "new-cap": ["error", { "capIsNew": false }],
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }]
+  },
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "es6": true
+  }
+}
