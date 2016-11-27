@@ -32,6 +32,7 @@ router.get('/calc', (req, res, next) => {
 
 router.post('/calc', (req, res) => {
   let lands = req.body.lands;
+  console.log(lands);
   let black = req.body.black;
   let blue = req.body.blue;
   let red = req.body.red;
