@@ -13,7 +13,9 @@ router.post('/card', (req, res, next) => {
   const input = req.body.text;
   cardsearch.cards(input)
   .then((result) => {
-    res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: input });
+    const card = result.data.cards;
+    card.reverse();
+    res.render('card', { title: 'Magic the Gathering', card: card, yourCard: input });
   })
   .catch((error) => {
     res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
@@ -105,7 +107,9 @@ router.post('/advancedsearch', (req, res) => {
   //console.log('link: ', link);
   cardsearch.getlink(link)
   .then((result) => {
-    res.render('card', { title: 'Magic the Gathering', card: result.data.cards, yourCard: info });
+    const card1 = result.data.cards;
+    card1.reverse();
+    res.render('card', { title: 'Magic the Gathering', card: card1, yourCard: info });
   })
   .catch((error) => {
     res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
