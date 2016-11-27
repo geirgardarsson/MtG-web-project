@@ -51,7 +51,6 @@ tr:nth-child(even) {
   flex-wrap: wrap;
   margin-top: 7%;
   width: 65%;
-  height: 113px;
 }
 
 .home-submit {
