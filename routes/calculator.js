@@ -1,4 +1,4 @@
-/////////script(type="text/javascript", src="https://www.gstatic.com/charts/loader.js")
+
 //MUNDU AÐ TAKA TIL Í ÞESSUM KÓÐA!!!!
 function manacalc(Colors,lands){
   let land=(parseInt(lands));
@@ -61,7 +61,7 @@ function manacalc(Colors,lands){
 //athugar hvort að fjöldi stemmi við fjölda landa
   if(landtotal !=0){
    check = lands-landtotal;
- }
+  }
 
   console.log("þetta er landafjöldinn" + mana);
 
@@ -96,64 +96,23 @@ function manacalc(Colors,lands){
   if(mana[6]>land){
     mana[6]=land;
   }
-/*
-//ÞETTA ER GAMLA CHECK SEM BÆITR EÐA DREGUR FRÁ FRÁ FYRSTA STAKI
-  //ef fjöldinn er minni en fjöldi landa
-  //þá bæta við minnsta gildinu þar til check er 0
-  if(check > 0){
-    while(check != 0){
-      //lyykja sem bætir við minnsta gildinu
-      let min=Infinity;
-      let pointer;
-      for(let i=0;i<mana.length;i++){
-        if(mana[i]<min && mana[i] != '' ){
-          min=mana[i];
-          pointer=i;
-        }
-      }
-      console.log("pointerinn er" + pointer);
-      mana[pointer]=mana[pointer]+1;
-      --check;
-    }
-    console.log("check>0 mana: " + mana);
-    //return mana;
-  }
-  //ef fjöldinn er stærri en fjöldi landa
-  //þá draga frá hæsta gildinu þar til check er 0
-  //HÉRNA GETUR ÞÚ LAGAÐ VILLUNA EF ALLIR ERU MEÐ SAMA FJÖLDA!!!!!!!!!!!!!
-  if(check < 0){
-    while(check !=0){
-      let maxpointer=maxpoint(mana);
-      mana[maxpointer]=mana[maxpointer]-1;
-      check++;
-      console.log("geir athugar stöðuna nokkrum sinnum");
-    }
-    console.log("check<0 mana: " + mana);
-  }
-  */
-  var mincount=0;
 
+ var mincount=0;
  let maxpointer=maxpoint(mana);
- console.log('geir fann villu');
+ //console.log('geir fann villu');
  console.log('mana er núna:' + mana);
   //Athugar hvort að öll gildi ná minumum
   for(var i=0;i<mana.length-1;i++){
-    //þarf mögulega að hafa þessi gildi
-    //if (mana[i] !== '') {
-      //if (mana[i] !== undefined) {
-      console.log('geir athugar villuna me' + mana[i]);
-        while(mana[i]<minlands && mana[i] !=''){
-          console.log("mana[i] fyrir:" + mana[i]);
-          console.log("mana[max] fyrir:" + mana[maxpointer]);
-          mana[maxpointer]=mana[maxpointer]-1;
-          mana[i]=mana[i]+1;
-          console.log("mana[i] eftir" + mana[i]);
-          console.log("mana[max] eftir:" + mana[maxpointer]);
-          maxpointer=maxpoint(mana);
-        }
-    //7  }
-  //7  }
-}
+    while(mana[i]<minlands && mana[i] !=''){
+      console.log("mana[i] fyrir:" + mana[i]);
+      console.log("mana[max] fyrir:" + mana[maxpointer]);
+      mana[maxpointer]=mana[maxpointer]-1;
+      mana[i]=mana[i]+1;
+      console.log("mana[i] eftir" + mana[i]);
+      console.log("mana[max] eftir:" + mana[maxpointer]);
+      maxpointer=maxpoint(mana);
+    }
+  }
   console.log("geir komst á leiðarenda");
   return mana;
 }

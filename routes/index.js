@@ -22,7 +22,8 @@ router.post('/card', (req, res, next) => {
 
 router.get('/calc', (req, res, next) => {
   //calculator.calculator();
-    res.render('calc', {title: 'GeirGatheringWizard'})
+    let checker = 7;
+    res.render('calc', {checker})
   .catch((error) => {
     res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
   });

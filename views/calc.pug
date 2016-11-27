@@ -11,70 +11,14 @@ block content
   h1(class='calc-top')= 'Reiknivél fyrir mana kostnað'
   p= 'hjálpar þér að finna út nákvæmlega hversu mikið mana þú átt að hafa af hverjum lit'
   p Hvaða liti ertu með í stokknum þínum?
-  form(method='post', action='/calc', class='calc-stats')
-    div(class='calc-name-fit')
-      div
-        p(class='calc-p-input')
-          |Fjöldi
-          span(class='blactext')   Svarta
-          |  mana tákna:
-        div(class='calc-input')
-          img(src='/images/BlackMana.jpg', class='icon')
-          input(type='number', name="black" min='1', placeholder=0, class='calc-name-input')
-      div
-        p(class='calc-p-input')
-          |Fjöldi
-          span(class='bluetext')  Blárra
-          |  mana tákna:
-        div(class='calc-input')
-          img(src='/images/BlueMana.jpg', class='icon')
-          input(type='number', name="blue" min='1', placeholder=0, class='calc-name-input')
-      div
-        p(class='calc-p-input')
-          |Fjöldi
-          span(class='redtext')  Rauðra
-          |  mana tákna:
-        div(class='calc-input')
-          img(src='/images/RedMana.jpg', class='icon')
-          input(type='number', name="red" min='1', placeholder=0, class='calc-name-input')
-      div
-        p(class='calc-p-input')
-          |Fjöldi
-          span(class='greentext')  Græna
-          |  mana tákna:
-        div(class='calc-input')
-          img(src='/images/GreenMana.jpg', class='icon')
-          input(type='number', name="green" min='1', placeholder=0, class='calc-name-input')
-      div
-        p(class='calc-p-input')
-          |Fjöldi
-          span(class='whitetext')  Hvítra
-          |  mana tákna:
-        div(class='calc-input')
-          img(src='/images/WhiteMana.jpg', class='icon')
-          input(type='number', name="white" min='1', placeholder=0, class='calc-name-input')
-      div
-        p(class='calc-p-input')
-          |Fjöldi
-          span(class='greytext')  Litlausa
-          |  mana tákna:
-        div(class='calc-input')
-          img(src='/images/GreyMana.jpg', class='greyicon')
-          input(type='number', name="grey" min='1', placeholder=0, class='calc-name-input')
-      div
-        p(class='calc-p-input') Fjöldi landa í stokknum þínum:
-        div(class='calc-input')
-          input(type='number', name="lands", min='1', placeholder='23', required)
-      div
-        input(type='submit', name='reikna út fjöldi landa')
-
-    if checker !== 6
+  //if checker !== 6
+    div(class='calc-stats')
       div(class='calc-outcome-container')
         if black
           div
             p(class='calc-p-input')
               |Fjöldi
-              span(class='blacktext') Svartra
+              span(class='blacktext')  Svartra
               |  landa:
             div(class='calc-input')
               img(src='/images/BlackMana.jpg', class='icon-result')
@@ -83,7 +27,7 @@ block content
           div
             p(class='calc-p-input')
               |Fjöldi
-              span(class='bluetext') Blárra
+              span(class='bluetext')  Blárra
               |  landa:
             div(class='calc-input')
               img(src='/images/BlueMana.jpg', class='icon-result')
@@ -92,7 +36,7 @@ block content
           div
             p(class='calc-p-input')
               |Fjöldi
-              span(class='redtext') Rauðra
+              span(class='redtext')  Rauðra
               |  landa:
             div(class='calc-input')
               img(src='/images/RedMana.jpg', class='icon-result')
@@ -101,7 +45,7 @@ block content
           div
             p(class='calc-p-input')
               |Fjöldi
-              span(class='greentext') Grænna
+              span(class='greentext')  Grænna
               |  landa:
             div(class='calc-input')
               img(src='/images/GreenMana.jpg', class='icon-result')
@@ -110,7 +54,7 @@ block content
           div
             p(class='calc-p-input')
               |Fjöldi
-              span(class='whitetext') Hvíta
+              span(class='whitetext')  Hvíta
               |  landa:
             div(class='calc-input')
               img(src='/images/WhiteMana.jpg', class='icon-result')
@@ -119,7 +63,7 @@ block content
           div
             p(class='calc-p-input')
               |Fjöldi
-              span(class='greytext') Grára
+              span(class='greytext')  Litlausa
               |  landa:
             div(class='calc-input')
               img(src='/images/GreyMana.jpg', class='icon-result')
@@ -131,5 +75,134 @@ block content
             div(class='calc-input')
               img(src='/images/GreyMana.jpg', class='icon-result')
               p #{extra}
-    else
+  //else
+    p Þú slóst ekki inn neitt
+  if checker == 7
+    form(method='post', action='/calc', class='calc-stats')
+      div(class='calc-name-fit')
+        div
+          p(class='calc-p-input')
+            |Fjöldi
+            span(class='blactext')   Svarta
+            |  mana tákna:
+          div(class='calc-input')
+            img(src='/images/BlackMana.jpg', class='icon')
+            input(type='number', name="black" min='1', placeholder=0, class='calc-name-input')
+        div
+          p(class='calc-p-input')
+            |Fjöldi
+            span(class='bluetext')  Blárra
+            |  mana tákna:
+          div(class='calc-input')
+            img(src='/images/BlueMana.jpg', class='icon')
+            input(type='number', name="blue" min='1', placeholder=0, class='calc-name-input')
+        div
+          p(class='calc-p-input')
+            |Fjöldi
+            span(class='redtext')  Rauðra
+            |  mana tákna:
+          div(class='calc-input')
+            img(src='/images/RedMana.jpg', class='icon')
+            input(type='number', name="red" min='1', placeholder=0, class='calc-name-input')
+        div
+          p(class='calc-p-input')
+            |Fjöldi
+            span(class='greentext')  Grænna
+            |  mana tákna:
+          div(class='calc-input')
+            img(src='/images/GreenMana.jpg', class='icon')
+            input(type='number', name="green" min='1', placeholder=0, class='calc-name-input')
+        div
+          p(class='calc-p-input')
+            |Fjöldi
+            span(class='whitetext')  Hvítra
+            |  mana tákna:
+          div(class='calc-input')
+            img(src='/images/WhiteMana.jpg', class='icon')
+            input(type='number', name="white" min='1', placeholder=0, class='calc-name-input')
+        div
+          p(class='calc-p-input')
+            |Fjöldi
+            span(class='greytext')  Litlausa
+            |  mana tákna:
+          div(class='calc-input')
+            img(src='/images/GreyMana.jpg', class='greyicon')
+            input(type='number', name="grey" min='1', placeholder=0, class='calc-name-input')
+        div
+          p(class='calc-p-input') Fjöldi landa í stokknum þínum:
+          div(class='calc-input')
+            input(type='number', name="lands", min='1', placeholder='23', required)
+        div
+          button(type='submit',class='adv-submit-button') reikna út fjöldi landa
+
+  else if checker !== 6
+    div(class='calc-stats')
+      div(class='calc-outcome-container')
+        if black
+          div
+            p(class='calc-p-input')
+              |Fjöldi
+              span(class='blacktext')  Svartra
+              |  landa:
+            div(class='calc-input')
+              img(src='/images/BlackMana.jpg', class='icon-result')
+              p #{black}
+        if blue
+          div
+            p(class='calc-p-input')
+              |Fjöldi
+              span(class='bluetext')  Blárra
+              |  landa:
+            div(class='calc-input')
+              img(src='/images/BlueMana.jpg', class='icon-result')
+              p #{blue}
+        if red
+          div
+            p(class='calc-p-input')
+              |Fjöldi
+              span(class='redtext')  Rauðra
+              |  landa:
+            div(class='calc-input')
+              img(src='/images/RedMana.jpg', class='icon-result')
+              p #{red}
+        if green
+          div
+            p(class='calc-p-input')
+              |Fjöldi
+              span(class='greentext')  Grænna
+              |  landa:
+            div(class='calc-input')
+              img(src='/images/GreenMana.jpg', class='icon-result')
+              p #{green}
+        if white
+          div
+            p(class='calc-p-input')
+              |Fjöldi
+              span(class='whitetext')  Hvíta
+              |  landa:
+            div(class='calc-input')
+              img(src='/images/WhiteMana.jpg', class='icon-result')
+              p #{white}
+        if grey
+          div
+            p(class='calc-p-input')
+              |Fjöldi
+              span(class='greytext')  Litlausa
+              |  landa:
+            div(class='calc-input')
+              img(src='/images/GreyMana.jpg', class='icon-result')
+              p #{grey}
+        if extra
+          div
+            p(class='calc-p-input')
+              |Þú ræður hvaða lit
+            div(class='calc-input')
+              img(src='/images/GreyMana.jpg', class='icon-result')
+              p #{extra}
+        form(method='get', action='/calc')
+          input(type='submit', text='Reikna aftur')
+  else if checker == 6
+    div(class='calc-stats')
       p Þú slóst ekki inn neitt
+      form(method='get', action='/calc')
+        button(type='submit', class='adv-submit-button') Reikna aftur
