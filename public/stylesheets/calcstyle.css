@@ -108,7 +108,7 @@
   align-self: center;
   justify-content: center;
   padding: 0.5%;
-  background-color: #f3f3f2;
+  background-color: grey;
   opacity: 0.9;
   border-radius: 10px;
   margin-bottom: 1%;
@@ -124,7 +124,9 @@
   padding: 0.5%;
   opacity: 0.9;
   margin-bottom: 1%;
-  width: 80%;
+  /*width: 80%;*/
+  margin-left: 10%;
+  margin-right: 10%;
   padding: 50px;
 }
 
@@ -132,11 +134,12 @@
   display: flex;
   flex-direction: column;
   padding: 0.5%;
-  background-color: gray;
+  background-color: red;
   opacity: 0.9;
   border-radius: 10px;
   margin-bottom: 1%;
-  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding: 50px;
 }
 

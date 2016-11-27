@@ -204,10 +204,14 @@ block content
             div(class='calc-input')
               img(src='/images/GreyMana.jpg', class='icon-result')
               p #{extra}
-        form(method='get', action='/calc')
+    form(method='get', action='/calc')
+      div(class='calc-submit-fit')
+        div(class='calc-submit')
           button(type='submit', class='calc-submit-button') Reikna aftur
   else if checker == 6
     div(class='calc-nostats')
       p(class='calc-p-input') Þú slóst ekki inn fjölda mana tákna
-      form(method='get', action='/calc')
-        button(type='submit', class='calc-submit-button') Reikna aftur
+    form(method='get', action='/calc')
+      div(class='calc-submit-fit')
+        div(class='calc-submit')
+          button(type='submit', class='calc-submit-button') Reikna aftur
