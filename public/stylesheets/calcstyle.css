@@ -208,12 +208,25 @@ font-family: 'Bree Serif', serif;*/
   justify-content: center;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
 
-/*display: flex;
-justify-content: center;
-background-color: gray;
-opacity: 0.9;
-padding: 0.5%;
-border-radius: 10px;
-width: 380px;
-}*/
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
