@@ -8,10 +8,10 @@ block content
       a(class='topnav-a' href='/advancedsearch') Ítarleg leit
     li(class='topnav-li')
       a(class='topnav-a-active' href='/calc') Reiknivél
-  div(class='calc-top-container')
-      h1(class='calc-top') Reiknivél fyrir mana kostnað
-      p(class='calc-p-input') Hjálpar þér að finna út nákvæmlega hversu mikið mana þú átt að hafa af hverjum lit
   if checker == 7
+    div(class='calc-top-container')
+        h1(class='calc-top') Reiknivél fyrir mana kostnað
+        p(class='calc-p-input') Hjálpar þér að finna út nákvæmlega hversu mikið mana þú átt að hafa af hverjum lit
     form(method='post', action='/calc')
       div(class='calc-stats')
         div(class='calc-name-fit')
@@ -68,14 +68,14 @@ block content
             p(class='calc-p-input') Fjöldi landa í stokknum þínum:
             div(class='calc-input')
               input(type='number', name='lands' ,class='calc-land-input', min='1', placeholder='23', required)
-        //div(class='calc-stats-submit')
-            div(class='calc-name-fit')
-            button(type='submit',class='calc-submit-button') reikna út fjöldi landa
       div(class='calc-submit-fit')
         div(class='calc-submit')
           button(type='submit', class='calc-submit-button') LEITA
 
   else if checker !== 6
+    div(class='calc-top-container')
+        h1(class='calc-top') útkoman úr Reiknivélinni
+        p(class='calc-p-input') Þetta er fjöldi landa af hverjum lit sem þú ættir að hafa
     div(class='calc-stats')
       div(class='calc-outcome-container')
         if black
@@ -144,6 +144,9 @@ block content
         div(class='calc-submit')
           button(type='submit', class='calc-submit-button') Reikna aftur
   else if checker == 6
+    div(class='calc-top-container')
+        h1(class='calc-top') Því miður
+        p(class='calc-p-input') Ekki hægt að reikna með þessum upplýsingum
     div(class='calc-nostats')
       p(class='calc-p-input') Þú slóst ekki inn fjölda mana tákna
     form(method='get', action='/calc')
