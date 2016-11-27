@@ -9,26 +9,41 @@ block content
     li(class='topnav-li')
       a(class='topnav-a' href='/calc') Reiknivél
     li(class='topnav-li')
-      a(class='topnav-a-active') *Spilið þitt*
+      a(class='topnav-a-active') Spilið þitt
   div(class='info-wrapper')
     each item in card
       div(class='info-left')
         h1= item.name
-        img(src= ""+item.imageUrl onerror="this.style.display='none'")
+        img(src= ""+item.imageUrl onerror="this.style.display='none'" class='info-img')
       div(class='info-right')
-        p Manacost #{item.manacost}
-        p Converted manacost #{item.cmc}
-        p Colors #{item.colors}
-        p Color Identity #{item.colorIdentity}
-        p Supertype #{item.supertypes}
-        p Type #{item.types}
-        p Subtype #{item.subtypes}
-        p Rarity #{item.rarity}
-        p Set #{item.setName}
-        p Text #{item.text}
-        p Artist #{item.artist}
-        p Power and toughness #{item.power} / #{item.toughness}
-        p Legalities #{item.legalities}
-  a(href='/advancedsearch') Ítarleg leit
-  a(href='/calc') Reiknvél
-  a(href='/') Heim
+        div(class='info-seperator-left')
+          p Manacost:
+          p Converted manacost:
+          p Colors:
+          p Color Identity:
+          p Supertype:
+          p Type:
+          p Subtype:
+          p Rarity:
+          p Set:
+          p Text:
+          p Flavor:
+          p Artist:
+          p Power and toughness:
+          p Legalities:
+        div(class='info-seperator-right')
+          p #{item.manacost}
+          p #{item.cmc}
+          p #{item.colors}
+          p #{item.colorIdentity}
+          p #{item.supertypes}
+          p #{item.types}
+          p #{item.subtypes}
+          p #{item.rarity}
+          p #{item.setName}
+          p #{item.text}
+          p
+            i #{item.flavor}
+          p #{item.artist}
+          p #{item.power} / #{item.toughness}
+          p #{item.legalities}

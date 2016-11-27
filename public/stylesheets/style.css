@@ -38,7 +38,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-top: 7%;
-  width: 940px;
+  width: 65%;
   height: 113px;
 }
 
@@ -130,16 +130,32 @@ li {
 .info-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.info-seperator {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .info-left {
   padding: 2%;
+  margin: 2%;
 }
 
 .info-right {
   padding: 2%;
   max-width: 40%;
+  margin: 2%;
+  background-color: gray;
+  border-radius: 25px;
+  margin-top: 5%;
+  opacity: 0.8;
+}
+
+.info-img {
+  width: 334.5px;
+  height: 465px;
 }
 
 .adv-submit {
