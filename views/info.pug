@@ -16,34 +16,47 @@ block content
         h1= item.name
         img(src= ""+item.imageUrl onerror="this.style.display='none'" class='info-img')
       div(class='info-right')
-        div(class='info-seperator-left')
-          p Manacost:
-          p Converted manacost:
-          p Colors:
-          p Color Identity:
-          p Supertype:
-          p Type:
-          p Subtype:
-          p Rarity:
-          p Set:
-          p Text:
-          p Flavor:
-          p Artist:
-          p Power and toughness:
-          p Legalities:
-        div(class='info-seperator-right')
-          p #{item.manacost}
-          p #{item.cmc}
-          p #{item.colors}
-          p #{item.colorIdentity}
-          p #{item.supertypes}
-          p #{item.types}
-          p #{item.subtypes}
-          p #{item.rarity}
-          p #{item.setName}
-          p #{item.text}
-          p
-            i #{item.flavor}
-          p #{item.artist}
-          p #{item.power} / #{item.toughness}
-          p #{item.legalities}
+        table(class='info-table')
+          tr
+            td Manacost:
+            td #{item.manacost}
+          tr
+            td Converted manacost:
+            td #{item.cmc}
+          tr
+            td Colors:
+            td #{item.colors}
+          tr
+            td Color Identity:
+            td #{item.colorIdentity}
+          tr
+            td Supertype:
+            td #{item.supertypes}
+          tr
+            td Type:
+            td #{item.types}
+          tr
+            td Subtype:
+            td #{item.subtypes}
+          tr
+            td Rarity:
+            td #{item.rarity}
+          tr
+            td Set:
+            td #{item.setName}
+          tr
+            td Text:
+            td #{item.text}
+          tr
+            td Flavor:
+            td
+              i #{item.flavor}
+          tr
+            td Artist:
+            td #{item.artist}
+          tr
+            td Power and toughness:
+            td #{item.power} / #{item.toughness}
+          tr
+            td Legalities:
+            td #{item.legalities}
