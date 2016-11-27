@@ -8,79 +8,14 @@ block content
       a(class='topnav-a' href='/advancedsearch') Ítarleg leit
     li(class='topnav-li')
       a(class='topnav-a-active' href='/calc') Reiknivél
-  h1(class='calc-top')= 'Reiknivél fyrir mana kostnað'
-  p= 'hjálpar þér að finna út nákvæmlega hversu mikið mana þú átt að hafa af hverjum lit'
-  p Hvaða liti ertu með í stokknum þínum?
-  //if checker !== 6
-    div(class='calc-stats')
-      div(class='calc-outcome-container')
-        if black
-          div
-            p(class='calc-p-input')
-              |Fjöldi
-              span(class='blacktext')  Svartra
-              |  landa:
-            div(class='calc-input')
-              img(src='/images/BlackMana.jpg', class='icon-result')
-              p #{black}
-        if blue
-          div
-            p(class='calc-p-input')
-              |Fjöldi
-              span(class='bluetext')  Blárra
-              |  landa:
-            div(class='calc-input')
-              img(src='/images/BlueMana.jpg', class='icon-result')
-              p #{blue}
-        if red
-          div
-            p(class='calc-p-input')
-              |Fjöldi
-              span(class='redtext')  Rauðra
-              |  landa:
-            div(class='calc-input')
-              img(src='/images/RedMana.jpg', class='icon-result')
-              p #{red}
-        if green
-          div
-            p(class='calc-p-input')
-              |Fjöldi
-              span(class='greentext')  Grænna
-              |  landa:
-            div(class='calc-input')
-              img(src='/images/GreenMana.jpg', class='icon-result')
-              p #{green}
-        if white
-          div
-            p(class='calc-p-input')
-              |Fjöldi
-              span(class='whitetext')  Hvíta
-              |  landa:
-            div(class='calc-input')
-              img(src='/images/WhiteMana.jpg', class='icon-result')
-              p #{white}
-        if grey
-          div
-            p(class='calc-p-input')
-              |Fjöldi
-              span(class='greytext')  Litlausa
-              |  landa:
-            div(class='calc-input')
-              img(src='/images/GreyMana.jpg', class='icon-result')
-              p #{grey}
-        if extra
-          div
-            p(class='calc-p-input')
-              |Þú ræður hvaða lit
-            div(class='calc-input')
-              img(src='/images/GreyMana.jpg', class='icon-result')
-              p #{extra}
-  //else
-    p Þú slóst ekki inn neitt
+  div(class='calc-top-container')
+    h1(class='calc-top')= 'Reiknivél fyrir mana kostnað'
+    p(class='calc-p-input') Hjálpar þér að finna út nákvæmlega hversu mikið mana þú átt að hafa af hverjum lit
   if checker == 7
     form(method='post', action='/calc')
       div(class='calc-stats')
         div(class='calc-name-fit')
+          p(class='calc-p-input') Hvaða liti ertu með í stokknum þínum?
           div
             p(class='calc-p-input')
               |Fjöldi

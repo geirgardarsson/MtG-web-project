@@ -70,17 +70,17 @@ function manacalc(Colors,lands){
     if(check>0){
       mana[6]=mana[6]+1;
       check=check-1;
-      console.log('check>0 GeirGatheringWizard');
+      //console.log('check>0 GeirGatheringWizard');
       //villa!!
     }
     //fjöldinn er stærri en fjöldi landa
     else if(check<0){
-      console.log('check<0 GeirGatheringWizard');
+      //console.log('check<0 GeirGatheringWizard');
       let cnt=0;
       //þarf að minnka öll gildi um 1
       for(var i=0;i<mana.length-1;i++){
         if(mana[i]!=''){
-          console.log('geir í draumalandi');
+          //console.log('geir í draumalandi');
           mana[i]=mana[i]-1;
           cnt=cnt+1;
 
@@ -104,12 +104,12 @@ function manacalc(Colors,lands){
   //Athugar hvort að öll gildi ná minumum
   for(var i=0;i<mana.length-1;i++){
     while(mana[i]<minlands && mana[i] !=''){
-      console.log("mana[i] fyrir:" + mana[i]);
-      console.log("mana[max] fyrir:" + mana[maxpointer]);
+      //console.log("mana[i] fyrir:" + mana[i]);
+      //console.log("mana[max] fyrir:" + mana[maxpointer]);
       mana[maxpointer]=mana[maxpointer]-1;
       mana[i]=mana[i]+1;
-      console.log("mana[i] eftir" + mana[i]);
-      console.log("mana[max] eftir:" + mana[maxpointer]);
+      //console.log("mana[i] eftir" + mana[i]);
+      //console.log("mana[max] eftir:" + mana[maxpointer]);
       maxpointer=maxpoint(mana);
     }
   }
