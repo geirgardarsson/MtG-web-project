@@ -36,7 +36,8 @@ function advanced(parameters) {
   // 7 = Artist
   // 8 = Cmc
   // 9 = Color
-  // 10 No other colors
+  // 10 = Text
+  // 11 No other colors
 
 
   for (let i = 0; i < parameters.length; i++) {
@@ -71,8 +72,13 @@ function advanced(parameters) {
             parameters[i] = 'cmc=' + parameters[i];
             break;
           case 9:
-            parameters[i] = 'colors=' + parameters[i];
-            break;
+            if (parameters[11] == 'true') {
+              parameters[i] = 'colors=' + '\"' + parameters[i] + '\"';
+              break;
+            } else {
+              parameters[i] = 'colors=' + parameters[i];
+              break;
+            }
           case 10:
             parameters[i] = 'text=' + parameters[i];
             break;

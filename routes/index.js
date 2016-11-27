@@ -92,6 +92,9 @@ router.post('/advancedsearch', (req, res) => {
   parameters[8] = req.body.cm + req.body.cost;
   parameters[9] = req.body.color;
   parameters[10] = req.body.text;
+  parameters[11] = req.body.noOtherColors;
+  console.log('noc: ', req.body.noOtherColors);
+  console.log('gæsalappir: ', '\"');
 
   let linkelems = cardsearch.advanced(parameters);
   //console.log(linkelems);
