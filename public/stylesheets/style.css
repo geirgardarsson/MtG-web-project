@@ -66,6 +66,20 @@ tr:nth-child(even) {
   width: 100%;
 }
 
+.card-input {
+  margin-top: 5%;
+  margin-bottom: 1%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-input-text {
+  background-color: gray;
+  padding: 1%;
+  border-radius: 15px;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
