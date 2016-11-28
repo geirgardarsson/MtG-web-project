@@ -3,14 +3,14 @@ const express = require('express');
 const router = express.Router();
 const cardsearch = require('./cardsearch.js');
 const calculator = require('./calculator.js');
-const axios = require('axios');
+// const axios = require('axios');
 
 /* GET home page. */
 router.get('/', (req, res) => {
   res.render('index', { title: 'Magic the Gathering' });
 });
 
-router.post('/card', (req, res, next) => {
+router.post('/card', (req, res) => {
   const input = req.body.text;
   cardsearch.cards(input)
   .then((result) => {
@@ -19,16 +19,16 @@ router.post('/card', (req, res, next) => {
     res.render('card', { title: 'Magic the Gathering', card, yourCard: input });
   })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá' });
+    res.render('error', { title: 'Villa', message: error });
   });
 });
 
-router.get('/calc', (req, res, next) => {
+router.get('/calc', (req, res) => {
   // calculator.calculator();
   const checker = 7;
   res.render('calc', { title: 'Reiknivél', checker })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá' });
+    res.render('error', { title: 'Villa', message: error });
   });
 });
 
@@ -72,7 +72,7 @@ router.get('/card/:nameset', (req, res) => {
     res.render('info', { card: result.data.cards });
   })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá' });
+    res.render('error', { title: 'Villa', message: error });
   });
 });
 
@@ -109,7 +109,7 @@ router.post('/advancedsearch', (req, res) => {
     res.render('card', { title: 'Magic the Gathering', card: card1, yourCard: info });
   })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá' });
+    res.render('error', { title: 'Villa', message: error });
   });
 });
 
