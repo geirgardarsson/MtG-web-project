@@ -1,13 +1,27 @@
 
+// finnur staðsetningu hæstagildis í fylki og skilar pointernum
+function maxpoint(mana) {
+  let max = 0;
+  let maxpointer;
+  for (let i = 0; i < mana.length - 1; i += 1) {
+    if (mana[i] > max) {
+      max = mana[i];
+      maxpointer = i;
+    }
+  }
+  return maxpointer;
+}
+
 // MUNDU AÐ TAKA TIL Í ÞESSUM KÓÐA!!!!
-function manacalc(Colors, lands) {
-  const land = (parseInt(lands));
+function manacalc(OriginalColors, lands) {
+  const Colors = OriginalColors;
+  const land = (parseInt(lands, 10));
   console.log(`lands er${lands}`);
   // skráir inn gildin sem tölur
-  for (let i = 0; i < Colors.length; i++) {
+  for (let i = 0; i < Colors.length; i += 1) {
     if (Colors[i] !== '') {
       if (Colors[i] !== undefined) {
-        Colors[i] = (parseInt(Colors[i]));
+        Colors[i] = (parseInt(Colors[i], 10));
       }
     }
   }
@@ -15,7 +29,7 @@ function manacalc(Colors, lands) {
   let numofcolors = 0;
   let total = 0;
   // reiknar út heildar manatákna og fjölda lita
-  for (let i = 0; i < Colors.length; i++) {
+  for (let i = 0; i < Colors.length; i += 1) {
     if (Colors[i] !== '') {
       if (Colors[i] !== undefined) {
         total += Colors[i];
@@ -30,12 +44,12 @@ function manacalc(Colors, lands) {
 
   // reiknar út hversu mikið af landi eiga að vera af hverjum lit og skilar í
   // fylkinu mana
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i += 1) {
     if (Colors[i] !== '') {
       if (Colors[i] !== undefined) {
         mana[i] = Math.round(((Colors[i] / total) * land));
-        if (mana[i] == 0) {
-          mana[i] = mana[i] + 1;
+        if (mana[i] === 0) {
+          mana[i] += 1;
         }
         console.log(`útkoman:${Math.round(((Colors[i] / total) * land))}`);
       }
@@ -45,12 +59,12 @@ function manacalc(Colors, lands) {
   let landtotal = 0;
   // reiknar út minnsta fjölda landa sem hver litur þarf að hafa
   let minlands = (Math.floor((Math.ceil(land / numofcolors)) / 2));
-  if (minlands == 0) {
+  if (minlands === 0) {
     minlands = 1;
   }
   console.log(`minlands er: ${minlands}`);
 // heildarfjöldi landa sem á að skila
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i += 1) {
     if (mana[i] !== '') {
       if (mana[i] !== undefined) {
         landtotal += mana[i];
@@ -61,62 +75,58 @@ function manacalc(Colors, lands) {
   console.log(`þetta er landtotal:${landtotal}`);
   let check = 0;
 // athugar hvort að fjöldi stemmi við fjölda landa
-  if (landtotal != 0) {
+  if (landtotal !== 0) {
     check = lands - landtotal;
   }
 
   console.log(`þetta er landafjöldinn${mana}`);
 
-  while (check != 0) {
+  while (check !== 0) {
     // fjöldinn er minni en fjöldi landa
     if (check > 0) {
       mana[6] += 1;
       check -= 1;
       console.log('check>0 GeirGatheringWizard');
-      // villa!!
-    }
-    // fjöldinn er stærri en fjöldi landa
-    else if (check < 0) {
+    } else if (check < 0) { // fjöldinn er stærri en fjöldi landa
       console.log('check<0 GeirGatheringWizard');
       let cnt = 0;
       // þarf að minnka öll gildi um 1
-      for (var i = 0; i < mana.length - 1; i++) {
-        if (mana[i] != '') {
+      for (let i = 0; i < mana.length - 1; i += 1) {
+        if (mana[i] !== '' && mana[i] !== 0) {
+          console.log(`þetta er mana[i],nyjacheck${mana[i]}`);
           // console.log('geir í draumalandi');
-          mana[i] = mana[i] - 1;
+          mana[i] -= 1;
+          console.log(`þetta er mana[i],nyjacheckv2${mana[i]}`);
           // ef þettta minnkar landafjölda af einhverjum lit í 0
           // þá minnkum við extra um 1 og hækkum þann landafjölda aftur um 1
-          if (mana[i] == 0) {
-            mana[i] = mana[i] + 1;
+          if (mana[i] === 0) {
+            mana[i] += 1;
             cnt -= 1;
           }
           cnt += 1;
         }
       }
-
-      mana[6] = mana[6] + cnt - 1;
+      cnt -= 1;
+      mana[6] += cnt;
       check = 0;
     }
   }
 
   // sértilfelli, aðeins notað ef notandi er vitleysingur :)
+  // sem sagt ef notandi ætlar að hafa fleiri liti en lönd
   if (mana[6] > land) {
     mana[6] = land;
   }
 
-  const mincount = 0;
+  // const mincount = 0;
   let maxpointer = maxpoint(mana);
- // console.log('geir fann villu');
-  console.log(`mana er núna:${mana}`);
   // Athugar hvort að öll gildi ná minumum
-  for (var i = 0; i < mana.length - 1; i++) {
-    while (mana[i] < minlands && mana[i] != '') {
-      // console.log("mana[i] fyrir:" + mana[i]);
-      // console.log("mana[max] fyrir:" + mana[maxpointer]);
-      mana[maxpointer] = mana[maxpointer] - 1;
-      mana[i] = mana[i] + 1;
-      // console.log("mana[i] eftir" + mana[i]);
-      // console.log("mana[max] eftir:" + mana[maxpointer]);
+  for (let i = 0; i < mana.length - 1; i += 1) {
+    while (mana[i] < minlands && mana[i] !== 0) {
+      console.log(`geir skynjar maðk í mysunni${mana[i]}`);
+      mana[maxpointer] -= 1;
+      mana[i] += 1;
+      console.log(`geir nálgast svarið${mana[i]}`);
       maxpointer = maxpoint(mana);
     }
   }
@@ -124,25 +134,12 @@ function manacalc(Colors, lands) {
   return mana;
 }
 
-// finnur staðsetningu hæstagildis í fylki og skilar pointernum
-function maxpoint(mana) {
-  let max = 0;
-  let maxpointer;
-  for (let i = 0; i < mana.length - 1; i++) {
-    if (mana[i] > max) {
-      max = mana[i];
-      maxpointer = i;
-    }
-  }
-  return maxpointer;
-}
-
 
 // athugar hvort að gildi í fylki sé tómt og skilar fjölda af gildum sem eru tóm
 function checker(colors) {
   let check = 0;
-  for (let i = 0; i < colors.length; i++) {
-    if (colors[i] == '') {
+  for (let i = 0; i < colors.length; i += 1) {
+    if (colors[i] === '') {
       check += 1;
     }
   }
