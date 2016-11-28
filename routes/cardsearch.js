@@ -4,24 +4,23 @@ const baseURL = process.env.BASEURL ||
                 'https://api.magicthegathering.io/v1/cards';
 
 function cards(input) {
-  let link = '?name=' + input;
+  let link = `?name=${input}`;
   link = baseURL + link;
   const instance = axios.create({ baseURL: link });
   return instance.get(link);
 }
 
 function cardinfo(nameset) {
-  let res = nameset.split('$');
-  res[0] = '?name=' + res[0] + '&';
-  res[1] = 'set=' + res[1];
-  let infolink = baseURL + res[0] + res[1];
-  const instance = axios.create({ baseURL: infolink }); //skoða seinna
+  const res = nameset.split('$');
+  res[0] = `?name=${res[0]}&`;
+  res[1] = `set=${res[1]}`;
+  const infolink = baseURL + res[0] + res[1];
+  const instance = axios.create({ baseURL: infolink }); // skoða seinna
   return instance.get(infolink);
 }
 
 function advanced(parameters) {
-
-  let linkelems = [];
+  const linkelems = [];
   let x = 0;
 
   // 0 = Name
@@ -41,44 +40,44 @@ function advanced(parameters) {
   for (let i = 0; i < parameters.length; i++) {
     if (parameters[i] !== '') {
       if (parameters[i] !== undefined) {
-        switch(i) {
+        switch (i) {
           case 0:
-            parameters[i] = 'name=' + parameters[i];
+            parameters[i] = `name=${parameters[i]}`;
             break;
           case 1:
-            parameters[i] = 'rarity=' + parameters[i];
+            parameters[i] = `rarity=${parameters[i]}`;
             break;
           case 2:
-            parameters[i] = 'power=' + parameters[i];
+            parameters[i] = `power=${parameters[i]}`;
             break;
           case 3:
-            parameters[i] = 'toughness=' + parameters[i];
+            parameters[i] = `toughness=${parameters[i]}`;
             break;
           case 4:
-            parameters[i] = 'type=' + parameters[i];
+            parameters[i] = `type=${parameters[i]}`;
             break;
           case 5:
-            parameters[i] = 'type=' + parameters[i];
+            parameters[i] = `type=${parameters[i]}`;
             break;
           case 6:
-            parameters[i] = 'setName=' + parameters[i];
+            parameters[i] = `setName=${parameters[i]}`;
             break;
           case 7:
-            parameters[i] = 'artist=' + parameters[i];
+            parameters[i] = `artist=${parameters[i]}`;
             break;
           case 8:
-            parameters[i] = 'cmc=' + parameters[i];
+            parameters[i] = `cmc=${parameters[i]}`;
             break;
           case 9:
             if (parameters[11] == 'true') {
-              parameters[i] = 'colors=' + '\"' + parameters[i] + '\"';
+              parameters[i] = `${'colors=' + '\"'}${parameters[i]}\"`;
               break;
             } else {
-              parameters[i] = 'colors=' + parameters[i];
+              parameters[i] = `colors=${parameters[i]}`;
               break;
             }
           case 10:
-            parameters[i] = 'text=' + parameters[i];
+            parameters[i] = `text=${parameters[i]}`;
             break;
         }
         linkelems[x] = parameters[i];
@@ -88,16 +87,15 @@ function advanced(parameters) {
   }
   return linkelems;
 }
-//splittar stök í fylki á sama
-function getsearchedfor(linkelems){
-  for(let i=0;i<linkelems.length;i++){
-    let display = linkelems[i].split('=');
-    console.log("display er:" + display);
+// splittar stök í fylki á sama
+function getsearchedfor(linkelems) {
+  for (let i = 0; i < linkelems.length; i++) {
+    const display = linkelems[i].split('=');
+    console.log(`display er:${display}`);
     linkelems[i] = display[1];
-    console.log('linkelems er: ' + linkelems);
+    console.log(`linkelems er: ${linkelems}`);
   }
   return linkelems;
-
 }
 
 function advancedlink(linkelems, noc) {
@@ -105,7 +103,7 @@ function advancedlink(linkelems, noc) {
   let link = '?';
 
   for (let i = 0; i < linkelems.length; i += 1) {
-    link += linkelems[i] + '&'
+    link += `${linkelems[i]}&`;
   }
 
   link = link.substring(0, link.length - 1);
@@ -126,4 +124,4 @@ module.exports = {
   advancedlink,
   getlink,
   getsearchedfor,
-}
+};

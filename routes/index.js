@@ -6,7 +6,7 @@ const axios = require('axios');
 
 /* GET home page. */
 router.get('/', (req, res) => {
-  res.render('index', {title: 'Magic the Gathering' });
+  res.render('index', { title: 'Magic the Gathering' });
 });
 
 router.post('/card', (req, res, next) => {
@@ -15,25 +15,25 @@ router.post('/card', (req, res, next) => {
   .then((result) => {
     const card = result.data.cards;
     card.reverse();
-    res.render('card', { title: 'Magic the Gathering', card: card, yourCard: input });
+    res.render('card', { title: 'Magic the Gathering', card, yourCard: input });
   })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
+    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá' });
   });
 });
 
 router.get('/calc', (req, res, next) => {
-  //calculator.calculator();
-    let checker = 7;
-    res.render('calc', { title: 'Reiknivél', checker})
+  // calculator.calculator();
+  const checker = 7;
+  res.render('calc', { title: 'Reiknivél', checker })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
+    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá' });
   });
 });
 
 
 router.post('/calc', (req, res) => {
-  let lands = req.body.lands;
+  const lands = req.body.lands;
   console.log(lands);
   let black = req.body.black;
   let blue = req.body.blue;
@@ -42,9 +42,9 @@ router.post('/calc', (req, res) => {
   let white = req.body.white;
   let grey = req.body.grey;
   let extra;
-  let colors = [black,blue,red,green,white, grey, extra];
-  let calculated = calculator.manacalc(colors, lands);
-  let checker= calculator.checker(colors);
+  const colors = [black, blue, red, green, white, grey, extra];
+  const calculated = calculator.manacalc(colors, lands);
+  const checker = calculator.checker(colors);
 
   black = calculated[0];
   blue = calculated[1];
@@ -53,14 +53,14 @@ router.post('/calc', (req, res) => {
   white = calculated[4];
   grey = calculated[5];
   extra = calculated[6];
-  console.log("black:" + black);
-  console.log("blue" + blue);
-  console.log("red" + red);
-  console.log("green" + green);
-  console.log("white" +white);
-  console.log("grey" +grey);
-  console.log("extra" +extra);
-  console.log("checker:" + checker);
+  console.log(`black:${black}`);
+  console.log(`blue${blue}`);
+  console.log(`red${red}`);
+  console.log(`green${green}`);
+  console.log(`white${white}`);
+  console.log(`grey${grey}`);
+  console.log(`extra${extra}`);
+  console.log(`checker:${checker}`);
 
   res.render('calc', { title: 'Reiknivél', black, blue, red, green, white, grey, extra, checker });
 });
@@ -81,8 +81,7 @@ router.get('/advancedsearch', (req, res) => {
 });
 
 router.post('/advancedsearch', (req, res) => {
-
-  let parameters = [];
+  const parameters = [];
 
   parameters[0] = req.body.name;
   parameters[1] = req.body.rarity;
@@ -99,12 +98,12 @@ router.post('/advancedsearch', (req, res) => {
   console.log('noc: ', req.body.noOtherColors);
   console.log('gæsalappir: ', '\"');
 
-  let linkelems = cardsearch.advanced(parameters);
-  //console.log(linkelems);
-  let link = cardsearch.advancedlink(linkelems, req.body.noOtherColors);
-  let info = cardsearch.getsearchedfor(linkelems);
-  //console.log(info);
-  //console.log('link: ', link);
+  const linkelems = cardsearch.advanced(parameters);
+  // console.log(linkelems);
+  const link = cardsearch.advancedlink(linkelems, req.body.noOtherColors);
+  const info = cardsearch.getsearchedfor(linkelems);
+  // console.log(info);
+  // console.log('link: ', link);
   cardsearch.getlink(link)
   .then((result) => {
     const card1 = result.data.cards;
@@ -112,7 +111,7 @@ router.post('/advancedsearch', (req, res) => {
     res.render('card', { title: 'Magic the Gathering', card: card1, yourCard: info });
   })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
+    res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá' });
   });
 });
 
