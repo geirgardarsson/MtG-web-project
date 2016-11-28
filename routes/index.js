@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 const cardsearch = require('./cardsearch.js');
 const calculator = require('./calculator.js');
@@ -34,7 +35,6 @@ router.get('/calc', (req, res, next) => {
 
 router.post('/calc', (req, res) => {
   const lands = req.body.lands;
-  console.log(lands);
   let black = req.body.black;
   let blue = req.body.blue;
   let red = req.body.red;
@@ -95,12 +95,10 @@ router.post('/advancedsearch', (req, res) => {
   parameters[9] = req.body.color;
   parameters[10] = req.body.text;
   parameters[11] = req.body.noOtherColors;
-  console.log('noc: ', req.body.noOtherColors);
-  console.log('gæsalappir: ', '\"');
 
   const linkelems = cardsearch.advanced(parameters);
   // console.log(linkelems);
-  const link = cardsearch.advancedlink(linkelems, req.body.noOtherColors);
+  const link = cardsearch.advancedlink(linkelems);
   const info = cardsearch.getsearchedfor(linkelems);
   // console.log(info);
   // console.log('link: ', link);

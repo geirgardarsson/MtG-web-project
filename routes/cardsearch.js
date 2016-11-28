@@ -19,7 +19,8 @@ function cardinfo(nameset) {
   return instance.get(infolink);
 }
 
-function advanced(parameters) {
+function advanced(originalParameters) {
+  const parameters = originalParameters;
   const linkelems = [];
   let x = 0;
 
@@ -37,7 +38,7 @@ function advanced(parameters) {
   // 11 No other colors
 
 
-  for (let i = 0; i < parameters.length; i++) {
+  for (let i = 0; i < parameters.length; i += 1) {
     if (parameters[i] !== '') {
       if (parameters[i] !== undefined) {
         switch (i) {
@@ -69,8 +70,8 @@ function advanced(parameters) {
             parameters[i] = `cmc=${parameters[i]}`;
             break;
           case 9:
-            if (parameters[11] == 'true') {
-              parameters[i] = `${'colors=' + '\"'}${parameters[i]}\"`;
+            if (parameters[11] === 'true') {
+              parameters[i] = `${'colors="'}${parameters[i]}"`;
               break;
             } else {
               parameters[i] = `colors=${parameters[i]}`;
@@ -78,6 +79,8 @@ function advanced(parameters) {
             }
           case 10:
             parameters[i] = `text=${parameters[i]}`;
+            break;
+          default:
             break;
         }
         linkelems[x] = parameters[i];
@@ -88,18 +91,16 @@ function advanced(parameters) {
   return linkelems;
 }
 // splittar stök í fylki á sama
-function getsearchedfor(linkelems) {
-  for (let i = 0; i < linkelems.length; i++) {
+function getsearchedfor(originalLinkelems) {
+  const linkelems = originalLinkelems;
+  for (let i = 0; i < linkelems.length; i += 1) {
     const display = linkelems[i].split('=');
-    console.log(`display er:${display}`);
     linkelems[i] = display[1];
-    console.log(`linkelems er: ${linkelems}`);
   }
   return linkelems;
 }
 
-function advancedlink(linkelems, noc) {
-  console.log('linkelms og noc: ', linkelems, noc);
+function advancedlink(linkelems) {
   let link = '?';
 
   for (let i = 0; i < linkelems.length; i += 1) {
@@ -107,11 +108,11 @@ function advancedlink(linkelems, noc) {
   }
 
   link = link.substring(0, link.length - 1);
-  console.log(link);
   return link;
 }
 
-function getlink(link) {
+function getlink(originalLink) {
+  let link = originalLink;
   link = baseURL + link;
   const instance = axios.create({ baseURL: link });
   return instance.get(link);
