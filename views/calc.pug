@@ -3,153 +3,153 @@ extends layout
 block content
   ul(class='topnav')
     li(class='topnav-li')
-      a(class='topnav-a' href='/') Heim
+      a(class='topnav-a' href='/') Home
     li(class='topnav-li')
-      a(class='topnav-a' href='/advancedsearch') Ítarleg leit
+      a(class='topnav-a' href='/advancedsearch') Advanced search
     li(class='topnav-li')
-      a(class='topnav-a-active' href='/calc') Reiknivél
+      a(class='topnav-a-active' href='/calc') Calculator
   if checker == 7
     div(class='calc-top-container')
-        h1(class='calc-top') Reiknivél fyrir mana kostnað
-        p(class='calc-p-input') Hjálpar þér að finna út nákvæmlega hversu mikið mana þú átt að hafa af hverjum lit
+        h1(class='calc-top') Mana calculator
+        p(class='calc-p-input') Helps you figure out excatcty how much mana of each color you need
     form(method='post', action='/calc')
       div(class='calc-stats')
         div(class='calc-name-fit')
-          p(class='calc-p-input') Hvaða liti ertu með í stokknum þínum?
+          p(class='calc-p-input') What Colors do you have in your deck?
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='blactext')   Svarta
-              |  mana tákna:
+              |Number of
+              span(class='blacktext')   Swamp
+              |  mana symbols:
             div(class='calc-input')
               img(src='/images/BlackMana.jpg', class='icon')
               input(type='number', name="black" min='1', placeholder=0, class='calc-number-input')
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='bluetext')  Blárra
-              |  mana tákna:
+              |Number of
+              span(class='bluetext')  Island
+              |  mana symbols:
             div(class='calc-input')
               img(src='/images/BlueMana.jpg', class='icon')
               input(type='number', name="blue" min='1', placeholder=0, class='calc-number-input')
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='redtext')  Rauðra
-              |  mana tákna:
+              |Number of
+              span(class='redtext')  Mountain
+              |  mana symbols:
             div(class='calc-input')
               img(src='/images/RedMana.jpg', class='icon')
               input(type='number', name="red" min='1', placeholder=0, class='calc-number-input')
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='greentext')  Grænna
-              |  mana tákna:
+              |Number of
+              span(class='greentext')  Forest
+              |  mana symbols:
             div(class='calc-input')
               img(src='/images/GreenMana.jpg', class='icon')
               input(type='number', name="green" min='1', placeholder=0, class='calc-number-input')
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='whitetext')  Hvítra
-              |  mana tákna:
+              |Number of
+              span(class='whitetext')  Plains
+              |  mana symbols:
             div(class='calc-input')
               img(src='/images/WhiteMana.jpg', class='icon')
               input(type='number', name="white" min='1', placeholder=0, class='calc-number-input')
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='greytext')  Litlausa
-              |  mana tákna:
+              |Number of
+              span(class='greytext')  Colorless
+              |  mana symbols:
             div(class='calc-input')
               img(src='/images/GreyMana.jpg', class='greyicon')
               input(type='number', name="grey" min='1', placeholder=0, class='calc-number-input')
           div
-            p(class='calc-p-input') Fjöldi landa í stokknum þínum:
+            p(class='calc-p-input') Number of lands in your deck
             div(class='calc-input')
               input(type='number', name='lands' ,class='calc-land-input', min='1', placeholder='23', required)
       div(class='calc-submit-fit')
         div(class='calc-submit')
-          button(type='submit', class='calc-submit-button') LEITA
+          button(type='submit', class='calc-submit-button') Calculate
 
   else if checker !== 6
     div(class='calc-top-container')
-        h1(class='calc-top') útkoman úr Reiknivélinni
-        p(class='calc-p-input') Þetta er fjöldi landa af hverjum lit sem þú ættir að hafa
+        h1(class='calc-top') Outcome
+        p(class='calc-p-input') This is the amount of lands you should have of each color
     div(class='calc-stats')
       div(class='calc-outcome-container')
         if black
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='blacktext')  Svartra
-              |  landa:
+              |Number of
+              span(class='blacktext')  Swamp
+              |  lands:
             div(class='calc-input')
               img(src='/images/BlackMana.jpg', class='icon-result')
               p(class='calc-num-input-black') #{black}
         if blue
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='bluetext')  Blárra
-              |  landa:
+              |Number of
+              span(class='bluetext')  Island
+              |  lands:
             div(class='calc-input')
               img(src='/images/BlueMana.jpg', class='icon-result')
               p(class='calc-num-input-blue') #{blue}
         if red
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='redtext')  Rauðra
-              |  landa:
+              |Number of
+              span(class='redtext')  Mountain
+              |  lands:
             div(class='calc-input')
               img(src='/images/RedMana.jpg', class='icon-result')
               p(class='calc-num-input-red') #{red}
         if green
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='greentext')  Grænna
-              |  landa:
+              |Number of
+              span(class='greentext')  Forest
+              |  lands:
             div(class='calc-input')
               img(src='/images/GreenMana.jpg', class='icon-result')
               p(class='calc-num-input-green') #{green}
         if white
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='whitetext')  Hvíta
-              |  landa:
+              |Number of
+              span(class='whitetext')  Plains
+              |  lands:
             div(class='calc-input')
               img(src='/images/WhiteMana.jpg', class='icon-result')
               p(class='calc-num-input-white') #{white}
         if grey
           div
             p(class='calc-p-input')
-              |Fjöldi
-              span(class='greytext')  Litlausa
-              |  landa:
+              |Number of
+              span(class='greytext')  Waste
+              |  lands:
             div(class='calc-input')
               img(src='/images/GreyMana.jpg', class='icon-result')
               p(class='calc-num-input-grey') #{grey}
         if extra
           div
             p(class='calc-p-input')
-              |Þú ræður hvaða lit
+              |Any color you want
             div(class='calc-input')
               img(src='/images/GreyMana.jpg', class='icon-result')
               p #{extra}
     form(method='get', action='/calc')
       div(class='calc-submit-fit')
         div(class='calc-submit')
-          button(type='submit', class='calc-submit-button') Reikna aftur
+          button(type='submit', class='calc-submit-button') Restart
   else if checker == 6
     div(class='calc-top-container')
-        h1(class='calc-top') Því miður
-        p(class='calc-p-input') Ekki hægt að reikna með þessum upplýsingum
+        h1(class='calc-top') whooopsssssss
+        p(class='calc-p-input') Not enough information to calculate
     div(class='calc-nostats')
-      p(class='calc-p-input') Þú slóst ekki inn fjölda mana tákna
+      p(class='calc-p-input') You forgot to input how many mana symbols you have
     form(method='get', action='/calc')
       div(class='calc-submit-fit')
         div(class='calc-submit')
-          button(type='submit', class='calc-submit-button') Reikna aftur
+          button(type='submit', class='calc-submit-button') Try again

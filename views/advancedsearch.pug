@@ -3,11 +3,11 @@ extends layout
 block content
   ul(class='topnav')
     li(class='topnav-li')
-      a(class='topnav-a' href='/') Heim
+      a(class='topnav-a' href='/') Home
     li(class='topnav-li')
-      a(class='topnav-a-active' href='/advancedsearch') Ítarleg leit
+      a(class='topnav-a-active' href='/advancedsearch') Advanced search
     li(class='topnav-li')
-      a(class='topnav-a' href='/calc') Reiknivél
+      a(class='topnav-a' href='/calc') Calculator
   form(method='post', action='/advancedsearch' class='adv-form')
     div(class='adv-name-fit')
       div(class='adv-name')
@@ -126,7 +126,7 @@ block content
           input(type='checkbox' value='true' name='noOtherColors' id='checkboxTwoNoc' class='hide')
           label(for='checkboxTwoNoc')
       div(class='adv-misc')
-        p(class='adv-header') Annað
+        p(class='adv-header') Other
         div
           input(name='subtype', placeholder='Subtype' class='adv-font')
         div
@@ -137,4 +137,4 @@ block content
           input(name='artist', placeholder='Artist' class='adv-font')
     div(class='adv-name-fit')
       div(class='adv-submit')
-        button(type='submit', class='adv-submit-button') LEITA
+        button(type='submit', class='adv-submit-button') Search

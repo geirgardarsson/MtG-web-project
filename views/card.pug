@@ -3,19 +3,19 @@ extends layout
 block content
   ul(class='topnav')
     li(class='topnav-li')
-      a(class='topnav-a' href='/') Heim
+      a(class='topnav-a' href='/') Home
     li(class='topnav-li')
-      a(class='topnav-a' href='/advancedsearch') Ítarleg leit
+      a(class='topnav-a' href='/advancedsearch') Advanced search
     li(class='topnav-li')
-      a(class='topnav-a' href='/calc') Reiknivél
+      a(class='topnav-a' href='/calc') Calculator
     li(class='topnav-li')
-      a(class='topnav-a-active') Spilin þín
+      a(class='topnav-a-active') Your Cards
   div(class='card-input')
-    p(class='card-input-text') Þú slóst inn: #{yourCard}
+    p(class='card-input-text') You searched for: #{yourCard}
   form(method='get', action='/advancedsearch')
     div(class='calc-submit-fit')
       div(class='calc-submit')
-        button(type='submit', class='calc-submit-button') Leita aftur
+        button(type='submit', class='calc-submit-button') Search again
   ul(class='card-container')
     each item in card
       li
