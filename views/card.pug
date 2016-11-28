@@ -21,3 +21,7 @@ block content
       li
         a(href='/card/'+ item.name + '$' + item.set)
           img(src= ""+item.imageUrl onerror="this.style.display='none'")
+  form(method='get', action='/advancedsearch')
+    div(class='calc-submit-fit')
+      div(class='calc-submit')
+        button(type='submit', class='calc-submit-button') Search again
