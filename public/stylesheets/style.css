@@ -327,6 +327,348 @@ button:hover {
   background: #26ca28;
 }
 
+.checkboxTwo-black {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-black:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-black label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo-black input[type=checkbox]:checked+label {
+  left: 114px;
+  background: #111;
+}
+
+.checkboxTwo-blue {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-blue:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-blue label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo-blue input[type=checkbox]:checked+label {
+  left: 114px;
+  background: #a3d3ea;
+}
+
+.checkboxTwo-red {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-red:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-red label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo-red input[type=checkbox]:checked+label {
+  left: 114px;
+  background: #eba58c;
+}
+
+.checkboxTwo-green {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-green:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-green label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo-green input[type=checkbox]:checked+label {
+  left: 114px;
+  background: #92c6a4;
+}
+
+.checkboxTwo-white {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-white:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-white label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo-white input[type=checkbox]:checked+label {
+  left: 114px;
+  background: #efedcb;
+}
+
+.checkboxTwo-C {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-C:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-C label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo-C input[type=checkbox]:checked+label {
+  left: 114px;
+  background: #111;
+}
+
+.checkboxTwo-UC {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-UC:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-UC label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo-UC input[type=checkbox]:checked+label {
+  left: 114px;
+  background: #b5d2dc;
+}
+
+.checkboxTwo-R {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-R:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-R label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo-R input[type=checkbox]:checked+label {
+  left: 114px;
+  background: #e6d09e;
+}
+
+.checkboxTwo-MR {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-MR:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-MR label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkboxTwo-MR input[type=checkbox]:checked+label {
+  left: 114px;
+  background: #ce3d28;
+}
+
 .hide {
   opacity: 0;
 }

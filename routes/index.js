@@ -25,7 +25,7 @@ router.post('/card', (req, res, next) => {
 router.get('/calc', (req, res, next) => {
   //calculator.calculator();
     let checker = 7;
-    res.render('calc', {checker})
+    res.render('calc', { title: 'Reiknivél', checker})
   .catch((error) => {
     res.render('error', { title: 'Villa', message: 'Eitthvað kom uppá'});
   });
@@ -62,7 +62,7 @@ router.post('/calc', (req, res) => {
   console.log("extra" +extra);
   console.log("checker:" + checker);
 
-  res.render('calc', { black, blue, red, green, white, grey, extra, checker });
+  res.render('calc', { title: 'Reiknivél', black, blue, red, green, white, grey, extra, checker });
 });
 
 

@@ -96,6 +96,48 @@
   text-align: center;
 }
 
+.calc-num-input-black {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  color: #111;
+}
+
+.calc-num-input-blue {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  color: #a3d3ea;
+}
+
+.calc-num-input-red {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  color: #eba58c;
+}
+
+.calc-num-input-green {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  color: #92c6a4;
+}
+
+.calc-num-input-white {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  color: #efedcb;
+}
+
+.calc-num-input-grey {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  color: #bfb6b6;
+}
+
 .icon {
   height: 10%;
   width: 10%;
