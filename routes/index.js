@@ -19,16 +19,16 @@ router.post('/card', (req, res) => {
     res.render('card', { title: 'Magic the Gathering', card, yourCard: input });
   })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: error });
+    res.render('error', { title: 'Error', message: error });
   });
 });
 
 router.get('/calc', (req, res) => {
   // calculator.calculator();
   const checker = 7;
-  res.render('calc', { title: 'Reiknivél', checker })
+  res.render('calc', { title: 'Calculator', checker })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: error });
+    res.render('error', { title: 'Error', message: error });
   });
 });
 
@@ -62,7 +62,7 @@ router.post('/calc', (req, res) => {
   // console.log(`extra${extra}`);
   // console.log(`checker:${checker}`);
 
-  res.render('calc', { title: 'Reiknivél', black, blue, red, green, white, grey, extra, checker });
+  res.render('calc', { title: 'Calculator', black, blue, red, green, white, grey, extra, checker });
 });
 
 
@@ -72,12 +72,12 @@ router.get('/card/:nameset', (req, res) => {
     res.render('info', { card: result.data.cards });
   })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: error });
+    res.render('error', { title: 'Error', message: error });
   });
 });
 
 router.get('/advancedsearch', (req, res) => {
-  res.render('advancedsearch', { title: 'Ítarleg leit' });
+  res.render('advancedsearch', { title: 'Advanced search' });
 });
 
 router.post('/advancedsearch', (req, res) => {
@@ -109,7 +109,7 @@ router.post('/advancedsearch', (req, res) => {
     res.render('card', { title: 'Magic the Gathering', card: card1, yourCard: info });
   })
   .catch((error) => {
-    res.render('error', { title: 'Villa', message: error });
+    res.render('error', { title: 'Error', message: error });
   });
 });
 
