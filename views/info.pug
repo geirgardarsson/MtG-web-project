@@ -57,6 +57,7 @@ block content
           tr
             td Power and toughness:
             td #{item.power} / #{item.toughness}
-          //tr
-            td Legalities:
-            td #{item.legalities}
+  form(method='get', action='/advancedsearch')
+    div(class='calc-submit-fit')
+      div(class='calc-submit')
+        button(type='submit', class='calc-submit-button') Search again
