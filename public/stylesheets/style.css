@@ -40,6 +40,9 @@ tr:nth-child(even) {
   margin-top: 2%;
 }
 
+
+/*bætti við justify content center, pending approval*/
+
 .home-container {
   background-color: gray;
   opacity: 0.8;
@@ -48,6 +51,7 @@ tr:nth-child(even) {
   flex-wrap: wrap;
   margin-top: 7%;
   width: 65%;
+  justify-content: center;
 }
 
 .home-submit {
