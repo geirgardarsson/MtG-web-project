@@ -357,7 +357,7 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ddd;
+  background: #423e3e
 }
 
 .checkboxTwo-black input[type=checkbox]:checked+label {
@@ -395,12 +395,12 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ddd;
+  background: #a3d3ea;
 }
 
 .checkboxTwo-blue input[type=checkbox]:checked+label {
   left: 114px;
-  background: #a3d3ea;
+  background: #207eab
 }
 
 .checkboxTwo-red {
@@ -433,12 +433,12 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ddd;
+  background: #eba58c;
 }
 
 .checkboxTwo-red input[type=checkbox]:checked+label {
   left: 114px;
-  background: #eba58c;
+  background: #da2525
 }
 
 .checkboxTwo-green {
@@ -471,12 +471,12 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ddd;
+  background: #92c6a4;
 }
 
 .checkboxTwo-green input[type=checkbox]:checked+label {
   left: 114px;
-  background: #92c6a4;
+  background: #11bb4c
 }
 
 .checkboxTwo-white {
@@ -509,12 +509,12 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ddd;
+  background: #efedcb;
 }
 
 .checkboxTwo-white input[type=checkbox]:checked+label {
   left: 114px;
-  background: #efedcb;
+  background: #f7f6ea;
 }
 
 .checkboxTwo-C {
@@ -547,7 +547,7 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ddd;
+  background: #423e3e
 }
 
 .checkboxTwo-C input[type=checkbox]:checked+label {
@@ -585,12 +585,12 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ddd;
+  background: #b5d2dc;
 }
 
 .checkboxTwo-UC input[type=checkbox]:checked+label {
   left: 114px;
-  background: #b5d2dc;
+  background: #66a5bb
 }
 
 .checkboxTwo-R {
@@ -623,12 +623,12 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ddd;
+  background: #e6d09e;
 }
 
 .checkboxTwo-R input[type=checkbox]:checked+label {
   left: 114px;
-  background: #e6d09e;
+  background: #cc9a28
 }
 
 .checkboxTwo-MR {
@@ -661,12 +661,12 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ddd;
+  background: #ce3d28;
 }
 
 .checkboxTwo-MR input[type=checkbox]:checked+label {
   left: 114px;
-  background: #ce3d28;
+  background: #e86304
 }
 
 .hide {

@@ -9,4 +9,4 @@ To Do!
     7- hjálp
     8- Bæta við ýta á spil header eftir search
     9- laga liti á takka
-    10- laga seinni takka í card
+    10- laga seinni takka í card   ----lokið
