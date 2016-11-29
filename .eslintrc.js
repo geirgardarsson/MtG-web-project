@@ -9,6 +9,9 @@ module.exports = {
       "jsx-a11y",
       "import"
     ],
+    "rules": {
+      "new-cap": "off"
+    },
     "parserOptions": {
         "sourceType": "module"
     },
