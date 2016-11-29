@@ -33,6 +33,7 @@ tr:nth-child(even) {
   margin: 4.1%;
   margin-right: 0;
   margin-top: 2%;
+  margin-bottom: 1%;
 }
 
 .home-form {
@@ -679,12 +680,12 @@ button:hover {
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #ce3d28;
+  background: #c15202;
 }
 
 .checkboxTwo-MR input[type=checkbox]:checked+label {
   left: 114px;
-  background: #c15202;
+  background: #ce3d28;
 }
 
 .hide {
