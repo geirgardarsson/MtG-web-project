@@ -169,7 +169,7 @@ li {
   margin: 2%;
   background-color: gray;
   border-radius: 25px;
-  margin-top: 5%;
+  margin-top: 10%;
   opacity: 0.8;
 }
 
@@ -180,6 +180,7 @@ li {
 
 .info-table {
   width: 100%;
+  margin-top: 5%;
 }
 
 .adv-submit {
@@ -666,7 +667,7 @@ button:hover {
 
 .checkboxTwo-MR input[type=checkbox]:checked+label {
   left: 114px;
-  background: #e86304
+  background: #c15202;
 }
 
 .hide {

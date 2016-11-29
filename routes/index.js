@@ -53,14 +53,14 @@ router.post('/calc', (req, res) => {
   white = calculated[4];
   grey = calculated[5];
   extra = calculated[6];
-  console.log(`black:${black}`);
-  console.log(`blue${blue}`);
-  console.log(`red${red}`);
-  console.log(`green${green}`);
-  console.log(`white${white}`);
-  console.log(`grey${grey}`);
-  console.log(`extra${extra}`);
-  console.log(`checker:${checker}`);
+  // console.log(`black:${black}`);
+  // console.log(`blue${blue}`);
+  // console.log(`red${red}`);
+  // console.log(`green${green}`);
+  // console.log(`white${white}`);
+  // console.log(`grey${grey}`);
+  // console.log(`extra${extra}`);
+  // console.log(`checker:${checker}`);
 
   res.render('calc', { title: 'Reiknivél', black, blue, red, green, white, grey, extra, checker });
 });
