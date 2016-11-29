@@ -12,5 +12,5 @@ To Do!
     10- laga seinni takka í card   ----lokið
     11- linta css
     12- þýða titlanna á síðunum   ----lokið
-    13- laga takka í reiknivél
+    13- laga takka í reiknivél   ----lokið
     14- taka burt öll console.log

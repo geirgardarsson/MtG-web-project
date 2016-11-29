@@ -255,6 +255,7 @@ font-family: 'Bree Serif', serif;*/
 .calc-submit-fit {
   display: flex;
   justify-content: center;
+  margin-bottom: 1%;
 }
 
 .tooltip {
