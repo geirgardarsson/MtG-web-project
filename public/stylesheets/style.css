@@ -719,3 +719,12 @@ button:hover {
 .calc-top {
   margin-top: 5%;
 }
+
+.ref-link {
+  text-decoration: none;
+  color: black;
+}
+
+.ref-link:hover {
+  color: white;
+}
