@@ -15,6 +15,7 @@ router.post('/card', (req, res) => {
   cardsearch.cards(input)
   .then((result) => {
     const card = result.data.cards;
+    console.log(card);
     card.reverse();
     res.render('card', { title: 'Magic the Gathering', card, yourCard: input });
   })
@@ -107,6 +108,20 @@ router.post('/advancedsearch', (req, res) => {
     const card1 = result.data.cards;
     card1.reverse();
     res.render('card', { title: 'Magic the Gathering', card: card1, yourCard: info });
+  })
+  .catch((error) => {
+    res.render('error', { title: 'Error', message: error });
+  });
+});
+
+router.post('/card', (req, res) => {
+  const input = req.body.set;
+  cardsearch.cards(input)
+  .then((result) => {
+    const card = result.data.cards;
+    console.log(card);
+    card.reverse();
+    res.render('card', { title: 'Magic the Gathering', card, yourCard: input });
   })
   .catch((error) => {
     res.render('error', { title: 'Error', message: error });

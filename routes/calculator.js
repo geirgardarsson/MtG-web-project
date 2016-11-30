@@ -71,10 +71,29 @@ function manacalc(OriginalColors, lands) {
       }
     }
   }
+console.log(`þetta er landtotal fyrst:${landtotal}`);
+  // sértilfelli, aðeins notað ef notandi er vitleysingur :)
+  // sem sagt ef notandi ætlar að hafa fleiri liti en lönd
+  if (numofcolors > lands) {
+    for (let i = 0; i < 6; i += 1) {
+      if (mana[i] !== '') {
+        if (mana[i] !== undefined) {
+          mana[i] = '';
+        }
+      }
+    }
+    mana[6] = lands;
+    console.log(`lagavillujá svona er mana:${mana}`);
+    return mana;
+  }
+
+
+
+
   // totla fjöldi landa sem er gert ráð fyrir
   console.log(`þetta er landtotal:${landtotal}`);
   let check = 0;
-// athugar hvort að fjöldi stemmi við fjölda landa
+  // athugar hvort að fjöldi stemmi við fjölda landa
   if (landtotal !== 0) {
     check = lands - landtotal;
   }
@@ -112,11 +131,6 @@ function manacalc(OriginalColors, lands) {
     }
   }
 
-  // sértilfelli, aðeins notað ef notandi er vitleysingur :)
-  // sem sagt ef notandi ætlar að hafa fleiri liti en lönd
-  if (mana[6] > land) {
-    mana[6] = land;
-  }
 
   // const mincount = 0;
   let maxpointer = maxpoint(mana);

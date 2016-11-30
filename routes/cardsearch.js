@@ -118,6 +118,13 @@ function getlink(originalLink) {
   return instance.get(link);
 }
 
+function getset(input){
+  let link = `?set=${input}`;
+  link = baseURL + link;
+  const instance = axios.create({ baseURL: link });
+  return instance.get(link);
+}
+
 module.exports = {
   cards,
   cardinfo,
@@ -125,4 +132,5 @@ module.exports = {
   advancedlink,
   getlink,
   getsearchedfor,
+  getset,
 };

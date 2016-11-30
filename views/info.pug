@@ -17,27 +17,37 @@ block content
         img(src= ""+item.imageUrl onerror="this.style.display='none'" class='info-img')
       div(class='info-right')
         table(class='info-table')
-          //tr
-            td Manacost:
-            td #{item.manacost}
-          tr
-            td Converted manacost:
-            td #{item.cmc}
-          tr
-            td Colors:
-            td #{item.colors}
-          tr
-            td Color Identity:
-            td #{item.colorIdentity}
-          tr
-            td Supertype:
-            td #{item.supertypes}
+          if item.manaCost
+            tr
+              td Manacost:
+              td #{item.manaCost}
+          if item.cmc
+            tr
+              td Converted manacost:
+              td #{item.cmc}
+          if item.colors
+            tr
+              td Colors:
+              td #{item.colors}
+          else
+            tr
+              td Colors:
+              td Colorless
+          if item.colorIdentity
+            tr
+              td Color Identity:
+              td #{item.colorIdentity}
+          if item.supertypes
+            tr
+              td Supertype:
+              td #{item.supertypes}
           tr
             td Type:
             td #{item.types}
-          tr
-            td Subtype:
-            td #{item.subtypes}
+          if item.subtypes
+            tr
+              td Subtype:
+              td #{item.subtypes}
           tr
             td Rarity:
             td #{item.rarity}
@@ -47,16 +57,25 @@ block content
           tr
             td Text:
             td #{item.text}
-          tr
-            td Flavor:
-            td
-              i #{item.flavor}
+          if item.flavor
+            tr
+              td Flavor:
+              td
+                i #{item.flavor}
           tr
             td Artist:
             td #{item.artist}
+          if item.power
+            tr
+              td Power and toughness:
+              td #{item.power} / #{item.toughness}
+          if item.loyalty
+            tr
+              td loyalty:
+              td #{item.loyalty}
           tr
-            td Power and toughness:
-            td #{item.power} / #{item.toughness}
+            td Printings:
+            td #{item.printings}
   form(method='get', action='/advancedsearch')
     div(class='calc-submit-fit')
       div(class='calc-submit')
