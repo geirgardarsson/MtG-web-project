@@ -101,7 +101,7 @@ router.post('/advancedsearch', (req, res) => {
   // console.log(linkelems);
   const link = cardsearch.advancedlink(linkelems);
   const info = cardsearch.getsearchedfor(linkelems);
-  // console.log(info);
+  console.log(info);
   // console.log('link: ', link);
   cardsearch.getlink(link)
   .then((result) => {
@@ -114,18 +114,5 @@ router.post('/advancedsearch', (req, res) => {
   });
 });
 
-router.post('/card', (req, res) => {
-  const input = req.body.set;
-  cardsearch.cards(input)
-  .then((result) => {
-    const card = result.data.cards;
-    console.log(card);
-    card.reverse();
-    res.render('card', { title: 'Magic the Gathering', card, yourCard: input });
-  })
-  .catch((error) => {
-    res.render('error', { title: 'Error', message: error });
-  });
-});
 
 module.exports = router;

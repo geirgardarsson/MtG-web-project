@@ -12,7 +12,7 @@ function maxpoint(mana) {
   return maxpointer;
 }
 
-// MUNDU AÐ TAKA TIL Í ÞESSUM KÓÐA!!!!
+
 function manacalc(OriginalColors, lands) {
   const Colors = OriginalColors;
   const land = (parseInt(lands, 10));
@@ -71,7 +71,7 @@ function manacalc(OriginalColors, lands) {
       }
     }
   }
-console.log(`þetta er landtotal fyrst:${landtotal}`);
+
   // sértilfelli, aðeins notað ef notandi er vitleysingur :)
   // sem sagt ef notandi ætlar að hafa fleiri liti en lönd
   if (numofcolors > lands) {
@@ -86,8 +86,6 @@ console.log(`þetta er landtotal fyrst:${landtotal}`);
     console.log(`lagavillujá svona er mana:${mana}`);
     return mana;
   }
-
-
 
 
   // totla fjöldi landa sem er gert ráð fyrir
@@ -113,7 +111,6 @@ console.log(`þetta er landtotal fyrst:${landtotal}`);
       for (let i = 0; i < mana.length - 1; i += 1) {
         if (mana[i] !== '' && mana[i] !== 0) {
           console.log(`þetta er mana[i],nyjacheck${mana[i]}`);
-          // console.log('geir í draumalandi');
           mana[i] -= 1;
           console.log(`þetta er mana[i],nyjacheckv2${mana[i]}`);
           // ef þettta minnkar landafjölda af einhverjum lit í 0
@@ -132,7 +129,6 @@ console.log(`þetta er landtotal fyrst:${landtotal}`);
   }
 
 
-  // const mincount = 0;
   let maxpointer = maxpoint(mana);
   // Athugar hvort að öll gildi ná minumum
   for (let i = 0; i < mana.length - 1; i += 1) {
