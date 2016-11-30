@@ -3,7 +3,6 @@ const express = require('express');
 const router = express.Router();
 const cardsearch = require('./cardsearch.js');
 const calculator = require('./calculator.js');
-// const axios = require('axios');
 
 /* GET home page. */
 router.get('/', (req, res) => {
@@ -25,7 +24,6 @@ router.post('/card', (req, res) => {
 });
 
 router.get('/calc', (req, res) => {
-  // calculator.calculator();
   const checker = 7;
   res.render('calc', { title: 'Calculator', checker })
   .catch((error) => {

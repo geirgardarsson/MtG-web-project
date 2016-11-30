@@ -102,6 +102,12 @@ mr- #ce3d28
   text-align: center;
 }
 
+.calc-p-input-home {
+  font-size: 160%;
+  text-align: center;
+  margin: 5%;
+}
+
 .calc-num-input-black {
   font-size: 25px;
   text-align: center;
@@ -227,6 +233,7 @@ mr- #ce3d28
   justify-content: center;
 }
 
+
 /* cursor: pointer;
 background-color: #111;
 border: none;
@@ -265,7 +272,6 @@ font-family: 'Bree Serif', serif; */
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
