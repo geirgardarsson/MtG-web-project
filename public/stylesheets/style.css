@@ -339,9 +339,9 @@ button:hover {
   background: #b3b1b1;
 }
 
-.checkboxTwo input[type=checkbox]:checked+label {
+.checkboxTwo input[type=checkbox]:checked + label {
   left: 114px;
-  background: #ffffff;
+  background: #fff;
 }
 
 .checkboxTwo-black {
@@ -377,7 +377,7 @@ button:hover {
   background: #423e3e;
 }
 
-.checkboxTwo-black input[type=checkbox]:checked+label {
+.checkboxTwo-black input[type=checkbox]:checked + label {
   left: 114px;
   background: #111;
 }
@@ -415,7 +415,7 @@ button:hover {
   background: #a3d3ea;
 }
 
-.checkboxTwo-blue input[type=checkbox]:checked+label {
+.checkboxTwo-blue input[type=checkbox]:checked + label {
   left: 114px;
   background: #207eab;
 }
@@ -453,7 +453,7 @@ button:hover {
   background: #eba58c;
 }
 
-.checkboxTwo-red input[type=checkbox]:checked+label {
+.checkboxTwo-red input[type=checkbox]:checked + label {
   left: 114px;
   background: #da2525;
 }
@@ -491,7 +491,7 @@ button:hover {
   background: #92c6a4;
 }
 
-.checkboxTwo-green input[type=checkbox]:checked+label {
+.checkboxTwo-green input[type=checkbox]:checked + label {
   left: 114px;
   background: #11bb4c;
 }
@@ -529,9 +529,9 @@ button:hover {
   background: #efedcb;
 }
 
-.checkboxTwo-white input[type=checkbox]:checked+label {
+.checkboxTwo-white input[type=checkbox]:checked + label {
   left: 114px;
-  background: #e4e0af
+  background: #e4e0af;
 }
 
 .checkboxTwo-C {
@@ -567,7 +567,7 @@ button:hover {
   background: #423e3e;
 }
 
-.checkboxTwo-C input[type=checkbox]:checked+label {
+.checkboxTwo-C input[type=checkbox]:checked + label {
   left: 114px;
   background: #111;
 }
@@ -605,7 +605,7 @@ button:hover {
   background: #b5d2dc;
 }
 
-.checkboxTwo-UC input[type=checkbox]:checked+label {
+.checkboxTwo-UC input[type=checkbox]:checked + label {
   left: 114px;
   background: #66a5bb;
 }
@@ -643,7 +643,7 @@ button:hover {
   background: #e6d09e;
 }
 
-.checkboxTwo-R input[type=checkbox]:checked+label {
+.checkboxTwo-R input[type=checkbox]:checked + label {
   left: 114px;
   background: #cc9a28;
 }
@@ -681,7 +681,7 @@ button:hover {
   background: #c15202;
 }
 
-.checkboxTwo-MR input[type=checkbox]:checked+label {
+.checkboxTwo-MR input[type=checkbox]:checked + label {
   left: 114px;
   background: #ce3d28;
 }

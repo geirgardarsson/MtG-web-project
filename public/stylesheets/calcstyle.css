@@ -233,7 +233,6 @@ mr- #ce3d28
   justify-content: center;
 }
 
-
 /* cursor: pointer;
 background-color: #111;
 border: none;
@@ -272,6 +271,7 @@ font-family: 'Bree Serif', serif; */
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
+
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
