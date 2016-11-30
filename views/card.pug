@@ -14,6 +14,8 @@ block content
     p(class='card-input-text') You searched for: #{yourCard}
     if card [0]
       p(class='card-input-text') Click a card for more info
+    else
+      p(class='card-input-text') No card match this criteria
   form(method='get', action='/advancedsearch')
     div(class='calc-submit-fit')
       div(class='calc-submit')
