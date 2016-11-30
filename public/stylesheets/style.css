@@ -10,9 +10,9 @@ body {
 }
 
 h1 {
+  font: 'Bree Serif', serif;
   font-size: 30px;
   font-weight: bold;
-  font: 'Bree Serif', serif;
 }
 
 a {
@@ -24,7 +24,7 @@ td {
 }
 
 tr:nth-child(even) {
-  background-color: #ddd
+  background-color: #ddd;
 }
 
 .home-header {
@@ -40,9 +40,6 @@ tr:nth-child(even) {
   margin: 5%;
   margin-top: 2%;
 }
-
-
-/*bætti við justify content center, pending approval*/
 
 .home-container {
   background-color: gray;
@@ -318,7 +315,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo:before {
+.checkboxTwo::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -333,7 +330,7 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
@@ -342,7 +339,7 @@ button:hover {
   background: #ddd;
 }
 
-.checkboxTwo input[type=checkbox]:checked+label {
+.checkboxTwo input[type=checkbox]:checked + label {
   left: 114px;
   background: #26ca28;
 }
@@ -356,7 +353,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo-black:before {
+.checkboxTwo-black::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -371,16 +368,16 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #423e3e
+  background: #423e3e;
 }
 
-.checkboxTwo-black input[type=checkbox]:checked+label {
+.checkboxTwo-black input[type=checkbox]:checked + label {
   left: 114px;
   background: #111;
 }
@@ -394,7 +391,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo-blue:before {
+.checkboxTwo-blue::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -409,7 +406,7 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
@@ -418,9 +415,9 @@ button:hover {
   background: #a3d3ea;
 }
 
-.checkboxTwo-blue input[type=checkbox]:checked+label {
+.checkboxTwo-blue input[type=checkbox]:checked + label {
   left: 114px;
-  background: #207eab
+  background: #207eab;
 }
 
 .checkboxTwo-red {
@@ -432,7 +429,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo-red:before {
+.checkboxTwo-red::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -447,7 +444,7 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
@@ -456,9 +453,9 @@ button:hover {
   background: #eba58c;
 }
 
-.checkboxTwo-red input[type=checkbox]:checked+label {
+.checkboxTwo-red input[type=checkbox]:checked + label {
   left: 114px;
-  background: #da2525
+  background: #da2525;
 }
 
 .checkboxTwo-green {
@@ -470,7 +467,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo-green:before {
+.checkboxTwo-green::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -485,7 +482,7 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
@@ -494,9 +491,9 @@ button:hover {
   background: #92c6a4;
 }
 
-.checkboxTwo-green input[type=checkbox]:checked+label {
+.checkboxTwo-green input[type=checkbox]:checked + label {
   left: 114px;
-  background: #11bb4c
+  background: #11bb4c;
 }
 
 .checkboxTwo-white {
@@ -508,7 +505,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo-white:before {
+.checkboxTwo-white::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -523,7 +520,7 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
@@ -532,7 +529,7 @@ button:hover {
   background: #efedcb;
 }
 
-.checkboxTwo-white input[type=checkbox]:checked+label {
+.checkboxTwo-white input[type=checkbox]:checked + label {
   left: 114px;
   background: #f7f6ea;
 }
@@ -546,7 +543,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo-C:before {
+.checkboxTwo-C::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -561,16 +558,16 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
   z-index: 1;
   left: 12px;
-  background: #423e3e
+  background: #423e3e;
 }
 
-.checkboxTwo-C input[type=checkbox]:checked+label {
+.checkboxTwo-C input[type=checkbox]:checked + label {
   left: 114px;
   background: #111;
 }
@@ -584,7 +581,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo-UC:before {
+.checkboxTwo-UC::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -599,7 +596,7 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
@@ -608,9 +605,9 @@ button:hover {
   background: #b5d2dc;
 }
 
-.checkboxTwo-UC input[type=checkbox]:checked+label {
+.checkboxTwo-UC input[type=checkbox]:checked + label {
   left: 114px;
-  background: #66a5bb
+  background: #66a5bb;
 }
 
 .checkboxTwo-R {
@@ -622,7 +619,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo-R:before {
+.checkboxTwo-R::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -637,7 +634,7 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
@@ -646,9 +643,9 @@ button:hover {
   background: #e6d09e;
 }
 
-.checkboxTwo-R input[type=checkbox]:checked+label {
+.checkboxTwo-R input[type=checkbox]:checked + label {
   left: 114px;
-  background: #cc9a28
+  background: #cc9a28;
 }
 
 .checkboxTwo-MR {
@@ -660,7 +657,7 @@ button:hover {
   position: relative;
 }
 
-.checkboxTwo-MR:before {
+.checkboxTwo-MR::before {
   content: '';
   position: absolute;
   top: 19px;
@@ -675,7 +672,7 @@ button:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   position: absolute;
   top: 9px;
@@ -684,7 +681,7 @@ button:hover {
   background: #c15202;
 }
 
-.checkboxTwo-MR input[type=checkbox]:checked+label {
+.checkboxTwo-MR input[type=checkbox]:checked + label {
   left: 114px;
   background: #ce3d28;
 }

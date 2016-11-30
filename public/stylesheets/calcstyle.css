@@ -51,7 +51,6 @@ mr- #ce3d28
   flex-flow: column wrap;
   align-self: center;
   justify-content: center;
-  padding: 0.5%;
   background-color: grey;
   opacity: 0.9;
   border-radius: 10px;
@@ -99,7 +98,6 @@ mr- #ce3d28
 }
 
 .calc-p-input {
-  /*font-size: 20px;*/
   font-size: 160%;
   text-align: center;
 }
@@ -177,7 +175,6 @@ mr- #ce3d28
   display: flex;
   align-self: center;
   justify-content: center;
-  padding: 0.5%;
   background-color: grey;
   opacity: 0.9;
   border-radius: 10px;
@@ -191,10 +188,8 @@ mr- #ce3d28
   display: flex;
   align-self: center;
   justify-content: center;
-  padding: 0.5%;
   opacity: 0.9;
   margin-bottom: 1%;
-  /*width: 80%;*/
   margin-left: 10%;
   margin-right: 10%;
   padding: 50px;
@@ -203,7 +198,6 @@ mr- #ce3d28
 .calc-nostats {
   display: flex;
   flex-direction: column;
-  padding: 0.5%;
   background-color: #d05858;
   opacity: 0.9;
   border-radius: 10px;
@@ -233,15 +227,14 @@ mr- #ce3d28
   justify-content: center;
 }
 
-
-/*cursor: pointer;
+/* cursor: pointer;
 background-color: #111;
 border: none;
 color: #ddd;
 border-radius: 10px;
 padding: 10px 175px;
 font-weight: bold;
-font-family: 'Bree Serif', serif;*/
+font-family: 'Bree Serif', serif; */
 
 .calc-submit {
   display: flex;
@@ -250,7 +243,6 @@ font-family: 'Bree Serif', serif;*/
   opacity: 0.9;
   padding: 0.5%;
   border-radius: 10px;
-  /*width: 27%;*/
 }
 
 .calc-submit-fit {
@@ -273,6 +265,7 @@ font-family: 'Bree Serif', serif;*/
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
+
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
