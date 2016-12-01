@@ -60,6 +60,7 @@ tr:nth-child(even) {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2%;
+  margin-bottom: 2%;
   width: 65%;
   align-items: center;
   flex-direction: column;
