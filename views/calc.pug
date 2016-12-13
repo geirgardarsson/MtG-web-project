@@ -141,7 +141,7 @@ block content
               |Number of lands in deck:
             div(class='calc-input')
               //img(src='/images/GreyMana.jpg', class='icon-result')
-              p #{lands}
+              p(class='calc-num-input-grey') #{lands}
       div(class='calc-stats-right')
         div(class='calc-outcome-container')
           div
@@ -201,13 +201,13 @@ block content
               div(class='calc-input')
                 img(src='/images/GreyMana.jpg', class='icon-result')
                 p(class='calc-num-input-grey') #{greyCalc}
-          if extraCalc
+          if extra
             div
               p(class='calc-p-input')
                 |Any color you want
               div(class='calc-input')
                 img(src='/images/GreyMana.jpg', class='icon-result')
-                p #{extra}
+                p(class='calc-num-input-grey') #{extra}
     form(method='get', action='/calc')
       div(class='calc-submit-fit')
         div(class='calc-submit')

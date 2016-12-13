@@ -181,7 +181,7 @@ mr- #ce3d28
 /* box fyrir input eftir útreikning*/
 
 .calc-stats-left {
-  display: flex;
+  /*display: flex;
   /*align-self: center;*/
   justify-content: center;
   background-color: #906d4a;
@@ -198,7 +198,7 @@ mr- #ce3d28
 /* box fyrir outcome eftir útreiking */
 
 .calc-stats-right {
-  display: flex;
+  /*display: flex;
   /*align-self: center;*/
   justify-content: center;
   background-color: #576147;
