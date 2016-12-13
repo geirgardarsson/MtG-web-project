@@ -31,7 +31,6 @@ router.get('/calc', (req, res) => {
   });
 });
 
-
 router.post('/calc', (req, res) => {
   const lands = req.body.lands;
   let black = req.body.black;
@@ -51,7 +50,7 @@ router.post('/calc', (req, res) => {
   let greenCalc = calculated[3];
   let whiteCalc = calculated[4];
   let greyCalc = calculated[5];
-  let extraCalc = calculated[6];
+  extra = calculated[6];
   // console.log(`black:${black}`);
   // console.log(`blue${blue}`);
   // console.log(`red${red}`);
@@ -61,7 +60,14 @@ router.post('/calc', (req, res) => {
   // console.log(`extra${extra}`);
   // console.log(`checker:${checker}`);
 
-  res.render('calc', { title: 'Calculator', blackCalc, blueCalc, redCalc, greenCalc, whiteCalc, greyCalc, extraCalc, black, blue, red, green, white, grey, checker });
+  res.render('calc', { title: 'Calculator', lands, blackCalc, blueCalc, redCalc, greenCalc, whiteCalc, greyCalc, extra, black, blue, red, green, white, grey, checker });
+});
+
+router.get('/new', (req, res) => {
+  res.render('', { title: 'Free for all'})
+  .catch((error) => {
+    res.render('error', { title: 'Error', message: error });
+  });
 });
 
 

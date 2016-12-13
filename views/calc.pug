@@ -136,13 +136,12 @@ block content
               div(class='calc-input')
                 img(src='/images/GreyMana.jpg', class='icon-result')
                 p(class='calc-num-input-grey') #{grey}
-          //if extra
-            div
-              p(class='calc-p-input')
-                |Any color you want
-              div(class='calc-input')
-                img(src='/images/GreyMana.jpg', class='icon-result')
-                p #{extra}
+          div
+            p(class='calc-p-input')
+              |Number of lands in deck:
+            div(class='calc-input')
+              //img(src='/images/GreyMana.jpg', class='icon-result')
+              p #{lands}
       div(class='calc-stats-right')
         div(class='calc-outcome-container')
           div
@@ -156,7 +155,7 @@ block content
                 |  lands:
               div(class='calc-input')
                 img(src='/images/BlackMana.jpg', class='icon-result')
-                p(class='calc-num-input-black') #{black}
+                p(class='calc-num-input-black') #{blackCalc}
           if blueCalc
             div
               p(class='calc-p-input')
@@ -165,7 +164,7 @@ block content
                 |  lands:
               div(class='calc-input')
                 img(src='/images/BlueMana.jpg', class='icon-result')
-                p(class='calc-num-input-blue') #{blue}
+                p(class='calc-num-input-blue') #{blueCalc}
           if redCalc
             div
               p(class='calc-p-input')
@@ -174,7 +173,7 @@ block content
                 |  lands:
               div(class='calc-input')
                 img(src='/images/RedMana.jpg', class='icon-result')
-                p(class='calc-num-input-red') #{red}
+                p(class='calc-num-input-red') #{redCalc}
           if greenCalc
             div
               p(class='calc-p-input')
@@ -183,7 +182,7 @@ block content
                 |  lands:
               div(class='calc-input')
                 img(src='/images/GreenMana.jpg', class='icon-result')
-                p(class='calc-num-input-green') #{green}
+                p(class='calc-num-input-green') #{greenCalc}
           if whiteCalc
             div
               p(class='calc-p-input')
@@ -192,7 +191,7 @@ block content
                 |  lands:
               div(class='calc-input')
                 img(src='/images/WhiteMana.jpg', class='icon-result')
-                p(class='calc-num-input-white') #{white}
+                p(class='calc-num-input-white') #{whiteCalc}
           if greyCalc
             div
               p(class='calc-p-input')
@@ -201,7 +200,7 @@ block content
                 |  lands:
               div(class='calc-input')
                 img(src='/images/GreyMana.jpg', class='icon-result')
-                p(class='calc-num-input-grey') #{grey}
+                p(class='calc-num-input-grey') #{greyCalc}
           if extraCalc
             div
               p(class='calc-p-input')
