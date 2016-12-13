@@ -45,13 +45,13 @@ router.post('/calc', (req, res) => {
   const calculated = calculator.manacalc(colors, lands);
   const checker = calculator.checker(colors);
 
-  black = calculated[0];
-  blue = calculated[1];
-  red = calculated[2];
-  green = calculated[3];
-  white = calculated[4];
-  grey = calculated[5];
-  extra = calculated[6];
+  let blackCalc = calculated[0];
+  let blueCalc = calculated[1];
+  let redCalc = calculated[2];
+  let greenCalc = calculated[3];
+  let whiteCalc = calculated[4];
+  let greyCalc = calculated[5];
+  let extraCalc = calculated[6];
   // console.log(`black:${black}`);
   // console.log(`blue${blue}`);
   // console.log(`red${red}`);
@@ -61,7 +61,7 @@ router.post('/calc', (req, res) => {
   // console.log(`extra${extra}`);
   // console.log(`checker:${checker}`);
 
-  res.render('calc', { title: 'Calculator', black, blue, red, green, white, grey, extra, checker });
+  res.render('calc', { title: 'Calculator', blackCalc, blueCalc, redCalc, greenCalc, whiteCalc, greyCalc, extraCalc, black, blue, red, green, white, grey, checker });
 });
 
 

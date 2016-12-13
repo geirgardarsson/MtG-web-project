@@ -76,69 +76,139 @@ block content
     div(class='calc-top-container')
         h1(class='calc-top') Outcome
         p(class='calc-p-input') This is the amount of lands you should have of each color
-    div(class='calc-stats')
-      div(class='calc-outcome-container')
-        if black
+    div(class='calc-stats-container')
+      div(class='calc-stats-left')
+        div(class='calc-outcome-container')
           div
             p(class='calc-p-input')
-              |Number of
-              span(class='blacktext')  Swamp
-              |  lands:
-            div(class='calc-input')
-              img(src='/images/BlackMana.jpg', class='icon-result')
-              p(class='calc-num-input-black') #{black}
-        if blue
+              |Number of symbols:
+          if black
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='blacktext')  Swamp
+                |  symbols:
+              div(class='calc-input')
+                img(src='/images/BlackMana.jpg', class='icon-result')
+                p(class='calc-num-input-black') #{black}
+          if blue
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='bluetext')  Island
+                |  symbols:
+              div(class='calc-input')
+                img(src='/images/BlueMana.jpg', class='icon-result')
+                p(class='calc-num-input-blue') #{blue}
+          if red
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='redtext')  Mountain
+                |  symbols:
+              div(class='calc-input')
+                img(src='/images/RedMana.jpg', class='icon-result')
+                p(class='calc-num-input-red') #{red}
+          if green
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='greentext')  Forest
+                |  symbols:
+              div(class='calc-input')
+                img(src='/images/GreenMana.jpg', class='icon-result')
+                p(class='calc-num-input-green') #{green}
+          if white
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='whitetext')  Plains
+                |  symbols:
+              div(class='calc-input')
+                img(src='/images/WhiteMana.jpg', class='icon-result')
+                p(class='calc-num-input-white') #{white}
+          if grey
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='greytext')  Waste
+                |  symbols:
+              div(class='calc-input')
+                img(src='/images/GreyMana.jpg', class='icon-result')
+                p(class='calc-num-input-grey') #{grey}
+          //if extra
+            div
+              p(class='calc-p-input')
+                |Any color you want
+              div(class='calc-input')
+                img(src='/images/GreyMana.jpg', class='icon-result')
+                p #{extra}
+      div(class='calc-stats-right')
+        div(class='calc-outcome-container')
           div
             p(class='calc-p-input')
-              |Number of
-              span(class='bluetext')  Island
-              |  lands:
-            div(class='calc-input')
-              img(src='/images/BlueMana.jpg', class='icon-result')
-              p(class='calc-num-input-blue') #{blue}
-        if red
-          div
-            p(class='calc-p-input')
-              |Number of
-              span(class='redtext')  Mountain
-              |  lands:
-            div(class='calc-input')
-              img(src='/images/RedMana.jpg', class='icon-result')
-              p(class='calc-num-input-red') #{red}
-        if green
-          div
-            p(class='calc-p-input')
-              |Number of
-              span(class='greentext')  Forest
-              |  lands:
-            div(class='calc-input')
-              img(src='/images/GreenMana.jpg', class='icon-result')
-              p(class='calc-num-input-green') #{green}
-        if white
-          div
-            p(class='calc-p-input')
-              |Number of
-              span(class='whitetext')  Plains
-              |  lands:
-            div(class='calc-input')
-              img(src='/images/WhiteMana.jpg', class='icon-result')
-              p(class='calc-num-input-white') #{white}
-        if grey
-          div
-            p(class='calc-p-input')
-              |Number of
-              span(class='greytext')  Waste
-              |  lands:
-            div(class='calc-input')
-              img(src='/images/GreyMana.jpg', class='icon-result')
-              p(class='calc-num-input-grey') #{grey}
-        if extra
-          div
-            p(class='calc-p-input')
-              |Any color you want
-            div(class='calc-input')
-              img(src='/images/GreyMana.jpg', class='icon-result')
-              p #{extra}
+              |Number of Lands
+          if blackCalc
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='blacktext')  Swamp
+                |  lands:
+              div(class='calc-input')
+                img(src='/images/BlackMana.jpg', class='icon-result')
+                p(class='calc-num-input-black') #{black}
+          if blueCalc
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='bluetext')  Island
+                |  lands:
+              div(class='calc-input')
+                img(src='/images/BlueMana.jpg', class='icon-result')
+                p(class='calc-num-input-blue') #{blue}
+          if redCalc
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='redtext')  Mountain
+                |  lands:
+              div(class='calc-input')
+                img(src='/images/RedMana.jpg', class='icon-result')
+                p(class='calc-num-input-red') #{red}
+          if greenCalc
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='greentext')  Forest
+                |  lands:
+              div(class='calc-input')
+                img(src='/images/GreenMana.jpg', class='icon-result')
+                p(class='calc-num-input-green') #{green}
+          if whiteCalc
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='whitetext')  Plains
+                |  lands:
+              div(class='calc-input')
+                img(src='/images/WhiteMana.jpg', class='icon-result')
+                p(class='calc-num-input-white') #{white}
+          if greyCalc
+            div
+              p(class='calc-p-input')
+                |Number of
+                span(class='greytext')  Waste
+                |  lands:
+              div(class='calc-input')
+                img(src='/images/GreyMana.jpg', class='icon-result')
+                p(class='calc-num-input-grey') #{grey}
+          if extraCalc
+            div
+              p(class='calc-p-input')
+                |Any color you want
+              div(class='calc-input')
+                img(src='/images/GreyMana.jpg', class='icon-result')
+                p #{extra}
     form(method='get', action='/calc')
       div(class='calc-submit-fit')
         div(class='calc-submit')

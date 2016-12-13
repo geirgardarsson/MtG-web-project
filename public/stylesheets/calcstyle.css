@@ -177,6 +177,43 @@ mr- #ce3d28
   justify-content: center;
 }
 
+
+/* box fyrir input eftir útreikning*/
+
+.calc-stats-left {
+  display: flex;
+  /*align-self: center;*/
+  justify-content: center;
+  background-color: #b8b5b2;
+  opacity: 0.9;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  margin-left: 10%;
+  margin-right: 1%;
+  padding: 3%;
+  width: 50%;
+}
+
+
+/* box fyrir outcome eftir útreiking */
+
+.calc-stats-right {
+  display: flex;
+  /*align-self: center;*/
+  justify-content: center;
+  background-color: #576147;
+  opacity: 0.9;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  margin-right: 10%;
+  padding: 3%;
+  width: 50%;
+}
+
+
+/*mögulega óþarft athuga seinna*/
+
 .calc-stats {
   display: flex;
   align-self: center;
@@ -188,6 +225,16 @@ mr- #ce3d28
   margin-left: 10%;
   margin-right: 10%;
   padding: 3%;
+}
+
+
+/* container fyrir outcome/input í calculator*/
+
+.calc-stats-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /*??*/
 }
 
 .calc-stats-submit {
@@ -233,6 +280,7 @@ mr- #ce3d28
   justify-content: center;
 }
 
+
 /* cursor: pointer;
 background-color: #111;
 border: none;
@@ -271,7 +319,6 @@ font-family: 'Bree Serif', serif; */
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
