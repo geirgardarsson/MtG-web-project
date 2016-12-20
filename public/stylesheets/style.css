@@ -726,3 +726,8 @@ button:hover {
 .ref-link:hover {
   color: white;
 }
+
+.img-zoom:hover {
+  transform: scale(1.5, 1.5);
+  transition: 0.5s;
+}
