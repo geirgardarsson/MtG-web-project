@@ -53,6 +53,19 @@ tr:nth-child(even) {
   flex-direction: column;
 }
 
+.home-container-middle {
+  background-color: gray;
+  opacity: 0.8;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  /*margin-bottom: 2%;*/
+  width: 65%;
+  align-items: center;
+  flex-direction: column;
+}
+
 .home-container-info {
   background-color: gray;
   opacity: 0.8;
