@@ -336,6 +336,7 @@ font-family: 'Bree Serif', serif; */
   margin-left: 5%;
   margin-right: 5%;
   align-items: center;
+  justify-content: center;
 }
 
 .life-stat-container {
@@ -358,4 +359,27 @@ font-family: 'Bree Serif', serif; */
   font-family: 'Bree Serif', serif;
   padding: 5px;
   margin-bottom: 2%;
+}
+
+.life-submit-button {
+  display: flex;
+  cursor: pointer;
+  background-color: #111;
+  border: none;
+  color: #ddd;
+  border-radius: 10px;
+  padding: 10px 115px;
+  font-weight: bold;
+  font-family: 'Bree Serif', serif;
+  justify-content: center;
+}
+
+.life-submit {
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  opacity: 0.9;
+  padding: 0.5%;
+  margin-top: 10%;
+  border-radius: 10px;
 }
