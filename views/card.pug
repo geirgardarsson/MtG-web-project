@@ -24,7 +24,7 @@ block content
     each item in card
       li
         a(href='/card/'+ item.name + '$' + item.set)
-          img(src= ""+item.imageUrl onerror="this.style.display='none'")
+          img(src= ""+item.imageUrl onerror="this.style.display='none'" class="img-zoom")
   if card [0]
     form(method='get', action='/advancedsearch')
       div(class='calc-submit-fit')
