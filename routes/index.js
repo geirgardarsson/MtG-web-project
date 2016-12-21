@@ -87,7 +87,7 @@ router.get('/advancedsearch', (req, res) => {
 
 router.post('/advancedsearch', (req, res) => {
   const parameters = [];
-
+  console.log(req.body.rarity);
   parameters[0] = req.body.name;
   parameters[1] = req.body.rarity;
   parameters[2] = req.body.po + req.body.wer;
@@ -128,6 +128,10 @@ router.get('/lifecounter', (req,res) => {
 router.post('/lifecounter', (req,res) => {
   let numplayers = req.body.players;
   let startlife = 20;
+  console.log(req.body.type);
+  if (req.body.type == 'Commander'){
+    startlife = 40;
+  }
   res.render('life', {title: 'Life Counter', players: numplayers, life: startlife })
 .catch((error)=>{
   res.render('error', {title: 'Error', message: error});

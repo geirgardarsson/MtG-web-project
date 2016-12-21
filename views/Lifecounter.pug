@@ -11,17 +11,23 @@ block content
     li(class='topnav-li')
       a(class='topnav-a-active' href='/Lifecounter') Life total
   div(class='calc-top-container')
-    h1(class='calc-top') Life counter
+    p(class='calc-top') Life counter
     p(class='calc-p-input') Keeps track of the life total of all the players (2-10 players)
   form(method='post', action='/lifecounter')
     div(class='calc-stats')
       div(class='calc-name-fit')
-        h1(class='calc-top') How many players?
+        p(class='calc-top') How many players?
         div
           p(class='calc-p-input')
             |Number of players:
           div(class='calc-input')
-            input(type='number', name="players" min='2', max='10' placeholder=2, class='calc-number-input')
+            input(type='number', name="players" min='2', max='10' value=2, class='calc-number-input')
+        p(class='calc-top') Commander?
+        div
+          div(class='checkboxTwo-UC')
+            p(class='checkboxText') Commander
+            input(type='checkbox' name='type' value='Commander' id='checkboxTwoUncommon' class='hide')
+            label(for='checkboxTwoUncommon')
         div(class='calc-submit-fit')
           div(class='calc-submit')
             button(type='submit', class='calc-submit-button') Play
