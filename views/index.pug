@@ -11,10 +11,28 @@ block content
   div(class='adv-name-fit')
     div(class='home-container')
       h1(class='home-header') Magic The Gathering
-      h2(class='home-header') Search for a card
+      p(class='calc-p-input-home')
+        | Here you can go to the advanced search
+        | page and search for card that match a
+        | specific criteria. You can also use the
+        | quick search function below to search for
+        | a quick search
+      h2(class='home-header') Quick Search
       form(method='post', action='/card' class='home-form')
         input(name='text', placeholder='e.g. Werebear' class='adv-name-input')
-        button(type='submit' class='home-submit') Search
+        button(type='submit' class='home-submit') Quick Search
+      form(method='get', action='/advancedsearch' class='home-form')
+        button(type='submit' class='home-submit') Advanced Search
+  div(class='adv-name-fit')
+    div(class='home-container-middle')
+      h1(class='home-header') Calculator
+      p(class='calc-p-input-home')
+        | Dont know how many lands of
+        | each color you should have in
+        | your deck? Just count all your
+        | mana symbols and use our calculator:
+      form(method='get', action='/calc' class='home-form')
+        button(type='submit' class='home-submit') Calculator
   div(class='adv-name-fit')
     div(class='home-container-info')
       h1(class='home-header') Info:
