@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  ul(class='topnav')
+    li(class='topnav-li')
+      a(class='topnav-a' href='/') Home
+    li(class='topnav-li')
+      a(class='topnav-a' href='/advancedsearch') Advanced search
+    li(class='topnav-li')
+      a(class='topnav-a' href='/calc') Calculator
+    li(class='topnav-li')
+      a(class='topnav-a-active' href='/lifecounter') Life total
+  div(class='calc-top-container')
+    h1(class='calc-top') Life counter
+    p(class='calc-p-input') Keeps track of the life total of all the players (2-10 players)
+  div(class='life-main-container')
+    - for (var x = 0; x < players; x++)
+        div(class='life-stat-container')
+          p(class='calc-p-input')
+            |Player #{x+1} life
+          div(class='calc-input')
+            input(type='number', name="player" min='0' value='20' , class='life-number-input')
+        //div
+          p(class='calc-p-input')
+            |PLayer x poison counter
+          div(class='calc-input')
+            input(type='number', name="playerp" min='0' value='0' , class='calc-number-input')
+    -

@@ -118,5 +118,20 @@ router.post('/advancedsearch', (req, res) => {
   });
 });
 
+router.get('/lifecounter', (req,res) => {
+  res.render('lifecounter', {title: 'Life Counter'})
+.catch((error)=>{
+  res.render('error', {title: 'Error', message: error});
+  });
+});
+
+router.post('/lifecounter', (req,res) => {
+  let numplayers = req.body.players;
+  res.render('life', {title: 'Life Counter', players: numplayers })
+.catch((error)=>{
+  res.render('error', {title: 'Error', message: error});
+  });
+});
+
 
 module.exports = router;

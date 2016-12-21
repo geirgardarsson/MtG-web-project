@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  ul(class='topnav')
+    li(class='topnav-li')
+      a(class='topnav-a' href='/') Home
+    li(class='topnav-li')
+      a(class='topnav-a' href='/advancedsearch') Advanced search
+    li(class='topnav-li')
+      a(class='topnav-a' href='/calc') Calculator
+    li(class='topnav-li')
+      a(class='topnav-a-active' href='/Lifecounter') Life total
+  div(class='calc-top-container')
+    h1(class='calc-top') Life counter
+    p(class='calc-p-input') Keeps track of the life total of all the players (2-10 players)
+  form(method='post', action='/lifecounter')
+    div(class='calc-stats')
+      div(class='calc-name-fit')
+        h1(class='calc-top') How many players?
+        div
+          p(class='calc-p-input')
+            |Number of players:
+          div(class='calc-input')
+            input(type='number', name="players" min='2', max='10' placeholder=2, class='calc-number-input')
+        div(class='calc-submit-fit')
+          div(class='calc-submit')
+            button(type='submit', class='calc-submit-button') Play
