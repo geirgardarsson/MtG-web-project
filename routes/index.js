@@ -127,7 +127,8 @@ router.get('/lifecounter', (req,res) => {
 
 router.post('/lifecounter', (req,res) => {
   let numplayers = req.body.players;
-  res.render('life', {title: 'Life Counter', players: numplayers })
+  let startlife = 20;
+  res.render('life', {title: 'Life Counter', players: numplayers, life: startlife })
 .catch((error)=>{
   res.render('error', {title: 'Error', message: error});
   });
