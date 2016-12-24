@@ -1,16 +1,11 @@
 To Do!
 
     1- Skalanleiki
-    2- laga object object object  ---lokið
-    3- manacost   ----lokið
-    4- homepage   ----lokið
-    5- skýrsla
-    6- MD/readme file
-    7- hjálp
-    8- Bæta við ýta á spil header eftir search   ---lokið
-    9- laga liti á takka  ----lokið
-    10- laga seinni takka í card   ----lokið
-    11- linta css
-    12- þýða titlanna á síðunum   ----lokið
-    13- laga takka í reiknivél   ----lokið
-    14- taka burt öll console.log
+    2- MD/readme file
+    3- hjálp
+    4- er search öruggt?
+    5- tooltips
+    6- meiri möguleikar í life counter, t.d player nöfn og litir
+    7- commenta js kóða
+    8- commenta css kóða
+    9- skipa upp css þannig það sé skipulegra (?)
