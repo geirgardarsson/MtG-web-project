@@ -20,13 +20,18 @@ block content
             |Player #{x+1} life
           div(class='calc-input')
             input(type='number', name="player#{x+1}" min='0' value=life , class='life-number-input')
-        //div
+        //div    --bæta þessu við fyrir poison counters
           p(class='calc-p-input')
             |PLayer x poison counter
           div(class='calc-input')
             input(type='number', name="playerp" min='0' value='0' , class='calc-number-input')
+        //bæta hér við til að telja hversu mikið dmg commander hefur gert
     -
   form(method='post', action='/lifecounter')
     div(class='calc-submit-fit')
       div(class='life-submit')
-        button(type='submit', class='life-submit-button' value=players ,name='players') Restart
+        button(type='submit', class='life-submit-button' value=players ,name='players') Play again
+  form(method='get', action='/lifecounter')
+    div(class='calc-submit-fit')
+      div(class='life-submit')
+        button(type='submit', class='life-submit-button') New game

@@ -15,13 +15,13 @@ block content
     p(class='calc-p-input') Keeps track of the life total of all the players (2-10 players)
   form(method='post', action='/lifecounter')
     div(class='calc-stats')
-      div(class='calc-name-fit')
+      div(class='life-name-fit')
         p(class='calc-top') How many players?
         div
           p(class='calc-p-input')
             |Number of players:
           div(class='calc-input')
-            input(type='number', name="players" min='2', max='10' value=2, class='calc-number-input')
+            input(type='number', name="players" min='2', max='10' value=2, class='life-number-input')
         p(class='calc-top') Commander?
         div
           div(class='checkboxTwo-UC')

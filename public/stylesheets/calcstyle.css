@@ -383,3 +383,53 @@ font-family: 'Bree Serif', serif; */
   margin-top: 10%;
   border-radius: 10px;
 }
+
+.life-name-fit {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.life-number-input {
+  width: 25%;
+  line-height: 32px;
+  font-size: 26px;
+  font-family: 'Bree Serif', serif;
+  padding: 5px;
+}
+
+
+/*
+.checkboxTwo-LIFE {
+  width: 150px;
+  height: 40px;
+  background: #333;
+  margin: 10px 3px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkboxTwo-LIFE::before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 120px;
+  background: #111;
+}
+
+.checkboxTwo-LIFE label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #b5d2dc;
+}

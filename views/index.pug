@@ -36,6 +36,16 @@ block content
       form(method='get', action='/calc' class='home-form')
         button(type='submit' class='home-submit') Calculator
   div(class='adv-name-fit')
+    div(class='home-container-middle')
+      h1(class='home-header') Life Counters
+      p(class='calc-p-input-home')
+        | Playing with friends and forgot
+        | To bring dies or paper to keep
+        | track of your life total? No worries
+        | you can use our life total:
+      form(method='get', action='/lifecounter' class='home-form')
+        button(type='submit' class='home-submit') Life Total
+  div(class='adv-name-fit')
     div(class='home-container-info')
       h1(class='home-header') Info:
       p(class='calc-p-input-home')

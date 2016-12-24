@@ -87,7 +87,7 @@ router.get('/advancedsearch', (req, res) => {
 
 router.post('/advancedsearch', (req, res) => {
   const parameters = [];
-  console.log(req.body.rarity);
+
   parameters[0] = req.body.name;
   parameters[1] = req.body.rarity;
   parameters[2] = req.body.po + req.body.wer;
@@ -128,8 +128,10 @@ router.get('/lifecounter', (req,res) => {
 router.post('/lifecounter', (req,res) => {
   let numplayers = req.body.players;
   let startlife = 20;
+  console.log(req.body.players);
   console.log(req.body.type);
-  if (req.body.type == 'Commander'){
+  console.log(req.body.life);
+  if (req.body.type == 'Commander' || req.body.life == 40){
     startlife = 40;
   }
   res.render('life', {title: 'Life Counter', players: numplayers, life: startlife })
@@ -137,6 +139,7 @@ router.post('/lifecounter', (req,res) => {
   res.render('error', {title: 'Error', message: error});
   });
 });
+
 
 
 module.exports = router;

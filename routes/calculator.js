@@ -51,7 +51,7 @@ function manacalc(OriginalColors, lands) {
         if (mana[i] === 0) {
           mana[i] += 1;
         }
-        // console.log(`útkoman:${Math.round(((Colors[i] / total) * land))}`);
+         //console.log(`útkoman:${Math.round(((Colors[i] / total) * land))}`);
       }
     }
   }
@@ -62,7 +62,7 @@ function manacalc(OriginalColors, lands) {
   if (minlands === 0) {
     minlands = 1;
   }
-  // console.log(`minlands er: ${minlands}`);
+   //console.log(`minlands er: ${minlands}`);
 // heildarfjöldi landa sem á að skila
   for (let i = 0; i < 6; i += 1) {
     if (mana[i] !== '') {
@@ -87,6 +87,8 @@ function manacalc(OriginalColors, lands) {
     return mana;
   }
 
+  let maxpointer = maxpoint(mana);
+
 
   // totla fjöldi landa sem er gert ráð fyrir
   // console.log(`þetta er landtotal:${landtotal}`);
@@ -110,16 +112,21 @@ function manacalc(OriginalColors, lands) {
       // þarf að minnka öll gildi um 1
       for (let i = 0; i < mana.length - 1; i += 1) {
         if (mana[i] !== '' && mana[i] !== 0) {
-          // console.log(`þetta er mana[i],nyjacheck${mana[i]}`);
-          mana[i] -= 1;
-          // console.log(`þetta er mana[i],nyjacheckv2${mana[i]}`);
-          // ef þettta minnkar landafjölda af einhverjum lit í 0
-          // þá minnkum við extra um 1 og hækkum þann landafjölda aftur um 1
-          if (mana[i] === 0) {
-            mana[i] += 1;
-            cnt -= 1;
-          }
-          cnt += 1;
+           //console.log(`þetta er mana[i],nyjacheck${mana[i]}`);
+           if(i != maxpointer){ // þessu var líka bætt við
+
+             mana[i] -= 1;
+             //console.log(`þetta er mana[i],nyjacheckv2${mana[i]}`);
+             // ef þettta minnkar landafjölda af einhverjum lit í 0
+             // þá minnkum við extra um 1 og hækkum þann landafjölda aftur um 1
+             if (mana[i] === 0) {
+               mana[i] += 1;
+               cnt -= 1;  //sleppa?
+               //console.log("hér á eftir breytist dót");
+               mana[maxpointer] -= 1;
+             }
+             cnt += 1;
+           }
         }
       }
       cnt -= 1;
@@ -128,8 +135,12 @@ function manacalc(OriginalColors, lands) {
     }
   }
 
+  //athugar hvort að auka sé minni en 0
+  if (mana[6]<0){
+    mana[6]= 0;
+  }
 
-  let maxpointer = maxpoint(mana);
+  maxpointer = maxpoint(mana);
   // Athugar hvort að öll gildi ná minumum
   for (let i = 0; i < mana.length - 1; i += 1) {
     while (mana[i] < minlands && mana[i] !== 0) {
