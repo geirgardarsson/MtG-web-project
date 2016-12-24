@@ -130,11 +130,15 @@ router.post('/lifecounter', (req,res) => {
   let startlife = 20;
   console.log(req.body.players);
   console.log(req.body.type);
-  console.log(req.body.life);
-  if (req.body.type == 'Commander' || req.body.life == 40){
+  console.log(req.body.GeirGatheringWizard + "þetta");
+  //console.log(req.body.locals.newgamelife + "þetta2");
+  //console.log(locals.newgamelife + "þetta3");
+  //console.log(req.body.newgamelife + "þetta4");
+  //console.log(GeirGatheringWizard+ "þetta56");
+  if (req.body.type == 'Commander' || req.body.type == 40){
     startlife = 40;
   }
-  res.render('life', {title: 'Life Counter', players: numplayers, life: startlife })
+  res.render('life', {title: 'Life Counter', players: numplayers, life: startlife, locals:{newgamelife: startlife} })
 .catch((error)=>{
   res.render('error', {title: 'Error', message: error});
   });

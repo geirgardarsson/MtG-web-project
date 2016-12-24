@@ -28,8 +28,10 @@ block content
         //bæta hér við til að telja hversu mikið dmg commander hefur gert
     -
   form(method='post', action='/lifecounter')
+    input(type='hidden', value=life, name='type')
     div(class='calc-submit-fit')
       div(class='life-submit')
+        - var GeirGatheringWizard = life;
         button(type='submit', class='life-submit-button' value=players ,name='players') Play again
   form(method='get', action='/lifecounter')
     div(class='calc-submit-fit')
