@@ -1,7 +1,11 @@
-"# lokaverkefni"
+# Magic the Gathering web project
 
 http://mtgffa.herokuapp.com/
 
-byrjað að opna verkefnið í terminal/console
-svo gert npm install og síðan npm start til
-að keyra locally
+Made as a project at Univeristy of Iceland in 2016.
+ExpressJs used for backend, pug templates for frontend.
+
+Authors:
+
+[Daníel Guðnason](https://github.com/DanniGudna)
+[Geir Garðarsson](https://github.com/geirgardarsson)
